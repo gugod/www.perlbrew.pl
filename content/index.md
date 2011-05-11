@@ -11,13 +11,18 @@ please read [the perlbrew document](http://beta.metacpan.org/module/App::perlbre
 
 perlbrew is a tool to manage multiple perl installations in your
 `$HOME` directory. They are completely isolated perl universes, with
-the benefits of not having to run `sudo` just to install CPAN modules,
-and more, for examples
+many benefits:
 
-- Leave vendor perl alone
-- Try the monthly released new perl
-- Learn new perl5 language features
-- Test production code against new perl
+- No need to run `sudo` to install CPAN modules, any more.
+- Try the monthly released new perls
+- Learn new language features
+- Test production code
+- Leave vendor perl (the one that comes with OS) alone
+  - Vendor perl usually has it's own purposes, any maybe a bad idea to mess it up too much.
+  - Especially PITA when trying to upgrade system perl
+  - Some vendors [introduced their own perl bugs](http://perlnews.org/2011/04/dealing-with-xcode-4-and-cpan-breakage/), [twice](http://www.theregister.co.uk/2009/02/16/apple_update_perl_breakage/)!
+- Hacking perl internals
+- Just to keep up with fashion
 
 ## perlbrew is simple
 
@@ -39,8 +44,8 @@ Daily usage looks like:
 ## Development
 
 perlbrew has always been improving, it is a open source project for
-you to participate.  There are currently over [30
+everyone to participate. There are currently over [30
 contributors](https://github.com/gugod/App-perlbrew/contributors) and
-growing.
-The code repository is located on [github](https://github.com/gugod/App-perlbrew).
-Feel free to send a bug report, a pull request, or anything. Event a beer can help :)
+growing.  The code repository is located on
+[github](https://github.com/gugod/App-perlbrew). Feel free to send a
+bug report, a pull request, or anything. Even a beer helps :)
