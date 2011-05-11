@@ -4,7 +4,7 @@ Copy & Paste this line into your terminal:
 
     curl -L http://xrl.us/perlbrewinstall | bash
 
-This installer installers everything to your `~/perl5/perlbrew`, for more advanced installation,
+This installs everything to `~/perl5/perlbrew`, for more advanced installation process,
 please read [the perlbrew document](http://beta.metacpan.org/module/App::perlbrew).
 
 ## What is perlbrew
