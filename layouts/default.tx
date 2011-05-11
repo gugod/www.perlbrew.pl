@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.ico">
     <title>Perlbrew</title>
-<!-- [if !IE]>
+<![if gte IE 9]>
     <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
     <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
-<![endif]-->
+<![endif]>
 : if 0 {
 	<!-- html5shiv http://code.google.com/p/html5shiv/ -->
 	<!--[if lt IE 9]><script src="javascripts/html5.js"></script><![endif]-->
