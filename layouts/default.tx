@@ -1,0 +1,41 @@
+<!doctype html>
+<!--[if lt IE 8 ]><html class="ie"><![endif]-->
+<!--[if (gte IE 8)|!(IE)]><!--><html><!--<![endif]-->
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew</title>
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn:regular,bold' rel='stylesheet' type='text/css'>
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+: if 0 {
+	<!-- html5shiv http://code.google.com/p/html5shiv/ -->
+	<!--[if lt IE 9]><script src="javascripts/html5.js"></script><![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script src="javascripts/jquery.browser.min.js" ></script>
+: }
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/">Perl</a></li>
+                <li><a href="http://cpan.org/">CPAN</a></li>
+                <li><a href="http://handlino.com">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <h1>Perlbrew</h1>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>
+        </div>
+    </header>
+    <div id="container" class="inner">
+        : block content -> { }
+    </div>
+
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphaics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>
