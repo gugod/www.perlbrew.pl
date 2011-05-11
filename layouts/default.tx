@@ -18,9 +18,9 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/">Perl</a></li>
-                <li><a href="http://cpan.org/">CPAN</a></li>
-                <li><a href="http://handlino.com">Handlino</a></li>
+                <li><a href="http://perl.org/" title="What makes everything">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing live">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website">Handlino</a></li>
             </ul>
         </div>
     </nav>

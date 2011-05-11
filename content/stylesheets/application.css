@@ -177,6 +177,7 @@ nav .inner, nav footer {
 }
 nav .inner ul, nav footer ul {
   float: right;
+  z-index: 201;
 }
 nav .inner ul a, nav footer ul a {
   -moz-box-shadow: #292929 -1px 0 0;
@@ -204,14 +205,13 @@ header .inner, header footer {
   position: relative;
 }
 header .inner h1, header footer h1 {
-  position: relative;
+  position: absolute;
   z-index: 200;
   background: url(../images/h1.png) left top no-repeat;
   margin: 0;
   width: 671px;
   height: 327px;
   text-indent: -9999em;
-  position: absolute;
   left: -53px;
   top: -40px;
 }
