@@ -25,7 +25,7 @@ This approach has many benefits:
 - Just to keep up with fashion
 
 While the default is good enough, you may customize it to install to
-alternative places, or even let multilpe uses share the whole
+alternative places, or even let multiple users share the whole
 perlbrew environment.
 
 ## perlbrew is simple
