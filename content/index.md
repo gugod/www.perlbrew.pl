@@ -10,8 +10,8 @@ please read [the perlbrew document](http://beta.metacpan.org/module/App::perlbre
 ## What is perlbrew
 
 perlbrew is a tool to manage multiple perl installations in your
-`$HOME` directory. They are completely isolated perl universes, with
-many benefits:
+`$HOME` directory. They are completely isolated perl universes.
+This approach has many benefits:
 
 - No need to run `sudo` to install CPAN modules, any more.
 - Try the monthly released new perls
@@ -24,28 +24,35 @@ many benefits:
 - Hacking perl internals
 - Just to keep up with fashion
 
+While the default is good enough, you may customize it to install to
+alternative places, or even let multilpe uses share the whole
+perlbrew environment.
+
 ## perlbrew is simple
 
-Daily usage looks like:
+To install the latest stable release, and use it permananetly:
 
-    # Install new releases
-    perlbrew install perl-5.14.0-RC1
     perlbrew install perl-5.12.3
-   
-    # Play with it
-    perlbrew use perl-5.14.0-RC1
-
-    # Maybe use a stable one for real work
     perlbrew switch perl-5.12.3
 
-    # Run myprogram.pl against ALL your perl installaitons
+To play with the latest RC version, but only in the current shell:
+
+    perlbrew install perl-5.14.0-RC1
+    perlbrew use perl-5.14.0-RC1
+
+Runs `myprogram.pl` against all installations of perl, especially helpful when running tests:
+
     perlbrew exec myprogram.pl
+
+For more descriptions about commands,
+
+    perlbrew help
 
 ## Development
 
 perlbrew has always been improving, it is a open source project for
-everyone to participate. There are currently over [30
-contributors](https://github.com/gugod/App-perlbrew/contributors) and
+everyone to participate. There are currently over
+[30 contributors](https://github.com/gugod/App-perlbrew/contributors) and
 growing.  The code repository is located on
 [github](https://github.com/gugod/App-perlbrew). Feel free to send a
-bug report, a pull request, or anything. Even a beer helps :)
+bug report, a pull request, or a bear. Everything helps :)
