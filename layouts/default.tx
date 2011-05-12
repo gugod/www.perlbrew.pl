@@ -32,7 +32,9 @@
         </div>
     </header>
     <div id="container" class="inner">
+        <section>
         : block content -> { }
+        </section>
     </div>
 
     <footer>
