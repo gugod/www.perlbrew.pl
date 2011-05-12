@@ -30,7 +30,7 @@ perlbrew environment.
 
 ## perlbrew is simple
 
-To install the latest stable release, and use it permananetly:
+To install the latest stable release, and use it permanently:
 
     perlbrew install perl-5.12.3
     perlbrew switch perl-5.12.3
