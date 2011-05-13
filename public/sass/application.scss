@@ -1,0 +1,215 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass";
+
+/*
+Copyright (c) 2009, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.net/yui/license.txt
+version: 2.7.0
+ */
+body{margin:10px;}h1{font-size:138.5%;}h2{font-size:123.1%;}h3{font-size:108%;}h1,h2,h3{margin:1em 0;}h1,h2,h3,h4,h5,h6,strong,dt{font-weight:bold;}optgroup{font-weight:normal;}abbr,acronym{border-bottom:1px dotted #000;cursor:help;}em{font-style:italic;}del{text-decoration:line-through;}blockquote,ul,ol,dl{margin:1em;}ol,ul,dl{margin-left:2em;}ol li{list-style:decimal outside;}ul li{list-style:disc outside;}dl dd{margin-left:1em;}th,td{border:1px solid #000;padding:.5em;}th{font-weight:bold;text-align:center;}caption{margin-bottom:.5em;text-align:center;}sup{vertical-align:super;}sub{vertical-align:sub;}p,fieldset,table,pre{margin-bottom:1em;}button,input[type="checkbox"],input[type="radio"],input[type="reset"],input[type="submit"]{padding:1px;}
+
+/* `Base
+-----------------------------------------------------------------------------*/
+
+html { background: #ffd893 url(../images/bg.png) center top repeat-x; height: 100%;}
+
+body {
+    background: url(../images/bg-radiation.png) center -200px no-repeat;
+    margin: 0;
+    font-family: 'Vollkorn', arial, serif;
+    color: #3c3326;
+    font-size: 15px;
+    height: 100%;
+}
+
+a {
+    &:link {
+        color: #1b8cdc;
+        text-decoration: none;}
+    &:visited {color: #1b8cdc; text-decoration: none;}
+    &:hover, &:active{color: #ee35e3;}
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display:inline-block;
+}
+/* Hide from IE Mac \*/
+
+.clearfix {
+    display:block;
+}
+/* End hide from IE Mac */
+
+.inner {
+    margin:0 auto;
+    width:800px;
+}
+
+.menu, .menu li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    li {float: left;}
+}
+
+/* `Nav
+-----------------------------------------------------------------------------*/
+
+nav {
+    @extend .clearfix;
+    background: url(../images/bg-nav.png) left top repeat-x;
+    height:43px;
+    position:relative;
+    z-index:100;
+    .inner {
+        @extend .clearfix;
+        @include box-shadow(rgba(#292929, 1) 1px 0 0);
+        border-right:1px solid #101010;
+        ul {
+            @extend .menu;
+            @extend .clearfix;
+            float:right;
+            z-index: 201;
+            a {
+                @include box-shadow(rgba(#292929, 1) -1px 0 0);
+                border-left:1px solid #101010;
+                display:block;
+                float:left;
+                padding:0 20px;
+                height:40px;
+                font-size:14px;
+                line-height:40px;
+                color:#b7ab8a;
+                text-shadow: 0 -1px 0 rgba(0,0,0,1);
+                &:hover { color:#efb55f; }
+            }
+        }
+    }
+}
+
+/* `Header
+-----------------------------------------------------------------------------*/
+
+header {
+    .inner {
+        height:280px;
+        position:relative;
+        h1 {
+            pointer-events: none;
+            position:absolute;
+            z-index:200;
+            background: url(../images/h1.png) left top no-repeat;
+            margin:0;
+            width:671px;
+            height:327px;
+            text-indent:-9999em;
+            left:-53px;
+            top:-40px;
+        }
+    }
+    #ninja {
+        background: url(../images/ninja.png) no-repeat;
+        width:104px;
+        height:142px;
+        position:absolute;
+        right:0;
+        top:-10px;
+        z-index:99;
+        span {
+            display:none;
+            background: url(../images/github.png) no-repeat;
+            margin:40px 0 0 90px;
+            width:127px;
+            height:84px;
+            text-indent:-9999em;
+        }
+        &:hover span { display:block; }
+    }
+}
+
+@-webkit-keyframes ninja {
+    0% {-webkit-transform: rotate(0deg);}
+    1% {-webkit-transform: rotate(0deg);}
+    14% {-webkit-transform: rotate(1deg);}
+    20% {-webkit-transform: rotate(4deg);}
+    30% {-webkit-transform: rotate(10deg);}
+    40% {-webkit-transform: rotate(14deg);}
+    50% {-webkit-transform: rotate(15deg);}
+    60% {-webkit-transform: rotate(14deg);}
+    70% {-webkit-transform: rotate(10deg);}
+    80% {-webkit-transform: rotate(4deg);}
+    90% {-webkit-transform: rotate(1deg);}
+    100% {-webkit-transform: rotate(0deg);}
+}
+
+#ninja {
+    -webkit-animation-name: ninja;
+    -webkit-animation-duration: 6s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-transform-origin: 0 5%;
+    -webkit-animation-timing-function: linear;
+}
+
+/* `Section
+-----------------------------------------------------------------------------*/
+
+section {
+    background: url(../images/hr.png) left bottom no-repeat;
+    display:block;
+    margin-bottom:20px;
+    padding-bottom:20px;
+    h2 {
+        margin-top:0.5em;
+        font-size:30px;
+    }
+    ul li {
+        list-style:url(../images/icon-shuriken.png);
+    }
+}
+
+code {
+    @include border-radius(3px);
+    @include box-shadow(0 1px 0 rgba(#fff, 0.7), rgba(#000, 0.3) 0 0 5px inset);
+    background: #67481d;
+    padding:2px 5px;
+    color:#fff;
+}
+
+pre {
+    @include border-radius(5px);
+    @include box-shadow(-1px 1px 0 rgba(#fff, 0.7), rgba(#000, 0.7) -1px 1px 2px inset);
+    background: #67481d url(../images/shuriken.png) 760px bottom no-repeat;
+    padding:20px;
+    code {
+        @include box-shadow(0 1px 0 rgba(#fff, 0), rgba(#000, 0) 0 0 5px inset);
+        background: #67481d;
+        padding:0;
+    }
+}
+
+/* `Footer
+-----------------------------------------------------------------------------*/
+
+footer {
+    @extend .inner;
+    display:block;
+    padding:10px 0 60px;
+    font-style:normal; color:#999;
+    a { 
+        &:link, &:visited {color: #999;}
+        &:hover, &:active {color: #ee35e3;}
+    }
+}

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+cp App-perlbrew.wiki/*.md content/
+sitebrew

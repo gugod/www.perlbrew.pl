@@ -1,0 +1,3 @@
+[submodule "App-perlbrew.wiki"]
+	path = App-perlbrew.wiki
+	url = git@github.com:gugod/App-perlbrew.wiki.git
