@@ -9,6 +9,21 @@ use YAML;
 
 my $cwd = io->curdir->rel2abs;
 
+sub github_markup {
+    my $text = shift;
+
+    $text =~ s{\[\[([^\n]+)\]\]}{
+        my $label = $1;
+        my $page = $1;
+        $page =~ s{ }{-}g;
+        $page =~ s{/}{-}g;
+
+        "[$label]($page.html)"
+    }eg;
+
+    return $text;
+}
+
 sub build_markdown {
     my ($name, $fullname, $dir) = @_;
 
@@ -21,10 +36,14 @@ sub build_markdown {
 
     my $outfile = $outdir . "/$out";
 
+    my $text = io($name)->all;
+
+    $text = github_markup($text);
+
     my $body = <<TX;
 : cascade default;
 : override content -> {
-    @{[ markdown( io($name)->all, { empty_element_suffix => '>' } ) ]}
+    @{[ markdown( $text, { empty_element_suffix => '>' } ) ]}
 : }
 TX
     io->file($outfile)->assert->print($body);
