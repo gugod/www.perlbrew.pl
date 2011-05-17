@@ -1,4 +1,5 @@
 all:
+	make pull-wiki
 	./brew
 
 deploy:
@@ -6,5 +7,3 @@ deploy:
 
 pull-wiki:
 	(cd App-perlbrew.wiki; git pull)
-	git add App-perlbrew.wiki;
-	git commit -m "update wiki";
