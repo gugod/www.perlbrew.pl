@@ -12,7 +12,7 @@ my $cwd = io->curdir->rel2abs;
 sub github_markup {
     my $text = shift;
 
-    $text =~ s{\[\[([^\n]+)\]\]}{
+    $text =~ s{(?<!`)\[\[([^\n]+?)\]\](?!`)}{
         my $label = $1;
         my $page = $1;
         $page =~ s{ }{-}g;
