@@ -6,4 +6,4 @@ deploy:
 	dotcloud push gugod.perlbrew public
 
 pull-wiki:
-	(cd App-perlbrew.wiki; git pull)
+	if [ -d "App-perlbrew.wiki" ]; then (cd App-perlbrew.wiki; git pull); else git clone git://github.com/gugod/App-perlbrew.wiki.git; fi
