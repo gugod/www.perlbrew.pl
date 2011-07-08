@@ -27,8 +27,18 @@
     </nav>
     <header>
         <div class="inner">
-            <h1>Perlbrew</h1>
-            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+                <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>
+            </div>
         </div>
     </header>
     <div id="container" class="inner">
@@ -36,7 +46,6 @@
         : block content -> { }
         </section>
     </div>
-
     <footer>
         <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
     </footer>
