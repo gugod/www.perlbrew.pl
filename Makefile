@@ -1,6 +1,5 @@
 all:
-	make pull-wiki
-	./brew
+	sitebrew
 
 deploy:
 	dotcloud push gugod.perlbrew public

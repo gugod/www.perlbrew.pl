@@ -37,8 +37,8 @@
                     <span id="bubble-5"></span>
                     <span id="bubble-6"></span>
                 </h1>
-                <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>
             </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
         </div>
     </header>
     <div id="container" class="inner">
