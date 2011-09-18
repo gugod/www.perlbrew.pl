@@ -466,11 +466,8 @@ section {
 }
 
 code {
-    @include border-radius(3px);
     @include box-shadow(0 1px 0 rgba(#fff, 0.7), rgba(#000, 0.3) 0 0 5px inset);
-    background: #67481d;
     padding:2px 5px;
-    color:#fff;
 }
 
 pre {
@@ -479,9 +476,11 @@ pre {
     background: #67481d;
     padding:20px;
     code {
+        @include border-radius(3px);
         @include box-shadow(0 1px 0 rgba(#fff, 0), rgba(#000, 0) 0 0 5px inset);
         background: #67481d;
         padding:0;
+        color:#fff;
     }
 }
 
