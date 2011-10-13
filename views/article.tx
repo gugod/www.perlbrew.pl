@@ -1,4 +1,5 @@
 : cascade "default-layout.tx";
 : override content -> {
-  <: $article_content :>
+  <h2><: $article.title :></h2>
+  <: $article.body_html :>
 : }
