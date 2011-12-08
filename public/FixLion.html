@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Fix For MacOSX Lion</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Fix For MacOSX Lion</h2>
+  <p>If you upgraded to Lion with Xcode 4.1, you may find youself fail to build any
+perls with perlbrew. This is because that the newly released <code>/usr/bin/nm</code> does
+not work with the perl building system. Luckly, this issues has already been
+solved in perl-blead, and <a href="http://metacpan.org/author/BINGOS">BINGOS</a> quickly made a new release of
+<a href="http://metacpan.org/release/Devel-PatchPerl">Devel::PatchPerl</a> for us.</p>
+
+<p>To fix this isusse before the next perlbrew release, grab this <code>patchperl</code>
+standalone executable, put it in your <code>$PERLBREW_ROOT/bin</code> and <code>chmod +x</code> it:</p>
+
+<pre><code>https://raw.github.com/gist/962406/93cd90f5e6c6a86073afb3815f0ea06c3c9e99ed/patchperl
+</code></pre>
+
+<p>That's something like this:</p>
+
+<pre><code>export PERLBREW_ROOT=${HOME}/perl5/perlbrew
+curl -k -L https://raw.github.com/gist/962406/93cd90f5e6c6a86073afb3815f0ea06c3c9e99ed/patchperl -o $PERLBREW_ROOT/bin/patchperl
+chmod +x $_
+</code></pre>
+
+<p>Or if you've previously installed perlbrew by doing <code>cpan App::perlbrew</code>, simply
+upgrade your <code>Devel::PatchPerl</code> to 0.42.</p>
+
+<p>As of the time this article is written, the latest release of perlbrew is 0.27, the next release
+of perlbrew will fix this issue.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

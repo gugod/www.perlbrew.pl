@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew Release 0.20</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew Release 0.20</h2>
+  <p>perlbrew 0.20 features three major changes:</p>
+
+<ul>
+<li>Improved <code>perlbrew install</code> command</li>
+<li>True multi-user friendliness</li>
+<li>switch / use for CSH users</li>
+</ul>
+
+<h2>Installation / Upgrade</h2>
+
+<p>In short, paste this line to your terminal:</p>
+
+<pre><code>curl -L https://github.com/gugod/App-perlbrew/raw/master/perlbrew-install | bash
+</code></pre>
+
+<p>If you've installed perlbrew from CPAN and you're upgrading, you can still upgrade with CPAN. However, after upgrading <code>App::perlbrew</code>, you need to run:</p>
+
+<pre><code>perlbrew init
+</code></pre>
+
+<h2>Improvements of the "install" command</h2>
+
+<p>The install command now takes 3 different kinds of arguments, a perl distribution name, a path to git checkout directory, or a URL to a perlbrew distribution tarball:</p>
+
+<ul>
+<li><code>perlbrew install perl-5.12.3</code></li>
+<li><code>perlbrew install ~/src/perl</code></li>
+<li><code>perlbrew install http://search.cpan.org/CPAN/authors/id/J/JE/JESSE/perl-5.14.0-RC2.tar.bz2</code></li>
+</ul>
+
+<p>If you choose to build from a git checkout directory, you may do a <code>git checkout v5.12.3</code> or <code>git checkout &lt;SHA1&gt;</code> to jump to any reversion you want to build, and run <code>perlbrew install ~/src/perl</code> from there. perlbrew will use the output of <code>git describe</code> as the installation name. That's something like <code>perl-v5.14.0-RC1-8-g2cf7ccf</code>.</p>
+
+<h2>Multi-user friendliness</h2>
+
+<p>In some use cases, many people may want to share one <code>PERLBREW_ROOT</code> on the same machine instead having redundant copies all over the hard drives.</p>
+
+<p>perlbrew had been using a symlink named <code>current</code> to record currently activated perl. That is a global setting, and is now deprecated.</p>
+
+<p>The <code>switch</code> command now stop updating the <code>current</code> symlink. Instead, it stores that piece information under <code>~/.perlbrew</code> directory.</p>
+
+<p>Notice that symbolic links are still used when installing development releases of perl. The perl executables are named with version numbers, like <code>perl5.13.9</code>, <code>cpan5.13.9</code>. In those cases, Un-versioned executable symlinks are created to point to their versioned counterparts (<code>perl -&gt; perl5.13.9</code>, <code>cpan -&gt; cpan5.13.9</code>.)</p>
+
+<h2>switch and use command for CSH users</h2>
+
+<p>For a while, CSH / TCSH users cannot use 'use' command to temporarily switch to a given perl installation,
+they now can. However, the user experiences is different. <code>perlbrew use</code> essentially launch a sub-shell that need to be <code>exit</code>ed. Like the illustration here:</p>
+
+<pre><code>&gt; perl -v # 5.12.3
+&gt;   perlbrew use perl-5.13.9
+&gt;   perl -v # 5.13.9
+&gt;   exit
+&gt; perl -v 5.12.3
+</code></pre>
+
+<p>The behavior of <code>switch</code> command also changes for CSH users. In order to make perlbrew multi-user friendly, the <code>current</code> symlink is removed, which essentially limits the approach of implementation of <code>switch</code> command. The <code>switch</code> command now prompts user to quit current shell and start a new one, or run <code>exec tcsh</code> in order to make if effective.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

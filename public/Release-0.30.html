@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew Release 0.30</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew Release 0.30</h2>
+  <p>perlbrew 0.30 contain these major changes</p>
+
+<ul>
+<li>local::lib integration</li>
+<li>Skip runs of exec on aliases</li>
+<li>Respect -f flag when installing to replace an already installed perl.</li>
+<li>Redefine the default value of -q flag to be false, and define it's meaning to be "complete silent"</li>
+</ul>
+
+<h2>The YAPC release</h2>
+
+<p>This is the release for YAPC::Asia 2011, featuring the local::lib integraton. Use the new command <code>lib</code>
+to manage local::lib containers:</p>
+
+<pre><code>perlbrew lib create nobita
+perlbrew lib create perl-5.12.3@shizuka
+perlbrew lib list
+perlbrew use perl-5.12.3@shizuka
+perlbrew use perl-5.14.2@nobita
+perlbrew switch perl-5.14.2@nobita
+perlbrew lib delete perl-5.12.3@nobita
+</code></pre>
+
+<p>The usage example and documentation is available by running <code>perlbrew lib</code> or <code>perlbrew help lib</code>.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

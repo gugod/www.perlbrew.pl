@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>How To Reinstall All Modules On New Perl</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>How To Reinstall All Modules On New Perl</h2>
+  <p>Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.</p>
+
+<p>One way to do this is to use the CPAN.pm autobundle feature to capture your old install:-
+<code>bash
+perl -MCPAN -e autobundle
+</code></p>
+
+<p>You willll end up with a bundle file written containing all installed modules, for instance:
+<code>
+Wrote bundle file
+   /home/davidp/.cpan/Bundle/Snapshot_2011_04_28_00.pm
+</code></p>
+
+<p>You can then install that bundle on the new perl install, and job done:</p>
+
+<pre><code>perl -MCPAN -e 'install Bundle::Snapshot_2011_04_28_00'
+</code></pre>
+
+<p><em>Taken from a London.pm list posting by David Precious</em></p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

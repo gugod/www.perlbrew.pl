@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew development and the git flow</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew development and the git flow</h2>
+  <p>The prerlbrew source repository on github sets the default branch to "develop", while there is still a "master" branch like usual git repositories. Each serves their own purpose.</p>
+
+<p>The "master" branch is a stable branch, and gets updated only on release. Whenever people checkout the master branch, they get the source code of the latest release of perlbrew. It also contain the stable version of <code>perlbrew</code> standalone executable, and the perlbrew installer program.</p>
+
+<p>The "develop" branch, is where random commits go. Well not really randomly, but it is where I personally commit new features, and accepting pull requests. Anyone who wish to try the nightly version of perlbrew can download the develop perlbrew executable from <a href="https://github.com/gugod/App-perlbrew/raw/develop/perlbrew">https://github.com/gugod/App-perlbrew/raw/develop/perlbrew</a></p>
+
+<p>They are named so because I personally adapt the <a href="http://nvie.com/posts/a-successful-git-branching-model/">git flow</a> convention when working on perlbrew. When working on a feature that is likely taking quite some time to finish, a local feature branch is created, and not necessarily pushed to the github. This way, when there are pending pull requests, they do not have to wait too long, since they can be merged into develop branch first.</p>
+
+<p>Pull requests always merged into the "develop" branch. If you are willing to contribute, make sure sending me pull requests against the develop branch but not the master branch. This should the default on github UI now, but it is still mentioned so everyone can know I intentionally set "develop" branch to be the default.</p>
+
+<p>At this moment contributors all have their own fork of perlbrew repository, and I have not grant any commit bit at all. The truth is, I never need to. Github forks are naturally branches that can be easily managed with git commands, and I do not need to talk to anybody through the workflow at all. People simply work on their own fork with whatever branching model they feel like to, and I always accept new changes to my develop branch.</p>
+
+<p>I feel like it is an ideal situation that no arguments about branching convention or naming are needed. People just commit something, and let me worry about the merge and release latter on.</p>
+
+<p>Does it slow down the development pace due to the need of pull requests ? Well, maybe, but perlbrew is an open source project with no strict development and release cycles. When things are slowing down, it usually means that people are just busy working something else. Besides, every pul requests come with a message from the developers describing what's changed. If they simply commit changes without talking to me afterward, I then have to figure it out on my own to decide if it's good to release. Sometimes that is just tedious.</p>
+
+<p>Anyway, there will be a <a href="http://yapcasia.org/2011/talk/65">talk about perlbrew</a> in the upcoming YAPC::Asia, I will be introducing this project again (it was presented in the last YAPC::Asia too), mostly about the updates since last year, and that are a few very important ones. If you want to make something awesome that I can talk about, make sure to send me the pull request !</p>
+
+<p>peace out, gugod</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

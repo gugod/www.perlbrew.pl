@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew</h2>
+  <p>perlbrew is a admin-free perl installation management tool.</p>
+
+<h2>Install, quickly</h2>
+
+<p>Copy &amp; Paste this line into your terminal:</p>
+
+<pre><code>curl -kL http://xrl.us/perlbrewinstall | bash
+</code></pre>
+
+<p>This step is the quickest and does not require super-user permission. If you
+prefer to install with cpan, there are two steps:</p>
+
+<pre><code>sudo cpan App::perlbrew
+perlbrew init
+</code></pre>
+
+<p>If installed with cpan, the perlbrew executable should be installed as
+<code>/usr/bin/perlbrew</code> or <code>/usr/local/bin/perlbrew</code>.  For all users who want to use
+perlbrew, a prior <code>perlbrew init</code> needs to be executed.</p>
+
+<p>The default perlbrew root directory is <code>~/perl5/perlbrew</code>, which can be changed
+by setting <code>PERLBREW_ROOT</code> environment variables before the installation and
+initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
+perlbrew document</a>.</p>
+
+<p>The latest version is 0.33, read the release note: <a href="Release-0.33.html">Release 0.33</a>.</p>
+
+<h2>What is perlbrew</h2>
+
+<p>perlbrew is a tool to manage multiple perl installations in your
+<code>$HOME</code> directory. They are completely isolated perl universes.
+This approach has many benefits:</p>
+
+<ul>
+<li>No need to run <code>sudo</code> to install CPAN modules, any more.</li>
+<li>Try the monthly released new perls.</li>
+<li>Learn new language features.</li>
+<li>Test production code.</li>
+<li>Leave vendor perl (the one that comes with OS) alone
+<ul>
+<li>Vendor perl usually serves its own purposes, and it might be a bad idea to mess it up too much.</li>
+<li>Especially PITA when trying to upgrade system perl.</li>
+<li>Some vendors <a href="http://perlnews.org/2011/04/dealing-with-xcode-4-and-cpan-breakage/">introduced their own perl bugs</a>, <a href="http://www.theregister.co.uk/2009/02/16/apple_update_perl_breakage/">twice</a>!</li>
+</ul></li>
+<li>Hacking perl internals.</li>
+<li>Just to keep up with fashion.</li>
+</ul>
+
+<p>While the default is good enough, you may customize it to install to alternative places, or even let multiple users share the whole perlbrew environment.</p>
+
+<h2>perlbrew is simple</h2>
+
+<p>To install the latest stable release, and use it permanently:</p>
+
+<pre><code>perlbrew install perl-5.14.1
+perlbrew switch perl-5.14.1
+</code></pre>
+
+<p>To play with the bleeding-edge version, but only in the current shell:</p>
+
+<pre><code>perlbrew install perl-blead
+perlbrew use perl-blead
+</code></pre>
+
+<p>Runs <code>myprogram.pl</code> against all installations of perl, especially helpful when running tests:</p>
+
+<pre><code>perlbrew exec myprogram.pl
+</code></pre>
+
+<p>For more descriptions about commands,</p>
+
+<pre><code>perlbrew help
+</code></pre>
+
+<h2>Articles</h2>
+
+<ul>
+<li><a href="Perlbrew-中文簡介.html">Perlbrew 中文簡介</a></li>
+<li><a href="Perlbrew-development-and-the-git-flow.html">Perlbrew development and the git flow</a></li>
+<li><a href="Perlbrew-In-Shell-Scripts.html">Perlbrew In Shell Scripts</a></li>
+<li><a href="Perlbrew-and-Friends.html">Perlbrew and Friends</a></li>
+<li><a href="FixLion.html">FixLion</a> Read this if you having issue build new perl on Mac OS X 1.7 (Lion)</li>
+</ul>
+
+<h2>Development</h2>
+
+<p>perlbrew has always been improving, it is a open source project for
+everyone to participate. There are currently over
+<a href="https://github.com/gugod/App-perlbrew/contributors">30 contributors</a> and
+growing.  The code repository is located on
+<a href="https://github.com/gugod/App-perlbrew">github</a>. Feel free to send a
+bug report, a pull request, or a beer. Everything helps :)</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

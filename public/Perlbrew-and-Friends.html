@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew and Friends</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew and Friends</h2>
+  <p>If you install perlbrew with the installer as recommended, you might notice that an executable named <code>patchperl</code> is also installed to your <code>~/perl5/perlbrew/bin</code> directory. Also when you read the <code>perlbrew</code> <a href="http://metacpan.org/module/perlbrew">usage documentation</a>, there is a command <code>install-cpanm</code> that installs a standalone executable <code>cpanm</code> to to the same <code>bin</code> directory. Why is perlbrew doing this ?</p>
+
+<p>The program <code>patchperl</code> is a standalone executable of the distribution of <a href="http://metacpan.org/module/Devel::PatchPerl">Devel::PatchPerl</a> by <a href="http://metacpan.org/author/BINGOS">BINGOS</a>, which aims to solve the issues encountered when building old perls (5.6.x, 5.8.x, etc) on modern operating systems. Due to the updates in OS, gcc, or libc, those old perl distributions fail to build due to various configure or library errors. <code>Devel::PatchPerl</code> patches the ancient perl source tree so it can be successfully built.</p>
+
+<p><code>perlbrew</code> requires the <code>patchperl</code> program to be there because it is the best way to make it Just Work. <code>cpanm</code> is an awesome CPAN client that is lightweight, and fast. I use it exclusively these days.</p>
+
+<p>The reason that these programs live under <code>~/perl5/perlbrew/bin</code> is very simple: so they are always available no matter which perl you switch to.</p>
+
+<p>With a proper perlbrew setup, <code>~/perl5/perlbrew/bin</code> should be the first or second item in your <code>$PATH</code>, since <code>perlbrew switch</code> and <code>perlbrew use</code> alters <code>$PATH</code>, it is the best that mandatory programs lives somewhere that's always accessible.</p>
+
+<p>If you install <code>cpanm</code> by doing <code>cpan -i App::cpanminus</code> within a perlbrew environment, you will run into this issue:</p>
+
+<pre><code>perlbrew switch perl-5.12.3
+cpan -i App::cpanminus
+cpanm Moose # works
+
+perlbrew switch perl-5.14.0
+cpanm Moose
+#=&gt; cpanm is not found 
+</code></pre>
+
+<p>This is because the first <code>cpan</code> (5.12.3) installs <code>cpanm</code> to <code>~/perl5/perlbrew/perls/5.12.3/bin</code>, and the latter <code>perlbrew switch perl-5.14.0</code> removes that from <code>$PATH</code>. If you use <code>cpanm</code> exclusively like I do, you should install it with <code>perlbrew install-cpanm</code>.</p>
+
+<p>In short, <code>patchperl</code> and <code>cpanm</code> are so important, it is best to make them always available.</p>
+
+<p>peace out, gugod.</p>
+
+<hr>
+
+<p>PS. You may also choose to manually install <code>cpanm</code> to a system-wide path like <code>/usr/local/bin</code>, that way it'll always available too. In that case you do not need to run <code>perlbrew install-cpanm</code> command at all.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

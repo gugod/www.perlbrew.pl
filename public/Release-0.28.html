@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew Release 0.28</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew Release 0.28</h2>
+  <p>perlbrew 0.28 is a bug-fixing release:</p>
+
+<ul>
+<li>fixes for cpantester</li>
+<li>Fix 'switch' and 'use' for bash users, by Woody2143++</li>
+<li>The standalone <code>perlbrew</code> file is now packed with fatpacker, by running <code>dev-bin/build.sh</code>. <code>perl Makefile.PL</code> does no trigger a re-build anymore.</li>
+<li>Update the installer to grab patchperl 0.46</li>
+</ul>
+
+<p>It is also mandatory for users to upgrade Devel::PatchPerl to at least 0.42 (the
+latest version is 0.46), in order to fix <a href="http://www.perlbrew.pl/FixLion.html">the building of Perl on MacOSX
+Lion</a>. There are also fixes for building on
+Ubuntu too.  Generally it is always nice to update Devel::Patchperl to the
+latest.</p>
+
+<p>Also due to a futther plan of implementation, the <code>perlbrew</code> standalone
+executable is now packed with <code>App::FatPack</code>, which is, IMHO, an awesome tool to
+build self-contained executables. In case you do not know yet, the <code>cpanm</code>
+execuatble is also packed with <code>App::FatPack</code>.</p>
+
+<p>Also I (<a href="twitter.com/gugod">@gugod</a>) submitted yet another perlbrew talk to the
+coming <a href="http://yapcasia.org/2011/">YAPC::Asia 2011</a>. Althought it has already
+been talked the last YAPC::Asia, perlbrew was still so young back then. Now the
+project has been improved and brought up many attention, I figured it a good
+idea to give a talk once again.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

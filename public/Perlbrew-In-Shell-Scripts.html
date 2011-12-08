@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew In Shell Scripts</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew In Shell Scripts</h2>
+  <p>Since the 0.29 release of perlbrew, it is much easier to invoke perlbrew
+function in the shell script. Specifically the <code>perlbrew use</code> and <code>perlbrew
+switch</code> commands. Here's an example bash script:</p>
+
+<pre><code>#!/bin/bash
+
+## These 3 lines are mandatory.
+export PERLBREW_ROOT=/opt/perlbrew
+export PERLBREW_HOME=/tmp/.perlbrew
+source ${PERLBREW_ROOT}/etc/bashrc
+
+## Do stuff with 5.14.1
+perlbrew use 5.14.1
+perl /app/my-modern-program
+
+## Do stuff with 5.12.3
+perlbrew use 5.12.3
+perl /app/my-legacy-program
+</code></pre>
+
+<p>In short: definde <code>PERLBREW_ROOT</code> and <code>PERLBREW_HOME</code> before including the perlbrew <code>bashrc</code> file.</p>
+
+<p>In an interactive shell environment, the default value of <code>$PERLBREW_HOME</code> is
+<code>$HOME/.perlbrew</code>. However, <code>$HOME</code> might not be always there in the context
+when a script is executed. It is then mandatory for you, the programmer, to
+specify a <code>$PERLBREW_HOME</code> that can be writable by the user running the script.</p>
+
+<p>Notice, with the bash integeration, the statement <code>perlbrew use 5.14.1</code> actually
+invokes the <code>perlbrew</code> bash function instead of the command <code>perlbrew</code>. Previous
+perlbrew release contain buggy perlbrew bash function and did not function properly.
+Therefore please make sure to upgrade to perlbrew 0.29 or latter.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

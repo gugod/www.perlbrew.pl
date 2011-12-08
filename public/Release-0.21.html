@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew Release 0.21</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew Release 0.21</h2>
+  <p>perlbrew 0.21 features these major changes:</p>
+
+<ul>
+<li>Improved <code>perlbrew list</code> command.</li>
+<li>Improved <code>install</code> command. Now takes an archive file path <code>perlbrew install /path/to/perl-5.14.0.tar.gz</code></li>
+<li>Fixed a bug that <code>perlbrew install URL</code> might install to a wrong destination directory.</li>
+<li>Fixed the <code>--as</code> option that was broken since 0.20 (RT 68241)</li>
+<li>website update mechanism</li>
+</ul>
+
+<h2>perlbrew list command improvements</h2>
+
+<p>The output of <code>perlbrew list</code> is slightly improved. A version number is displayed for those installations which cannot be told the version numbers from their names. For example:</p>
+
+<pre><code>&gt; perlbrew list
+* perl-5.12.3
+  perl-5.13.10
+  perl-5.14.0-RC2
+  perl-blead (5.14.0)
+  perl-v5.14.0-RC1-8-g2cf7ccf
+  /usr/bin/perl (5.10.0)
+</code></pre>
+
+<p>The version number is acquired from <code>perl -e 'print $]'</code>, therefore it does not contain any RC number or git commit sha1.</p>
+
+<h2>Website Update mechanism</h2>
+
+<p>For those who are interested in publishing contents to <a href="http://perlbrew.pl">http://perlbrew.pl</a>, the website is basically semi-automatic synchronized with <a href="https://github.com/gugod/App-perlbrew/wiki">perlbrew github wiki</a>. One should be able to just edit the wiki content and wait momentarily for the update. Several points to be noticed:</p>
+
+<ul>
+<li>Make sure you use "markdown" syntax. Other formats are not supported.</li>
+<li>If you use git access, the file name extension has to be <code>.md</code>.</li>
+<li>Page can be linked by their names, just put them in double square brackets, for example: <code>[[Home]]</code>, or <code>[[Release-0.21]]</code>.</li>
+<li>Github flavored markdown has no effect -- the render-er is <a href="http://beta.metacpan.org/module/Text::Markdown">Text::Markdown</a>.</li>
+</ul>
+
+<p>To preview it on your own, do the following:</p>
+
+<pre><code>echo Text::Markdown Text::Xslate IO::All | cpanm
+git clone git://github.com/gugod/www.perlbrew.pl.git
+cd www.perlbrew.pl
+make
+open public/YOUR-PAGE-NAME.html
+</code></pre>
+
+<p>The command <code>make</code> should pull the latest wiki content and start generating HTML files from there. HTML files are generated under <code>public/</code> with matching file names, except the <code>.md</code> extension is replaced with <code>.html</code>. For example, these two are matching pages:</p>
+
+<ul>
+<li><a href="https://github.com/gugod/App-perlbrew/wiki/Reinstall-All-Modules-On-New-Perl">https://github.com/gugod/App-perlbrew/wiki/Reinstall-All-Modules-On-New-Perl</a></li>
+<li><a href="http://www.perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html">http://www.perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html</a></li>
+</ul>
+
+<p>Notice the homepage is named <code>index.md</code> but not <code>Home.md</code>, which is the landing page for Github wiki.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>

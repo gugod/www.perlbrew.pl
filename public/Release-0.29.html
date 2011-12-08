@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>Perlbrew Release 0.29</title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew Release 0.29</h2>
+  <p>perlbrew 0.29 contain improvements with some deprecations:</p>
+
+<ul>
+<li>Fix <a href="https://github.com/gugod/App-perlbrew/issues/108">GH #108</a></li>
+<li>Add a command <code>switch-off</code> in addition to <code>off</code></li>
+<li>Deprecate the special name "system" for command <code>use</code> and <code>system</code></li>
+<li>A shell integration fallback mechanism</li>
+</ul>
+
+<h2>Deprecate the special name "system"</h2>
+
+<p>After <code>alias</code> command is introduced, it does not make good sense to keep those
+special name with special purpose.  <code>perlbrew use system</code> or <code>perlbrew switch
+system</code> no longer mean to switch to system perl. The former is now simply <code>perlbrew
+off</code>, and the later becames <code>perlbrew switch-off</code>.</p>
+
+<p>The <code>off</code> command behaviour is changed to only affect current shell, while an
+additional command <code>switch-off</code> is introduced to let user permananetly turn of
+perlbrew.</p>
+
+<h2>shell integration fallback mechanism</h2>
+
+<p>The mechanism to make <code>use</code>, <code>switch</code>, <code>off</code> and <code>switch-off</code> command work needs
+to change <code>$PATH</code> on-the-fly, therefore highly depends on shell integration.
+For bash and zsh, there is a <code>perlbrew</code> shell function that does all the work.
+User of csh / tcsh or other shells might find perlbrew use-less due to lack of
+shell function, and therefore not possible to change <code>$PATH</code> in the invocation
+of perlbrew commands.</p>
+
+<p>To provide a work-around for non-(ba|z)sh users, a sub-shell is launched with
+the tweaked <code>$PATH</code> inside that shell, which you have to <code>exit</code> explicitly
+afterward.</p>
+
+<pre><code>% perlbrew use 5.12.3
+
+A sub-shell is launched with perl-5.12.3 as the activated perl. Run 'exit' to finish it.
+</code></pre>
+
+<p>As a consequence, it is also possible for users who does not add
+<code>source $PERLBREW_ROOT/etc/bashrc</code> in their shell to fallback to the sub-shell
+mechanism. However, it is hightly recommend to add that <code>source</code> line if you
+use bash or zsh.</p>
+
+<p>If you intend to use perlbrew without its shell integration, there are caveats
+on MacOS X that should be notified. A special <code>/usr/libexec/path_helper</code> command
+has been used, since Snow Leopard. The shell initialziation processs, which you
+cann find it in <code>/etc/profile</code>, <code>/etc/zshenv</code> or <code>/etc/csh.login</code>, set the
+initial value of <code>$PATH</code>. As a result, changes to <code>$PATH</code> are lost in sub-shell.
+You can confirm it by running these statements in an interactive shell:</p>
+
+<p>## bash user
+   % export PATH=/tmp/foobar:${PATH}
+   % bash
+   % echo $PATH # does not contain /tmp/foobar in the beginning</p>
+
+<p>For this reason, it is impossible for <code>perlbrew</code> command to tweak <code>$PATH</code> value
+without you to <code>source</code> its rc files. Also, for the same reason, if your or you
+OS provides shell rc that resets <code>$PATH</code> regardless its current value, there is
+not much perlbrew can do without the shell integration.</p>
+
+<p>Again, it works much better if you simply use the perlbrew shell integration.</p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+    </footer>
+</body>
+</html>
