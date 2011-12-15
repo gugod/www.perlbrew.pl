@@ -3,11 +3,41 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2011-12-14T11:28:30Z</updated>
+  <updated>2011-12-15T23:26:49Z</updated>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.34.html" type="text/html"/>
+    <title>Perlbrew Release 0.34</title>
+    <updated>2011-12-16T06:54:25+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.34 is a maintenance release with some fixes, and some new stuffs.</p>
+
+<ul>
+<li>Awesome URLs:
+<ul>
+<li>The installer: http://install.perlberw.pl</li>
+<li>The program: http://get.perlberw.pl</li>
+</ul></li>
+<li>Fix: remove duplicated items from the output of <code>perlbrew list</code>.</li>
+<li>New Command: self-install.
+<ul>
+<li>This is actually renamed from an undocumented command <code>install-perlbrew</code></li>
+<li>Plus it gets documented.</li>
+</ul></li>
+<li>Provide aditional bash completion control helper commands.</li>
+<li>Documentation fixes / typo corrections.</li>
+<li>alter MANPATHs, see GH #173</li>
+<li>Allow the representation like '@lib' te mean "a lib name under current perl.". See GH #153</li>
+</ul>
+</div>
+    </content>
+  </entry>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/" type="text/html"/>
     <title>Perlbrew</title>
-    <updated>2011-12-14T19:24:48+08:00</updated>
+    <updated>2011-12-16T03:19:46+08:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -37,7 +67,7 @@ by setting <code>PERLBREW_ROOT</code> environment variables before the installat
 initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
 perlbrew document</a>.</p>
 
-<p>The latest version is 0.33, read the release note: <a href="Release-0.33.html">Release 0.33</a>.</p>
+<p>The latest version is 0.34, read the release note: <a href="Release-0.34.html">Release 0.34</a>.</p>
 
 <h2>What is perlbrew</h2>
 
