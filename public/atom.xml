@@ -3,41 +3,11 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2011-12-15T23:26:49Z</updated>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.34.html" type="text/html"/>
-    <title>Perlbrew Release 0.34</title>
-    <updated>2011-12-16T06:54:25+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.34 is a maintenance release with some fixes, and some new stuffs.</p>
-
-<ul>
-<li>Awesome URLs:
-<ul>
-<li>The installer: http://install.perlberw.pl</li>
-<li>The program: http://get.perlberw.pl</li>
-</ul></li>
-<li>Fix: remove duplicated items from the output of <code>perlbrew list</code>.</li>
-<li>New Command: self-install.
-<ul>
-<li>This is actually renamed from an undocumented command <code>install-perlbrew</code></li>
-<li>Plus it gets documented.</li>
-</ul></li>
-<li>Provide aditional bash completion control helper commands.</li>
-<li>Documentation fixes / typo corrections.</li>
-<li>alter MANPATHs, see GH #173</li>
-<li>Allow the representation like '@lib' te mean "a lib name under current perl.". See GH #153</li>
-</ul>
-</div>
-    </content>
-  </entry>
+  <updated>2011-12-17T05:09:22Z</updated>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/" type="text/html"/>
     <title>Perlbrew</title>
-    <updated>2011-12-16T03:19:46+08:00</updated>
+    <updated>2011-12-17T13:08:43+08:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -67,7 +37,7 @@ by setting <code>PERLBREW_ROOT</code> environment variables before the installat
 initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
 perlbrew document</a>.</p>
 
-<p>The latest version is 0.34, read the release note: <a href="Release-0.34.html">Release 0.34</a>.</p>
+<p>The latest version is 0.35, read the release note: <a href="Release-0.35.html">Release 0.35</a>.</p>
 
 <h2>What is perlbrew</h2>
 
@@ -134,6 +104,53 @@ everyone to participate. There are currently over
 growing.  The code repository is located on
 <a href="https://github.com/gugod/App-perlbrew">github</a>. Feel free to send a
 bug report, a pull request, or a beer. Everything helps :)</p>
+</div>
+    </content>
+  </entry>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.35.html" type="text/html"/>
+    <title>Perlbrew Release 0.35</title>
+    <updated>2011-12-17T13:08:35+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.35 is a maintenance release with these fixes:</p>
+
+<ul>
+<li>fixes for cpantester failures</li>
+<li>requiers local::lib version 1.008</li>
+</ul>
+</div>
+    </content>
+  </entry>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.34.html" type="text/html"/>
+    <title>Perlbrew Release 0.34</title>
+    <updated>2011-12-16T06:54:25+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.34 is a maintenance release with some fixes, and some new stuffs.</p>
+
+<ul>
+<li>Awesome URLs:
+<ul>
+<li>The installer: http://install.perlberw.pl</li>
+<li>The program: http://get.perlberw.pl</li>
+</ul></li>
+<li>Fix: remove duplicated items from the output of <code>perlbrew list</code>.</li>
+<li>New Command: self-install.
+<ul>
+<li>This is actually renamed from an undocumented command <code>install-perlbrew</code></li>
+<li>Plus it gets documented.</li>
+</ul></li>
+<li>Provide aditional bash completion control helper commands.</li>
+<li>Documentation fixes / typo corrections.</li>
+<li>alter MANPATHs, see GH #173</li>
+<li>Allow the representation like '@lib' te mean "a lib name under current perl.". See GH #153</li>
+</ul>
 </div>
     </content>
   </entry>
@@ -1251,72 +1268,6 @@ Wrote bundle file
 </code></pre>
 
 <p><em>Taken from a London.pm list posting by David Precious</em></p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.20.html" type="text/html"/>
-    <title>Perlbrew Release 0.20</title>
-    <updated>2011-05-17T09:00:51+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.20 features three major changes:</p>
-
-<ul>
-<li>Improved <code>perlbrew install</code> command</li>
-<li>True multi-user friendliness</li>
-<li>switch / use for CSH users</li>
-</ul>
-
-<h2>Installation / Upgrade</h2>
-
-<p>In short, paste this line to your terminal:</p>
-
-<pre><code>curl -L https://github.com/gugod/App-perlbrew/raw/master/perlbrew-install | bash
-</code></pre>
-
-<p>If you've installed perlbrew from CPAN and you're upgrading, you can still upgrade with CPAN. However, after upgrading <code>App::perlbrew</code>, you need to run:</p>
-
-<pre><code>perlbrew init
-</code></pre>
-
-<h2>Improvements of the "install" command</h2>
-
-<p>The install command now takes 3 different kinds of arguments, a perl distribution name, a path to git checkout directory, or a URL to a perlbrew distribution tarball:</p>
-
-<ul>
-<li><code>perlbrew install perl-5.12.3</code></li>
-<li><code>perlbrew install ~/src/perl</code></li>
-<li><code>perlbrew install http://search.cpan.org/CPAN/authors/id/J/JE/JESSE/perl-5.14.0-RC2.tar.bz2</code></li>
-</ul>
-
-<p>If you choose to build from a git checkout directory, you may do a <code>git checkout v5.12.3</code> or <code>git checkout &lt;SHA1&gt;</code> to jump to any reversion you want to build, and run <code>perlbrew install ~/src/perl</code> from there. perlbrew will use the output of <code>git describe</code> as the installation name. That's something like <code>perl-v5.14.0-RC1-8-g2cf7ccf</code>.</p>
-
-<h2>Multi-user friendliness</h2>
-
-<p>In some use cases, many people may want to share one <code>PERLBREW_ROOT</code> on the same machine instead having redundant copies all over the hard drives.</p>
-
-<p>perlbrew had been using a symlink named <code>current</code> to record currently activated perl. That is a global setting, and is now deprecated.</p>
-
-<p>The <code>switch</code> command now stop updating the <code>current</code> symlink. Instead, it stores that piece information under <code>~/.perlbrew</code> directory.</p>
-
-<p>Notice that symbolic links are still used when installing development releases of perl. The perl executables are named with version numbers, like <code>perl5.13.9</code>, <code>cpan5.13.9</code>. In those cases, Un-versioned executable symlinks are created to point to their versioned counterparts (<code>perl -&gt; perl5.13.9</code>, <code>cpan -&gt; cpan5.13.9</code>.)</p>
-
-<h2>switch and use command for CSH users</h2>
-
-<p>For a while, CSH / TCSH users cannot use 'use' command to temporarily switch to a given perl installation,
-they now can. However, the user experiences is different. <code>perlbrew use</code> essentially launch a sub-shell that need to be <code>exit</code>ed. Like the illustration here:</p>
-
-<pre><code>&gt; perl -v # 5.12.3
-&gt;   perlbrew use perl-5.13.9
-&gt;   perl -v # 5.13.9
-&gt;   exit
-&gt; perl -v 5.12.3
-</code></pre>
-
-<p>The behavior of <code>switch</code> command also changes for CSH users. In order to make perlbrew multi-user friendly, the <code>current</code> symlink is removed, which essentially limits the approach of implementation of <code>switch</code> command. The <code>switch</code> command now prompts user to quit current shell and start a new one, or run <code>exec tcsh</code> in order to make if effective.</p>
 </div>
     </content>
   </entry>
