@@ -3,11 +3,27 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2011-12-17T05:09:22Z</updated>
+  <updated>2011-12-17T18:55:19Z</updated>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.36.html" type="text/html"/>
+    <title>Perlbrew Release 0.36</title>
+    <updated>2011-12-18T02:54:56+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.36 is just to make it installable with <code>cpan</code>, there are no feature changes:</p>
+
+<ul>
+<li>fix test errors on freebsd that makes it uninstallable</li>
+</ul>
+</div>
+    </content>
+  </entry>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/" type="text/html"/>
     <title>Perlbrew</title>
-    <updated>2011-12-17T13:08:43+08:00</updated>
+    <updated>2011-12-18T02:53:52+08:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -37,7 +53,7 @@ by setting <code>PERLBREW_ROOT</code> environment variables before the installat
 initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
 perlbrew document</a>.</p>
 
-<p>The latest version is 0.35, read the release note: <a href="Release-0.35.html">Release 0.35</a>.</p>
+<p>The latest version is 0.36, read the release note: <a href="Release-0.36.html">Release 0.36</a>.</p>
 
 <h2>What is perlbrew</h2>
 
@@ -1238,36 +1254,6 @@ open public/YOUR-PAGE-NAME.html
 </ul>
 
 <p>Notice the homepage is named <code>index.md</code> but not <code>Home.md</code>, which is the landing page for Github wiki.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html" type="text/html"/>
-    <title>How To Reinstall All Modules On New Perl</title>
-    <updated>2011-05-17T09:00:51+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.</p>
-
-<p>One way to do this is to use the CPAN.pm autobundle feature to capture your old install:-
-<code>bash
-perl -MCPAN -e autobundle
-</code></p>
-
-<p>You willll end up with a bundle file written containing all installed modules, for instance:
-<code>
-Wrote bundle file
-   /home/davidp/.cpan/Bundle/Snapshot_2011_04_28_00.pm
-</code></p>
-
-<p>You can then install that bundle on the new perl install, and job done:</p>
-
-<pre><code>perl -MCPAN -e 'install Bundle::Snapshot_2011_04_28_00'
-</code></pre>
-
-<p><em>Taken from a London.pm list posting by David Precious</em></p>
 </div>
     </content>
   </entry>
