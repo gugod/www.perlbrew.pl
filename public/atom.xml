@@ -3,7 +3,24 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2011-12-28T09:17:23Z</updated>
+  <updated>2011-12-28T09:40:46Z</updated>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.37.html" type="text/html"/>
+    <title>Perlbrew Release 0.37</title>
+    <updated>2011-12-28T17:40:15+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.37 features these changes</p>
+
+<ul>
+<li>fix ENV mess after switching to diffirent libs multiple times</li>
+<li>add --sitecustomize option. For more detail, read: <a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a></li>
+</ul>
+</div>
+    </content>
+  </entry>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/" type="text/html"/>
     <title>Perlbrew</title>
@@ -187,23 +204,6 @@ $ ack PATTERN
 <li><a href="Reinstall-All-Modules-On-New-Perl.html">Reinstall-All-Modules-On-New-Perl</a></li>
 <li><a href="Perlbrew-中文簡介.html">Perlbrew 中文簡介</a></li>
 <li><a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a></li>
-</ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.37.html" type="text/html"/>
-    <title>Perlbrew Release 0.37</title>
-    <updated>2011-12-28T16:45:02+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.37 features these changes</p>
-
-<ul>
-<li>fix ENV mess after switching to diffirent libs multiple times</li>
-<li>add --sitecustomize option</li>
 </ul>
 </div>
     </content>
