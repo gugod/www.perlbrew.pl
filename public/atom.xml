@@ -3,28 +3,11 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2011-12-28T09:40:46Z</updated>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.37.html" type="text/html"/>
-    <title>Perlbrew Release 0.37</title>
-    <updated>2011-12-28T17:40:15+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.37 features these changes</p>
-
-<ul>
-<li>fix ENV mess after switching to diffirent libs multiple times</li>
-<li>add --sitecustomize option. For more detail, read: <a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a></li>
-</ul>
-</div>
-    </content>
-  </entry>
+  <updated>2011-12-29T02:14:17Z</updated>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/" type="text/html"/>
     <title>Perlbrew</title>
-    <updated>2011-12-28T16:47:46+08:00</updated>
+    <updated>2011-12-29T10:14:04+08:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -54,7 +37,7 @@ by setting <code>PERLBREW_ROOT</code> environment variables before the installat
 initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
 perlbrew document</a>.</p>
 
-<p>The latest version is 0.37, read the release note: <a href="Release-0.37.html">Release 0.37</a>.</p>
+<p>The latest version is 0.38, read the release note: <a href="Release-0.38.html">Release 0.38</a>.</p>
 
 <h2>What is perlbrew</h2>
 
@@ -121,6 +104,36 @@ everyone to participate. There are currently over
 growing.  The code repository is located on
 <a href="https://github.com/gugod/App-perlbrew">github</a>. Feel free to send a
 bug report, a pull request, or a beer. Everything helps :)</p>
+</div>
+    </content>
+  </entry>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.38.html" type="text/html"/>
+    <title>Perlbrew Release 0.38</title>
+    <updated>2011-12-29T10:13:54+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.38 only fixes dependency declariton for 0.37. See <a href="Release-0.37.html">Release 0.37</a> release note
+for the latest feature updates.</p>
+</div>
+    </content>
+  </entry>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.37.html" type="text/html"/>
+    <title>Perlbrew Release 0.37</title>
+    <updated>2011-12-28T17:40:15+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.37 features these changes</p>
+
+<ul>
+<li>fix ENV mess after switching to diffirent libs multiple times</li>
+<li>add --sitecustomize option. For more detail, read: <a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a></li>
+</ul>
 </div>
     </content>
   </entry>
@@ -1204,53 +1217,6 @@ perlbrew alias create perl-5.14.0 stable
 </code></pre>
 
 <p>However, if the perlbrew executable is installed with CPAN, this command does not do anything at all, but just showing a message telling that it cannot be auto-upgraded. If your perlbrew is installed with CPAN, you need to upgrade it with CPAN.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/CommandAlias.html" type="text/html"/>
-    <title>Description</title>
-    <updated>2011-05-27T00:21:52+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>Since 0.21, the <code>current</code> symlink is ditched in favor of bash-based multi-user support. However, the change discourage non-interactive uses of perlbrew because people will have to put the versioned path in shebang, which makes it troublesome when it is time to switch to different perl for those program.</p>
-
-<p>An 'alias' command is introduced to generalize the need. <code>current</code> symlink is no longer a special one, but just a name specified by users.</p>
-
-<h2>Usage</h2>
-
-<pre><code>perlbrew alias [-f] &lt;action&gt; &lt;name&gt; [&lt;alias&gt;]
-</code></pre>
-
-<p>Action is one of: create, delete, rename</p>
-
-<p><code>-f</code> flag is used to forcibly perform the action.</p>
-
-<p><code>&lt;name&gt;</code> should be one of the installation names, <code>&lt;alias&gt;</code> is the given alternative name.</p>
-
-<h2>Synopsis</h2>
-
-<pre><code># essentially ln -s perl-5.14.0 current.
-#     should fail if 'perl-5.14.0' does not exist.
-#     should fail if 'current' already exists.
-perlbrew alias create perl-5.14.0 current
-
-# delete the alias
-perlbrew alias delete current
-
-# renaming
-#     should fail if `current` does not exist.
-#     should fail if `main` already exists.
-perlbrew alias rename current main
-
-# -f for force override
-#    should still fail if the alias refers to a non-alias installation.
-#    should still fail if the name does not exists (`perl-5.14.0` and `current` in the following cases)
-perlbrew alias -f create perl-5.14.0 current
-perlbrew alias -f rename current main
-</code></pre>
 </div>
     </content>
   </entry>
