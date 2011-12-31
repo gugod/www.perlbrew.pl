@@ -3,11 +3,11 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2011-12-29T02:14:17Z</updated>
+  <updated>2011-12-31T16:11:31Z</updated>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/" type="text/html"/>
     <title>Perlbrew</title>
-    <updated>2011-12-29T10:14:04+08:00</updated>
+    <updated>2012-01-01T00:11:06+08:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -37,7 +37,7 @@ by setting <code>PERLBREW_ROOT</code> environment variables before the installat
 initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
 perlbrew document</a>.</p>
 
-<p>The latest version is 0.38, read the release note: <a href="Release-0.38.html">Release 0.38</a>.</p>
+<p>The latest version is 0.39, read the release note: <a href="Release-0.39.html">Release 0.39</a>.</p>
 
 <h2>What is perlbrew</h2>
 
@@ -104,6 +104,26 @@ everyone to participate. There are currently over
 growing.  The code repository is located on
 <a href="https://github.com/gugod/App-perlbrew">github</a>. Feel free to send a
 bug report, a pull request, or a beer. Everything helps :)</p>
+</div>
+    </content>
+  </entry>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.39.html" type="text/html"/>
+    <title>Perlbrew Release 0.39</title>
+    <updated>2012-01-01T00:10:59+08:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.39 is the Happy New Year 2012 (TZ=CST) release with 3 bug fixes. All
+bash users are recommended to this version, especially if you're using it with
+local::lib integration.</p>
+
+<ul>
+<li>Fix GH #179. lib naming are more consistent.</li>
+<li>Fix GH #171. bash users are suggestted to upgrad to this version.</li>
+<li>Fix GH #152.</li>
+</ul>
 </div>
     </content>
   </entry>
@@ -1134,89 +1154,6 @@ cpanm Moose
 </ul>
 
 <p>It is a relatively smaller release merely to fix cpan tests.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.22.html" type="text/html"/>
-    <title>Perlbrew Release 0.22</title>
-    <updated>2011-05-27T01:20:26+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>The 0.22 release features these major changes:</p>
-
-<ul>
-<li>Fix ccache support on Linux
-<ul>
-<li>To compile perl with ccache, <code>perlbrew install -Dcc=ccache\ gcc' -Dld=gcc perl-5.14.0</code></li>
-</ul></li>
-<li>Better installation management
-<ul>
-<li>Fix: <code>install</code> command no longer clobber existing installations.</li>
-<li>New command: uninstall</li>
-<li>New command: alias</li>
-</ul></li>
-<li>New command: self-upgrade</li>
-</ul>
-
-<h2>Better Installation Management</h2>
-
-<p>The <code>install</code> command used to clobber existing perl installations without noticing users, now it does not. perlbrew simply stops the installation process when it detects any naming collision. If it is intended to reinstall with the exact same name, you need to explicitly uninstall the old one first.</p>
-
-<p>Yes, finally the <code>uninstall</code> command is here, to remove the specified perl installation.</p>
-
-<pre><code>perlbrew uninstall perl-5.10.1
-</code></pre>
-
-<p>Also a mechanism to make aliases is introduced. Which provides a better non-interactive usage.</p>
-
-<p>Let's say you have both perl-5.12.3 and perl-5.14.0 installed, and want to migrate all your programs to use perl-5.14.0 eventually. Previously, you need to put the exact path to perl-5.12.3 in the shebang, like:</p>
-
-<pre><code>#!/Users/gugod/perl5/perlbrew/perls/perl-5.12.3/bin/perl
-</code></pre>
-
-<p>To migrate your programs to perl-5.14.0, you need to replace that line to</p>
-
-<pre><code>#!/Users/gugod/perl5/perlbrew/perls/perl-5.14.0/bin/perl
-</code></pre>
-
-<p>Which might not be a big issue, until you have to do that for tens, or hundreds of programs.</p>
-
-<p>The solution to this scenario, is to use alias. First create an alias for perl-5.12.3, here the name of choice is "stable":</p>
-
-<pre><code>perlbrew alias create perl-5.12.3 stable
-</code></pre>
-
-<p>And the shebang for the "stable" perl is just:</p>
-
-<pre><code>#!/Users/gugod/perl5/perlbrew/perls/stable/bin/perl
-</code></pre>
-
-<p>Under the hood it is just a symlink that does the trick. Once you need to fullly migrate to perl-5.14.0, just upgrade the symlink with:</p>
-
-<pre><code>perlbrew alias delete stable
-perlbrew alias create perl-5.14.0 stable
-</code></pre>
-
-<p>Or alternatively, do a force create to override the existing alias</p>
-
-<pre><code>perlbrew alias -f create perl-5.14.0 stable
-</code></pre>
-
-<p>No need to change shebang of programs anymore.</p>
-
-<p>perlbrew used to have a special symlink named <code>current</code> to keep what's the default perl for users. This <code>current</code> symlink is no longer special. You may still create an alias named "current" if you need to.</p>
-
-<h2>New command: self-upgrade</h2>
-
-<p>A <code>self-upgrade</code> command is also introduced for easier upgrading. It essentially just run this line:</p>
-
-<pre><code>curl -L http://xrl.us/perlbrewinstall | bash
-</code></pre>
-
-<p>However, if the perlbrew executable is installed with CPAN, this command does not do anything at all, but just showing a message telling that it cannot be auto-upgraded. If your perlbrew is installed with CPAN, you need to upgrade it with CPAN.</p>
 </div>
     </content>
   </entry>
