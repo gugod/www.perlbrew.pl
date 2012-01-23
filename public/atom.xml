@@ -3,107 +3,24 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2011-12-31T16:11:31Z</updated>
+  <updated>2012-01-23T00:53:18Z</updated>
   <entry>
-    <link rel="alternate" href="http://perlbrew.pl/" type="text/html"/>
-    <title>Perlbrew</title>
-    <updated>2012-01-01T00:11:06+08:00</updated>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.40.html" type="text/html"/>
+    <title>Perlbrew Release 0.40</title>
+    <updated>2012-01-23T08:49:32+08:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew is a admin-free perl installation management tool.</p>
-
-<h2>Install, quickly</h2>
-
-<p>Copy &amp; Paste this line into your terminal:</p>
-
-<pre><code>curl -kL http://install.perlbrew.pl | bash
-</code></pre>
-
-<p>This step is the quickest and does not require super-user permission. If you
-prefer to install with cpan, there are two steps:</p>
-
-<pre><code>sudo cpan App::perlbrew
-perlbrew init
-</code></pre>
-
-<p>If installed with cpan, the perlbrew executable should be installed as
-<code>/usr/bin/perlbrew</code> or <code>/usr/local/bin/perlbrew</code>.  For all users who want to use
-perlbrew, a prior <code>perlbrew init</code> needs to be executed.</p>
-
-<p>The default perlbrew root directory is <code>~/perl5/perlbrew</code>, which can be changed
-by setting <code>PERLBREW_ROOT</code> environment variables before the installation and
-initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
-perlbrew document</a>.</p>
-
-<p>The latest version is 0.39, read the release note: <a href="Release-0.39.html">Release 0.39</a>.</p>
-
-<h2>What is perlbrew</h2>
-
-<p>perlbrew is a tool to manage multiple perl installations in your
-<code>$HOME</code> directory. They are completely isolated perl universes.
-This approach has many benefits:</p>
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.40 is the release greeting the Happy Chinese New Year of Dragon.</p>
 
 <ul>
-<li>No need to run <code>sudo</code> to install CPAN modules, any more.</li>
-<li>Try the monthly released new perls.</li>
-<li>Learn new language features.</li>
-<li>Test production code.</li>
-<li>Leave vendor perl (the one that comes with OS) alone
-<ul>
-<li>Vendor perl usually serves its own purposes, and it might be a bad idea to mess it up too much.</li>
-<li>Especially PITA when trying to upgrade system perl.</li>
-<li>Some vendors <a href="http://perlnews.org/2011/04/dealing-with-xcode-4-and-cpan-breakage/">introduced their own perl bugs</a>, <a href="http://www.theregister.co.uk/2009/02/16/apple_update_perl_breakage/">twice</a>!</li>
-</ul></li>
-<li>Hacking perl internals.</li>
-<li>Just to keep up with fashion.</li>
+<li>Make the stanalone perlbrew program smaller by using Perl::Strip</li>
+<li>use CPAN::Perl::Releases to decide the location of perl tarball -- less HTTP hits</li>
+<li>Prefer $PERLBREW_ROOT/bin/patchperl if it is there.</li>
 </ul>
 
-<p>While the default is good enough, you may customize it to install to alternative places, or even let multiple users share the whole perlbrew environment.</p>
-
-<h2>perlbrew is simple</h2>
-
-<p>To install the latest stable release, and use it permanently:</p>
-
-<pre><code>perlbrew install perl-5.14.2
-perlbrew switch perl-5.14.2
-</code></pre>
-
-<p>To play with the bleeding-edge version, but only in the current shell:</p>
-
-<pre><code>perlbrew install perl-blead
-perlbrew use perl-blead
-</code></pre>
-
-<p>Runs <code>myprogram.pl</code> against all installations of perl, especially helpful when running tests:</p>
-
-<pre><code>perlbrew exec myprogram.pl
-</code></pre>
-
-<p>For more descriptions about commands,</p>
-
-<pre><code>perlbrew help
-</code></pre>
-
-<h2>Articles</h2>
-
-<ul>
-<li><a href="Perlbrew-中文簡介.html">Perlbrew 中文簡介</a></li>
-<li><a href="Perlbrew-development-and-the-git-flow.html">Perlbrew development and the git flow</a></li>
-<li><a href="Perlbrew-In-Shell-Scripts.html">Perlbrew In Shell Scripts</a></li>
-<li><a href="Perlbrew-and-Friends.html">Perlbrew and Friends</a></li>
-<li><a href="FixLion.html">FixLion</a> Read this if you having issue build new perl on Mac OS X 1.7 (Lion)</li>
-</ul>
-
-<h2>Development</h2>
-
-<p>perlbrew has always been improving, it is a open source project for
-everyone to participate. There are currently over
-<a href="https://github.com/gugod/App-perlbrew/contributors">30 contributors</a> and
-growing.  The code repository is located on
-<a href="https://github.com/gugod/App-perlbrew">github</a>. Feel free to send a
-bug report, a pull request, or a beer. Everything helps :)</p>
+<p>May the Dragon brings you the best luck.</p>
 </div>
     </content>
   </entry>
@@ -1133,27 +1050,6 @@ cpanm Moose
 <li>Fix <a href="https://github.com/gugod/App-perlbrew/issues/82">Github Issue #82</a></li>
 <li>Add tests for various commands</li>
 </ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.23.html" type="text/html"/>
-    <title>Perlbrew Release 0.23</title>
-    <updated>2011-05-31T21:28:53+08:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>The 0.23 release features these minor rchanges:</p>
-
-<ul>
-<li>Fix dependency and tests in 0.22 release tarball.</li>
-<li>pdksh support for OpenBSD</li>
-<li>fix auto-detection of curl</li>
-<li>Introduce a <code>PERLBREW_HOME</code> env var, default to <code>~/.perlbrew</code>. User may set it to store personal setting to somewher else.</li>
-</ul>
-
-<p>It is a relatively smaller release merely to fix cpan tests.</p>
 </div>
     </content>
   </entry>
