@@ -48,15 +48,19 @@
 <pre><code>curl -kL http://install.perlbrew.pl | bash
 </code></pre>
 
-<p>This step is the quickest and does not require super-user permission. If you
-prefer to install with cpan, there are two steps:</p>
+<p>If your system does not have curl but wget, try:</p>
+
+<pre><code>wget --no-check-certificate -O - http://install.perlbrew.pl | bash
+</code></pre>
+
+<p>If you prefer to install with cpan, there are two steps:</p>
 
 <pre><code>sudo cpan App::perlbrew
 perlbrew init
 </code></pre>
 
-<p>If installed with cpan, the perlbrew executable should be installed as
-<code>/usr/bin/perlbrew</code> or <code>/usr/local/bin/perlbrew</code>.  For all users who want to use
+<p>If it is installed with cpan, the perlbrew executable should be installed as
+<code>/usr/bin/perlbrew</code> or <code>/usr/local/bin/perlbrew</code>. For all users who want to use
 perlbrew, a prior <code>perlbrew init</code> needs to be executed.</p>
 
 <p>The default perlbrew root directory is <code>~/perl5/perlbrew</code>, which can be changed
