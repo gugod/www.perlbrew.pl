@@ -48,9 +48,13 @@
 <pre><code>curl -kL http://install.perlbrew.pl | bash
 </code></pre>
 
-<p>If your system does not have curl but wget, try:</p>
+<p>Or, if your system does not have curl but something else:</p>
 
-<pre><code>wget --no-check-certificate -O - http://install.perlbrew.pl | bash
+<pre><code># Linux
+wget --no-check-certificate -O - http://install.perlbrew.pl | bash
+
+# FreeBSD
+fetch -o- http://install.perlbrew.pl | sh
 </code></pre>
 
 <p>If you prefer to install with cpan, there are two steps:</p>
@@ -68,7 +72,7 @@ by setting <code>PERLBREW_ROOT</code> environment variables before the installat
 initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
 perlbrew document</a>.</p>
 
-<p>The latest version is 0.42, read the release note: <a href="Release-0.42.html">Release 0.42</a>.</p>
+<p>The latest version is 0.43, read the release note: <a href="Release-0.43.html">Release 0.43</a>.</p>
 
 <h2>What is perlbrew</h2>
 
