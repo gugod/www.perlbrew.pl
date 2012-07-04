@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/Perlbrew">
+    <title>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </title>
+<![if gte IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
+                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </h2>
+  <h1>!/bin/sh</h1>
+
+<pre><code>#! −*−perl−*−
+eval 'exec perl −x −wS $0 ${1+"$@"}'
+    if 0;
+</code></pre>
+
+<p>The other is extremely simple:</p>
+
+<pre><code>#!/usr/bin/env perl
+</code></pre>
+
+<p>Bascially they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang youl'll find in most perl programs:</p>
+
+<pre><code>#!/usr/bin/perl
+</code></pre>
+
+<p>This is because most UNIX-like systems (especially Linux) comes with perl installed at <code>/usr/bin/perl</code>. Some UNIX does not have perl by default, but can be easily installed latter on. Just that they might end up being at <code>/usr/local/bin/perl</code>. Usually perl programmers call them "system perl".</p>
+
+<p>A developer might install their own version of perl to anywhere like <code>/opt/perl5.14.2/bin/perl</code> or <code>/opt/local/bin/perl</code> or any other fancy paths. An put the bin path to the beginning of <code>$PATH</code> environment variable so that when they run perl programs as <code>perl foo.pl</code>, it'll invoke their own version of perl, not the system perl. There is no special names for such perl installation, let's call them as "env perl" in the article.</p>
+
+<p>perlbrew rely on this mechanism to be functional properly. Whenever you say <code>perlbrew use 5.14.2</code>, perlbrew locates the path of 5.14.2 perl binary, and modify <code>$PATH</code> to point to there. Running perl programs with env perl requires you type "perl" in the beginning of the command. Relying shebang lines in the code does not.</p>
+
+<p>The shebang schema is like Dokodemo Door, a convention that brings huge convenience to easily specify an compiler + runner of the code. Without this design, scripting/dynamic language authors might just create their own conventions.</p>
+
+<p>However, it also creates problems. A cross-platform perl program might not be set be executable because the shebang line is valid on the author's platform, but not on the users' environment. A perl program authored on Mac can simply put <code>#!/usr/bin/perl</code> in the first line, but once that program gets copied to FreeBSD, perl can only be found at <code>#!/usr/local/bin/perl</code>. The user intend to run the program should modify the code a little bit in order to make it a valid executable. Which really invalids the statement that "perl programs are cross-platform."</p>
+
+<p>Well, that sounds like picking bones from a egg. Developers will eventually learn that they can either symlink perl around, or have some fancy scripts that properly modify shebang in-place. True. However when a program does not run because of a invalid shebang line, it can be really frustrated for newbies</p>
+
+<p>Sadly, there is really no perfect cross-platform shebang that works for all UNIX-like systems.</p>
+
+<p>However, CPAN distributions built with <code>ExtUtil::MakeMaker</code> solves this issue in a very good way. When perl programs are distributed / installed as a CPAN distribution, its shebang line are rewritten to be the same perl that used to invoke cpan client itself. Or, if you download+extract a CPAN distribution on your own and run <code>perl Makefile.PL</code> to do manual installation, it will be you env perl.</p>
+
+<p>Since shebang is hard to be cross-platfrom, it is also not trivial to decide what to put on the perlbrew executable shebang. You'll find that it currently contains <code>#!/usr/bin/perl</code>. However, the true is, when users runs this installer:</p>
+
+<pre><code>curl -kL http://install.perlbrew.pl | bash
+</code></pre>
+
+<p>The downloaded perlbrew will be modified to use your system perl shebang. To be more specific, it is the pre-perlbrew env perl shebang. That means <code>the first perl in $PATH that is not under $PERLRREW_ROOT</code>.</p>
+
+<p>You might remember that it used to be just <code>#!/usr/bin/env perl</code>. But that has at least 2 drawbacks:</p>
+
+<ol>
+<li>CentOS Linux comes without <code>/usr/bin/env</code>, but only <code>/bin/env</code> (well, the same for many other UNIXs)</li>
+<li><code>perlbrew use perl-5.6.0</code> will strangle perlbrew executable itself, because perlbrew requires 5.8.8.</li>
+</ol>
+
+<p>Therefore, it is the best to let <code>perlbrew</code> itself fixed to use system perl shebang. You may leave your own program to use the env shebang so that it can be invoked with env perl, which is managed with perlbrew. Optionally, you might want to hard-coded a perlbrew perl shebang in your code for some use cases.</p>
+
+<p>Shebang is cool. It even feels like a cool word to be spoken. But having to manage shebang in programs really sucks. <em>shrug</em></p>
+
+        </section>
+    </div>
+    <footer>
+        <p>© 2011 perlberw is an open source project. The web design and graphics are copyrighted work sponsord by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p><a href="http://flattr.com/thing/643574/Perlbrew" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></p>
+    </footer>
+</body>
+</html>
