@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/Perlbrew">
-    <title>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </title>
+    <title>Dealing with shebangs</title>
 <![if gte IE 9]>
     <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
     <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -38,10 +38,11 @@
     </header>
     <div id="container" class="inner">
         <section>
-  <h2>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </h2>
-  <h1>!/bin/sh</h1>
+  <h2>Dealing with shebangs</h2>
+  <p>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </p>
 
-<pre><code>#! −*−perl−*−
+<pre><code>#!/bin/sh
+#! −*−perl−*−
 eval 'exec perl −x −wS $0 ${1+"$@"}'
     if 0;
 </code></pre>
