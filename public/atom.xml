@@ -3,7 +3,26 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2012-08-23T07:43:55Z</updated>
+  <updated>2012-08-24T05:12:58Z</updated>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.48.html" type="text/html"/>
+    <title>Perlbrew Release 0.48</title>
+    <updated>2012-08-24T07:12:00+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.48 is released on August 24 2012 with these changes</p>
+
+<ul>
+<li>The build log output "build.log" is now named after the installation name for eaiser reference.</li>
+<li>Fix the invokation configure command to actually contains -Duserelocatableinc</li>
+<li>Experimental: bash/zsh users may put this to shell init instead: eval "$(~/perl5/perlbrew/bin/perlbrew init -)"</li>
+<li>A few output message updates</li>
+</ul>
+</div>
+    </content>
+  </entry>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.47.html" type="text/html"/>
     <title>Perlbrew Release 0.47</title>
@@ -944,48 +963,6 @@ perlbrew lib delete perl-5.12.3@nobita
 <p>Anyway, there will be a <a href="http://yapcasia.org/2011/talk/65">talk about perlbrew</a> in the upcoming YAPC::Asia, I will be introducing this project again (it was presented in the last YAPC::Asia too), mostly about the updates since last year, and that are a few very important ones. If you want to make something awesome that I can talk about, make sure to send me the pull request !</p>
 
 <p>peace out, gugod</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Perlbrew-In-Shell-Scripts.html" type="text/html"/>
-    <title>Perlbrew In Shell Scripts</title>
-    <updated>2011-09-18T14:08:44+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>Since the 0.29 release of perlbrew, it is much easier to invoke perlbrew
-function in the shell script. Specifically the <code>perlbrew use</code> and <code>perlbrew
-switch</code> commands. Here's an example bash script:</p>
-
-<pre><code>#!/bin/bash
-
-## These 3 lines are mandatory.
-export PERLBREW_ROOT=/opt/perlbrew
-export PERLBREW_HOME=/tmp/.perlbrew
-source ${PERLBREW_ROOT}/etc/bashrc
-
-## Do stuff with 5.14.1
-perlbrew use 5.14.1
-perl /app/my-modern-program
-
-## Do stuff with 5.12.3
-perlbrew use 5.12.3
-perl /app/my-legacy-program
-</code></pre>
-
-<p>In short: definde <code>PERLBREW_ROOT</code> and <code>PERLBREW_HOME</code> before including the perlbrew <code>bashrc</code> file.</p>
-
-<p>In an interactive shell environment, the default value of <code>$PERLBREW_HOME</code> is
-<code>$HOME/.perlbrew</code>. However, <code>$HOME</code> might not be always there in the context
-when a script is executed. It is then mandatory for you, the programmer, to
-specify a <code>$PERLBREW_HOME</code> that can be writable by the user running the script.</p>
-
-<p>Notice, with the bash integeration, the statement <code>perlbrew use 5.14.1</code> actually
-invokes the <code>perlbrew</code> bash function instead of the command <code>perlbrew</code>. Previous
-perlbrew release contain buggy perlbrew bash function and did not function properly.
-Therefore please make sure to upgrade to perlbrew 0.29 or latter.</p>
 </div>
     </content>
   </entry>
