@@ -3,7 +3,24 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2012-08-25T20:41:11Z</updated>
+  <updated>2012-09-01T09:37:43Z</updated>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.50.html" type="text/html"/>
+    <title>Perlbrew Release 0.50</title>
+    <updated>2012-09-01T11:36:54+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.50 in release on 2012-09-01T11:25:41+0200 with the follow changes.</p>
+
+<ul>
+<li>properly remove perlbrew-related PERL5LIB entries. GH #197</li>
+<li>minor documentation tweak.</li>
+</ul>
+</div>
+    </content>
+  </entry>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.49.html" type="text/html"/>
     <title>Perlbrew Release 0.49</title>
@@ -914,41 +931,6 @@ specify it.</p>
 it is still required to include the perlbrew bashrc file in your shell script.
 Without doing so, they spawn a sub-shell process, which is never a desired
 outcome.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.30.html" type="text/html"/>
-    <title>Perlbrew Release 0.30</title>
-    <updated>2011-10-14T00:21:27+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.30 contain these major changes</p>
-
-<ul>
-<li>local::lib integration</li>
-<li>Skip runs of exec on aliases</li>
-<li>Respect -f flag when installing to replace an already installed perl.</li>
-<li>Redefine the default value of -q flag to be false, and define it's meaning to be "complete silent"</li>
-</ul>
-
-<h2>The YAPC release</h2>
-
-<p>This is the release for YAPC::Asia 2011, featuring the local::lib integraton. Use the new command <code>lib</code>
-to manage local::lib containers:</p>
-
-<pre><code>perlbrew lib create nobita
-perlbrew lib create perl-5.12.3@shizuka
-perlbrew lib list
-perlbrew use perl-5.12.3@shizuka
-perlbrew use perl-5.14.2@nobita
-perlbrew switch perl-5.14.2@nobita
-perlbrew lib delete perl-5.12.3@nobita
-</code></pre>
-
-<p>The usage example and documentation is available by running <code>perlbrew lib</code> or <code>perlbrew help lib</code>.</p>
 </div>
     </content>
   </entry>
