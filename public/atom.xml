@@ -3,7 +3,38 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2012-11-11T22:15:49Z</updated>
+  <updated>2012-11-16T07:48:55Z</updated>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.58.html" type="text/html"/>
+    <title>perlbrew 0.58 is released on 2012-11-16T08:45:18+0100 with the following fixes</title>
+    <updated>2012-11-16T08:47:07+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><ul>
+<li>Fix infinite re-exec loop as identified in #263</li>
+<li>Fix a case where PERL5LIB still contains previous entries after deactivating or activating other ones.</li>
+</ul>
+</div>
+    </content>
+  </entry>
+  <entry>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.57.html" type="text/html"/>
+    <title>Perlbrew Release 0.57</title>
+    <updated>2012-11-13T20:08:01+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.57 is released on 2012-11-13T19:57:03+0100 with an important fix</p>
+
+<ul>
+<li>Fix an infinite re-exec loop</li>
+</ul>
+</div>
+    </content>
+  </entry>
   <entry>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.56.html" type="text/html"/>
     <title>Perlbrew Release 0.56</title>
@@ -456,88 +487,6 @@ for the latest feature updates.</p>
 <ul>
 <li>fix ENV mess after switching to diffirent libs multiple times</li>
 <li>add --sitecustomize option. For more detail, read: <a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a></li>
-</ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html" type="text/html"/>
-    <title>Install a sitecustomize.pl file with perlbrew</title>
-    <updated>2011-12-28T09:46:42+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>When perl is compiled with <code>-Dusesitecustomize</code> it will look for a file in the <code>$Config{siteperl}</code> directory called <code>sitecustomize.pl</code> and execute it extremely early in the life of the interpreter.  (See <a href="http://perldoc.perl.org/perlrun.html">perldoc perlrun</a> and the <code>-f</code> switch for an explanation.)</p>
-
-<p>Perlbrew 0.37 adds the <code>--sitecustomize</code> installation option to specify a Perl file to be installed as <code>sitecustomize.pl</code>. (Perlbrew will also set <code>-Dusesitecustomize</code> automatically.)</p>
-
-<pre><code>$ perlbrew install perl-5.14.2 --sitecustomize /path/to/customize.pl
-</code></pre>
-
-<p>This is extremely useful for doing dynamic manipulation of the environment or perl globals.  In particular, it can be used to modify @INC in a more customized way than can be achieved with <code>PERL5LIB</code>.</p>
-
-<p>Consider this usage example: A user wants to be able to install a command line perl application like App::Ack and have it be available regardless of which perl is active with Perlbrew.  Further, the user would like to keep its dependencies isolated so that the Perlbrew-installed perl stays 'pure'.</p>
-
-<p>A good way to install an isolated application is to use <code>local::lib</code> with Perlbrew:</p>
-
-<pre><code>$ perlbrew lib create ack
-$ perlbrew use perl-5.14.2@ack
-$ cpanm App::Ack
-</code></pre>
-
-<p>This installs the 'ack' program to the <code>bin</code> directory of the configured local library directory.  If the user switches to another Perl or another local library directory, <code>ack</code> won't be available.  The user can't run <code>ack</code> directly out of the local library <code>bin</code> directory because <code>PERL5LIB</code> won't be set correctly to find its dependencies.</p>
-
-<p>There are many ways to solve this problem.  One approach is to use a <code>sitecustomize.pl</code> file.  The following <code>sitecustomize.pl</code> file checks to see if the executing script appears to be installed in a
-local library that follows the <code>INSTALL_BASE</code> convention.  If so, it <strong>automatically</strong> adds the proper library path to <code>@INC</code>:</p>
-
-<pre><code>use strict;
-use Config;
-use Cwd ();
-my %seen;
-my @bindirs =
-  grep { defined &amp;&amp; !$seen{$_}++ } 
-  map { $Config{"install". $_} }
-  map { ("${_}bin", "${_}script") } "", "site", "vendor";
-
-my $script = Cwd::realpath($0);
-
-if ( ! grep { /\Q$script\E/ } @bindirs ) {
-  my @path = split "/", $script;
-  if ( @path &gt; 2 ) { # at least /bin/foo
-    pop @path; # get rid of script filename
-    my $installbase = join("/", @path[0 .. $#path-1], 'lib', 'perl5');
-    if ( $path[-1] eq 'bin' &amp;&amp; -d $installbase ) {
-      require lib;
-      lib-&gt;import($installbase);
-    }
-  }
-}
-</code></pre>
-
-<p>That lets the user switch Perlbrew perls but still run the original <code>ack</code> program via an alias.</p>
-
-<pre><code>$ alias ack=`which ack`
-$ perlbrew use perl-5.10.2
-$ ack PATTERN
-</code></pre>
-
-<p>The <code>ack</code> that is run via the alias has a shebang line (<code>#!...</code>) that invoke the original perl, which will run <code>sitecustomize.pl</code>, which will fix up <code>@INC</code> and then <code>ack</code> will run successfully, finding its dependencies in <code>@INC</code>.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.36.html" type="text/html"/>
-    <title>Perlbrew Release 0.36</title>
-    <updated>2011-12-17T19:54:56+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.36 is just to make it installable with <code>cpan</code>, there are no feature changes:</p>
-
-<ul>
-<li>fix test errors on freebsd that makes it uninstallable</li>
 </ul>
 </div>
     </content>
