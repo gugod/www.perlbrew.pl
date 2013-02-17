@@ -52,7 +52,7 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
 <pre><code>#!/usr/bin/env perl
 </code></pre>
 
-<p>Bascially they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang youl'll find in most perl programs:</p>
+<p>Bascially they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang you'll find in most perl programs:</p>
 
 <pre><code>#!/usr/bin/perl
 </code></pre>
@@ -71,7 +71,7 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
 
 <p>Sadly, there is really no perfect cross-platform shebang that works for all UNIX-like systems.</p>
 
-<p>However, CPAN distributions built with <code>ExtUtil::MakeMaker</code> solves this issue in a very good way. When perl programs are distributed / installed as a CPAN distribution, its shebang line are rewritten to be the same perl that used to invoke cpan client itself. Or, if you download+extract a CPAN distribution on your own and run <code>perl Makefile.PL</code> to do manual installation, it will be you env perl.</p>
+<p>However, CPAN distributions built with <code>ExtUtil::MakeMaker</code> solves this issue in a very good way. When perl programs are distributed / installed as a CPAN distribution, its shebang line are rewritten to be the same perl that used to invoke cpan client itself. Or, if you download+extract a CPAN distribution on your own and run <code>perl Makefile.PL</code> to do manual installation, it will be your env perl.</p>
 
 <p>Since shebang is hard to be cross-platfrom, it is also not trivial to decide what to put on the perlbrew executable shebang. You'll find that it currently contains <code>#!/usr/bin/perl</code>. However, the true is, when users runs this installer:</p>
 
