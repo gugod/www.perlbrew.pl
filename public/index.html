@@ -7,7 +7,7 @@
     <title>Perlbrew</title>
 <![if gte IE 9]>
     <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
-    <link href="stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
 <![endif]>
 </head>
 <body>
@@ -45,16 +45,16 @@
 
 <p>Copy &amp; Paste this line into your terminal:</p>
 
-<pre><code>curl -kL http://install.perlbrew.pl | bash
+<pre><code>\curl -L http://install.perlbrew.pl | bash
 </code></pre>
 
 <p>Or, if your system does not have curl but something else:</p>
 
 <pre><code># Linux
-wget --no-check-certificate -O - http://install.perlbrew.pl | bash
+\wget -O - http://install.perlbrew.pl | bash
 
 # FreeBSD
-fetch -o- http://install.perlbrew.pl | sh
+\fetch -o- http://install.perlbrew.pl | sh
 </code></pre>
 
 <p>If you prefer to install with cpan, there are two steps:</p>
