@@ -1,494 +1,280 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://perlbrew.pl/</id>
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2012-11-16T07:48:55Z</updated>
+  <updated>2014-02-16T16:36:14Z</updated>
   <entry>
+    <id>http://perlbrew.pl/Release-0.67.html?27e348cf658e7f9221f32748993b820ee56eaeb3</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.67.html" type="text/html"/>
+    <title>Perlbrew Release 0.67</title>
+    <updated>2013-11-20T08:51:41+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.67 is released at 2013-11-20T08:40:52+0100 with contributions from many people. Thanks to All!</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.66.html?dad7a9869f4b5b2a0dcf9a1f65b2158fc4983d59</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.66.html" type="text/html"/>
+    <title>Perlbrew Release 0.66</title>
+    <updated>2013-08-03T00:33:18+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.66 is released on 2013-08-03T00:22:29+0200 with an important bug fix for 0.65.</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.65.html?2ae8c2619f998fdd34f33e64b8ba3de52df7c5d4</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.65.html" type="text/html"/>
+    <title>Perlbrew Release 0.65</title>
+    <updated>2013-08-01T07:25:27+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.65 is released on 2013-08-01T07:19:03+0200</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.64.html?5de4afee94790fdcbd6d4858771f986eac4e838c</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.64.html" type="text/html"/>
+    <title>Perlbrew Release 0.64</title>
+    <updated>2013-06-02T09:49:55+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.64 is released on 2013-06-02T09:44:59+0200</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.63.html?63faf600f4c2c7179b8a9766c487f33d38c981fe</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.63.html" type="text/html"/>
+    <title>Perlbrew Release 0.63</title>
+    <updated>2013-05-06T17:13:49+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.63 is released on 2013-05-06T16:53:48+0200 with a few changes</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.62.html?182af5556ba8f83b8b6bc1c0836e6749bb9a592c</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.62.html" type="text/html"/>
+    <title>Perlbrew Release 0.62</title>
+    <updated>2013-04-07T11:51:45+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.62 is released on 2013-04-07T17:43:58+0800</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.61.html?731d8c18dc630e87e707d783809f30a772688bc5</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.61.html" type="text/html"/>
+    <title>Perlbrew Release 0.61</title>
+    <updated>2013-03-19T19:56:58+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.61 is released on 2013-03-19T19:55:47+0100</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html?ad6f7ef394972ee19e7375cf12d2e04404ca9abd</id>
+    <link rel="alternate" href="http://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html" type="text/html"/>
+    <title>How To Reinstall All Modules On New Perl</title>
+    <updated>2013-03-03T14:20:00+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Dealing-with-shebangs.html?3cd0d7cb57537c655fd1f6289af29d8f8aece4ad</id>
+    <link rel="alternate" href="http://perlbrew.pl/Dealing-with-shebangs.html" type="text/html"/>
+    <title>Dealing with shebangs</title>
+    <updated>2013-02-17T13:12:21+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic:</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.59.html?48c45a7fb556e7d9d6f877b27b3338866af93c90</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.59.html" type="text/html"/>
+    <title>perlbrew 0.59 is released on 2013-02-17T12:34:10+0100 with the following fixes</title>
+    <updated>2013-02-17T13:11:00+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary/>
+  </entry>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.58.html?a252322cf2d80199e47662398a74550f370f585e</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.58.html" type="text/html"/>
     <title>perlbrew 0.58 is released on 2012-11-16T08:45:18+0100 with the following fixes</title>
     <updated>2012-11-16T08:47:07+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><ul>
-<li>Fix infinite re-exec loop as identified in #263</li>
-<li>Fix a case where PERL5LIB still contains previous entries after deactivating or activating other ones.</li>
-</ul>
-</div>
-    </content>
+    <summary/>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.57.html?73e69c5dc7f6ee3b13575f4c0fe02b62bb9d2290</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.57.html" type="text/html"/>
     <title>Perlbrew Release 0.57</title>
     <updated>2012-11-13T20:08:01+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.57 is released on 2012-11-13T19:57:03+0100 with an important fix</p>
-
-<ul>
-<li>Fix an infinite re-exec loop</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.57 is released on 2012-11-13T19:57:03+0100 with an important fix</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.56.html?3997dac91b11d909fff20be542800b7166a393f3</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.56.html" type="text/html"/>
     <title>Perlbrew Release 0.56</title>
     <updated>2012-11-11T23:14:17+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.56 is released on 2012-11-11T23:10:30+0100 with an important fix</p>
-
-<ul>
-<li>Fix GH #261, which breaks <code>off</code> and <code>swich-off</code> commands.</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.56 is released on 2012-11-11T23:10:30+0100 with an important fix</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.55.html?1bd1769edeca9536cea6d6b54fc35bf29d8b6d1e</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.55.html" type="text/html"/>
     <title>Perlbrew Release 0.55</title>
     <updated>2012-11-04T13:26:04+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.55 is released on  2012-11-04T13:25:49+0100 with the following changes</p>
-
-<ul>
-<li>Revert the requirement of 5.8.8. Now require 5.8</li>
-<li>Add <code>PERLBREW_CPAN_MIRROR</code> environment variable</li>
-<li>Deal with a minor <code>local::lib</code> path problem. See GH #254.</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.55 is released on 2012-11-04T13:25:49+0100 with the following changes</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.54.html?bb6cf71e8f25cc99e35790cd95e1234844bd74ea</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.54.html" type="text/html"/>
     <title>Perlbrew Release 0.54</title>
     <updated>2012-10-24T21:51:28+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.54 is released on  2012-10-24T21:21:25+0200 with the following changes</p>
-
-<ul>
-<li>Now requires perl 5.8.8</li>
-<li>Fix an issue with list-module command listing extra modules See GH #245</li>
-<li>Tweak default Configure options for pre-5.6 versions</li>
-<li>Fix an issue with warning messagse in 'upgrade-perl' command.</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.54 is released on 2012-10-24T21:21:25+0200 with the following changes</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.53.html?25be64719d82788f6018981e068d6bd036a27fa2</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.53.html" type="text/html"/>
     <title>Perlbrew Release 0.53</title>
     <updated>2012-10-14T18:09:58+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.53 is released on 2012-10-14T17:41:17+0200 with the follow changes.</p>
-
-<ul>
-<li>New command: <code>info</code>.</li>
-<li>requires CPAN::Perl::Releases 0.76 for 5.14.3 info.</li>
-<li>Skip "." in @INC to deal with a <code>list-module</code> issue. GH #245.</li>
-<li>Environment variable cleanups and minor bashrc rewrite.</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.53 is released on 2012-10-14T17:41:17+0200 with the follow changes.</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.52.html?ad470ef69b8478eda6509d1a3cc0402db1fe31ca</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.52.html" type="text/html"/>
     <title>Perlbrew Release 0.52</title>
     <updated>2012-10-04T21:41:31+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.52 is released on 2012-10-04T21:30:40+0200 with the follow fixes</p>
-
-<ul>
-<li>userelocatableinc is no longer default. Meanwhile <code>PERLBREW_CONFIGURE_FLAGS</code> can still be used.</li>
-<li>Fix GH #197 again. Also make sure perlbrew-unrelated PERL5LIB values are preserved.</li>
-<li>Fix an issue that MANPATH contains unwanted values even after switch/use/off.</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.52 is released on 2012-10-04T21:30:40+0200 with the follow fixes</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.50.html?40554414ce662703e1b55043d240eae1b9a31259</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.50.html" type="text/html"/>
     <title>Perlbrew Release 0.50</title>
     <updated>2012-09-29T10:27:30+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.50 is released on 2012-09-01T11:25:41+0200 with the follow changes.</p>
-
-<ul>
-<li>properly remove perlbrew-related PERL5LIB entries. GH #197</li>
-<li>minor documentation tweak.</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.50 is released on 2012-09-01T11:25:41+0200 with the follow changes.</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.51.html?baed38d8b077653d71b22926fe14e1ffd5756174</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.51.html" type="text/html"/>
     <title>Perlbrew Release 0.51</title>
     <updated>2012-09-29T10:27:07+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.51 is released on 2012-09-29T09:17:14+0200 with the follow fixes</p>
-
-<ul>
-<li>Fix a start-up warning message from bashrc when perlbrew is not active</li>
-<li>Fix a breakage on CentOS due to the use of <code>manpath</code> command.</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.51 is released on 2012-09-29T09:17:14+0200 with the follow fixes</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.49.html?868f007ae0fd0a0ff358c68219a6973fbcbe3ff2</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.49.html" type="text/html"/>
     <title>Perlbrew Release 0.49</title>
     <updated>2012-08-25T22:40:30+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.49 is bug-fixing release</p>
-
-<ul>
-<li>Fix the build for perl-5.12 and 5.14 -- userelocatableinc are not working properly. https://github.com/gugod/App-perlbrew/issues/232</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.49 is bug-fixing release</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.48.html?76db3b6858f6e18473ee827933e2d00d5930e2f1</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.48.html" type="text/html"/>
     <title>Perlbrew Release 0.48</title>
     <updated>2012-08-24T07:12:00+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.48 is released on August 24 2012 with these changes</p>
-
-<ul>
-<li>The build log output "build.log" is now named after the installation name for eaiser reference.</li>
-<li>Fix the invokation configure command to actually contains -Duserelocatableinc</li>
-<li>Experimental: bash/zsh users may put this to shell init instead: eval "$(~/perl5/perlbrew/bin/perlbrew init -)"</li>
-<li>A few output message updates</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.48 is released on August 24 2012 with these changes</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.47.html?b7108fe741d32953a703d1708b6566d57dc920e0</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.47.html" type="text/html"/>
     <title>Perlbrew Release 0.47</title>
     <updated>2012-08-23T09:43:03+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.47 is released on August 23 2012, it contains these changes</p>
-
-<ul>
-<li>New command: download.</li>
-<li>New env var: PERLBREW_CONFIGURE_FLAGS</li>
-<li>userelocatableinc is enabled by default when the installing perl version is greater than or equals to 5.8.9. It should make some use cases eaiser. In particular, you can move PERLBREW_ROOT directory to another place.</li>
-<li>fix https://github.com/gugod/App-perlbrew/issues/216 for bash users and zsh users</li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.47 is released on August 23 2012, it contains these changes</div>
+    </summary>
   </entry>
   <entry>
+    <id>http://perlbrew.pl/Release-0.46.html?f62094f56de48369845f3c49324980b851f8e9bb</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.46.html" type="text/html"/>
     <title>Perlbrew Release 0.46</title>
     <updated>2012-07-21T08:16:40+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.46 contain these changes</p>
-
-<ul>
-<li>fix: The deprecation warning when running <code>self-upgrde</code></li>
-<li>fix: system MANPATH detection </li>
-<li>improvement: Specifying multiple perl: <code>exec --with perl-5.14.2,perl-5.16.0</code>
-<ul>
-<li>Read more details by running <code>perlbrew help exec</code></li>
-</ul></li>
-</ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.45.html" type="text/html"/>
-    <title>Perlbrew Release 0.45</title>
-    <updated>2012-07-14T19:03:55+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.45 contain these changes</p>
-
-<ul>
-<li>New command: install-ack . This install the standalone version of ack under $PERLBREW_ROOT/bin</li>
-<li>New command: list-modules</li>
-<li><code>exec</code> command now also iterates thourgh all the libs</li>
-<li>Documented the <code>--with</code> argument of exec command. See <code>perlbrew help exec</code></li>
-</ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Dealing-with-shebangs.html" type="text/html"/>
-    <title>Dealing with shebangs</title>
-    <updated>2012-07-04T21:46:14+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </p>
-
-<pre><code>#!/bin/sh
-#! −*−perl−*−
-eval 'exec perl −x −wS $0 ${1+"$@"}'
-    if 0;
-</code></pre>
-
-<p>The other is extremely simple:</p>
-
-<pre><code>#!/usr/bin/env perl
-</code></pre>
-
-<p>Bascially they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang youl'll find in most perl programs:</p>
-
-<pre><code>#!/usr/bin/perl
-</code></pre>
-
-<p>This is because most UNIX-like systems (especially Linux) comes with perl installed at <code>/usr/bin/perl</code>. Some UNIX does not have perl by default, but can be easily installed latter on. Just that they might end up being at <code>/usr/local/bin/perl</code>. Usually perl programmers call them "system perl".</p>
-
-<p>A developer might install their own version of perl to anywhere like <code>/opt/perl5.14.2/bin/perl</code> or <code>/opt/local/bin/perl</code> or any other fancy paths. An put the bin path to the beginning of <code>$PATH</code> environment variable so that when they run perl programs as <code>perl foo.pl</code>, it'll invoke their own version of perl, not the system perl. There is no special names for such perl installation, let's call them as "env perl" in the article.</p>
-
-<p>perlbrew rely on this mechanism to be functional properly. Whenever you say <code>perlbrew use 5.14.2</code>, perlbrew locates the path of 5.14.2 perl binary, and modify <code>$PATH</code> to point to there. Running perl programs with env perl requires you type "perl" in the beginning of the command. Relying shebang lines in the code does not.</p>
-
-<p>The shebang schema is like Dokodemo Door, a convention that brings huge convenience to easily specify an compiler + runner of the code. Without this design, scripting/dynamic language authors might just create their own conventions.</p>
-
-<p>However, it also creates problems. A cross-platform perl program might not be set be executable because the shebang line is valid on the author's platform, but not on the users' environment. A perl program authored on Mac can simply put <code>#!/usr/bin/perl</code> in the first line, but once that program gets copied to FreeBSD, perl can only be found at <code>#!/usr/local/bin/perl</code>. The user intend to run the program should modify the code a little bit in order to make it a valid executable. Which really invalids the statement that "perl programs are cross-platform."</p>
-
-<p>Well, that sounds like picking bones from a egg. Developers will eventually learn that they can either symlink perl around, or have some fancy scripts that properly modify shebang in-place. True. However when a program does not run because of a invalid shebang line, it can be really frustrated for newbies</p>
-
-<p>Sadly, there is really no perfect cross-platform shebang that works for all UNIX-like systems.</p>
-
-<p>However, CPAN distributions built with <code>ExtUtil::MakeMaker</code> solves this issue in a very good way. When perl programs are distributed / installed as a CPAN distribution, its shebang line are rewritten to be the same perl that used to invoke cpan client itself. Or, if you download+extract a CPAN distribution on your own and run <code>perl Makefile.PL</code> to do manual installation, it will be you env perl.</p>
-
-<p>Since shebang is hard to be cross-platfrom, it is also not trivial to decide what to put on the perlbrew executable shebang. You'll find that it currently contains <code>#!/usr/bin/perl</code>. However, the true is, when users runs this installer:</p>
-
-<pre><code>curl -kL http://install.perlbrew.pl | bash
-</code></pre>
-
-<p>The downloaded perlbrew will be modified to use your system perl shebang. To be more specific, it is the pre-perlbrew env perl shebang. That means <code>the first perl in $PATH that is not under $PERLRREW_ROOT</code>.</p>
-
-<p>You might remember that it used to be just <code>#!/usr/bin/env perl</code>. But that has at least 2 drawbacks:</p>
-
-<ol>
-<li>CentOS Linux comes without <code>/usr/bin/env</code>, but only <code>/bin/env</code> (well, the same for many other UNIXs)</li>
-<li><code>perlbrew use perl-5.6.0</code> will strangle perlbrew executable itself, because perlbrew requires 5.8.8.</li>
-</ol>
-
-<p>Therefore, it is the best to let <code>perlbrew</code> itself fixed to use system perl shebang. You may leave your own program to use the env shebang so that it can be invoked with env perl, which is managed with perlbrew. Optionally, you might want to hard-coded a perlbrew perl shebang in your code for some use cases.</p>
-
-<p>Shebang is cool. It even feels like a cool word to be spoken. But having to manage shebang in programs really sucks. <em>shrug</em></p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.44.html" type="text/html"/>
-    <title>Perlbrew Release 0.44</title>
-    <updated>2012-07-04T21:43:45+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.44 contain these changes</p>
-
-<ul>
-<li>Notice: "self-install" command now alters the shebang to use system perl</li>
-<li>Notice: "install-patchperl" command now alters the shebang to use system perl.</li>
-<li>some documentation tweaks</li>
-<li>fix: <code>perlbrew use</code> to/from a lib has not been working properly.</li>
-</ul>
-
-<p>Also tl;dr <a href="Dealing-with-shebangs.html">Dealing with shebangs</a></p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Home.html" type="text/html"/>
-    <title>Welcome to the App-perlbrew wiki!</title>
-    <updated>2012-07-04T21:41:29+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>The content in the wiki will be semi-manually built as HTML and get published to http://perlbrew.pl . You are welcome to write up a page and ping me (@gugod) to get it published.</p>
-
-<h2>How To Information</h2>
-
-<ul>
-<li><a href="Dealing-with-shebangs.html">Dealing with shebangs</a></li>
-<li><a href="Reinstall-All-Modules-On-New-Perl.html">Reinstall-All-Modules-On-New-Perl</a></li>
-<li><a href="Perlbrew-中文簡介.html">Perlbrew 中文簡介</a></li>
-<li><a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a></li>
-</ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.43.html" type="text/html"/>
-    <title>Perlbrew Release 0.43</title>
-    <updated>2012-05-27T14:34:55+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.43 contain these changes</p>
-
-<ul>
-<li>cpantester-error fixes</li>
-<li>csh support. Big thanks to matzsoft.</li>
-<li>support 'fetch' command on FreeBSD.</li>
-<li>Fix a bug that perlbrew failed to resolve version number when dist path contain "perl5"</li>
-</ul>
-
-<p>The csh support is a wonderful piece of work by <a href="https://github.com/matzsoft">matzsoft</a>,
-that means csh users can also quickly <code>use</code> different perl versions in the shell, without
-resorting a sub-shell. Big appreciate to mazsoft <code>:-)</code>.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.42.html" type="text/html"/>
-    <title>Perlbrew Release 0.42</title>
-    <updated>2012-03-07T12:22:01+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.42 contain these minor changes</p>
-
-<ul>
-<li>Improvement: die when running perlbrew (use|switch) with unknown installation name.</li>
-<li>clean 'build.log' on install. ref: RT #69168.</li>
-</ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.41.html" type="text/html"/>
-    <title>Perlbrew Release 0.41</title>
-    <updated>2012-02-02T04:22:12+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.41 contain minor fixes:</p>
-
-<ul>
-<li>Fix installation issue when the specified version is not listed in CPAN::Perl::Releases</li>
-<li>Fix sub-shell invocation for 'switch' and 'use' command. This is particularly for csh users, but it should also work for bash users.</li>
-</ul>
-
-<p>The sub-shell is a fallback when user does not sourcing the perlbrew bashrc in
-their <code>~/.bash_profile</code> or <code>~/.zshenv</code>. However it is advertised to avoid using
-sub-shell, but just include bash/zsh integration for much better experience.</p>
-
-<p>Also notice that, on Mac OSX Lion, zsh sub-shell is not working at all due to
-the content of <code>/etc/zshenv</code>.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.40.html" type="text/html"/>
-    <title>Perlbrew Release 0.40</title>
-    <updated>2012-01-23T01:49:32+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.40 is the release greeting the Happy Chinese New Year of Dragon.</p>
-
-<ul>
-<li>Make the stanalone perlbrew program smaller by using Perl::Strip</li>
-<li>use CPAN::Perl::Releases to decide the location of perl tarball -- less HTTP hits</li>
-<li>Prefer $PERLBREW_ROOT/bin/patchperl if it is there.</li>
-</ul>
-
-<p>May the Dragon brings you the best luck.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.39.html" type="text/html"/>
-    <title>Perlbrew Release 0.39</title>
-    <updated>2011-12-31T17:10:59+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.39 is the Happy New Year 2012 (TZ=CST) release with 3 bug fixes. All
-bash users are recommended to this version, especially if you're using it with
-local::lib integration.</p>
-
-<ul>
-<li>Fix GH #179. lib naming are more consistent.</li>
-<li>Fix GH #171. bash users are suggestted to upgrad to this version.</li>
-<li>Fix GH #152.</li>
-</ul>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.38.html" type="text/html"/>
-    <title>Perlbrew Release 0.38</title>
-    <updated>2011-12-29T03:13:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.38 only fixes dependency declariton for 0.37. See <a href="Release-0.37.html">Release 0.37</a> release note
-for the latest feature updates.</p>
-</div>
-    </content>
-  </entry>
-  <entry>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.37.html" type="text/html"/>
-    <title>Perlbrew Release 0.37</title>
-    <updated>2011-12-28T10:40:15+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml"><p>perlbrew 0.37 features these changes</p>
-
-<ul>
-<li>fix ENV mess after switching to diffirent libs multiple times</li>
-<li>add --sitecustomize option. For more detail, read: <a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a></li>
-</ul>
-</div>
-    </content>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.46 contain these changes</div>
+    </summary>
   </entry>
 </feed>
