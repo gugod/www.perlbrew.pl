@@ -1,5 +1,6 @@
 all:
 	sitebrew
+	sitebrew buildatom
 
 deploy:
 	cd public; s3cmd sync ./ s3://perlbrew.pl/
