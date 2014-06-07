@@ -4,7 +4,19 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2014-02-16T16:36:14Z</updated>
+  <updated>2014-06-07T13:20:48Z</updated>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.68.html?8ec9f32e61ae3e55cfbacd242aa7cd98baacaae0</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.68.html" type="text/html"/>
+    <title>Perlbrew Release 0.68</title>
+    <updated>2014-06-07T15:18:30+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.68 is released at 2014-06-07T15:08:00+0200</div>
+    </summary>
+  </entry>
   <entry>
     <id>http://perlbrew.pl/Release-0.67.html?27e348cf658e7f9221f32748993b820ee56eaeb3</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.67.html" type="text/html"/>
@@ -110,7 +122,7 @@
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic:</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </div>
     </summary>
   </entry>
   <entry>
@@ -121,7 +133,6 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary/>
   </entry>
   <entry>
     <id>http://perlbrew.pl/Release-0.58.html?a252322cf2d80199e47662398a74550f370f585e</id>
@@ -131,7 +142,6 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary/>
   </entry>
   <entry>
     <id>http://perlbrew.pl/Release-0.57.html?73e69c5dc7f6ee3b13575f4c0fe02b62bb9d2290</id>

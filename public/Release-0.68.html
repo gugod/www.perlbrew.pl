@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="alternate" type="application/atom+xml" href="http://feeds.feedburner.com/Perlbrew">
-    <title>(This is only a documentation draf, there are no implementation whatsoever)</title>
+    <title>Perlbrew Release 0.68</title>
 <![if gte IE 9]>
     <link href="http://fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
     <link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -38,19 +38,16 @@
     </header>
     <div id="container" class="inner">
         <section>
-  <h2>(This is only a documentation draf, there are no implementation whatsoever)</h2>
-  <h2>Description</h2>
+  <h2>Perlbrew Release 0.68</h2>
+  <p>perlbrew 0.68 is released at 2014-06-07T15:08:00+0200</p>
 
-<p>The 'perlbrew cpan' command help install cpan modules to all perl installations.</p>
-
-<h2>Usage Example</h2>
-
-<pre><code># Install Task::Jifty for all perls
-perlbrew cpan install Task::Jifty
-
-# Install Task::Jifty for some perls
-perlbrew 5.12,5.14 cpan install Task::Jifty
-</code></pre>
+<ul>
+<li>disable SSL cert checks. GH #385.</li>
+<li>"perlbrew download stable" works as on expects. GH #383</li>
+<li>Many fish shell fixes. GH #376 #378 #379</li>
+<li>make 5.21 installable. GH #396</li>
+<li>various documentation fixes.</li>
+</ul>
 
         </section>
     </div>
