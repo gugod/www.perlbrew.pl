@@ -4,7 +4,19 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2014-06-07T13:20:48Z</updated>
+  <updated>2014-06-10T21:54:26Z</updated>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.69.html?45b7d3e956222a2d3ae4303839dcf3fdd950571a</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.69.html" type="text/html"/>
+    <title>Perlbrew Release 0.69</title>
+    <updated>2014-06-10T23:52:42+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.69 is released at 2014-06-10T23:32:05+0200</div>
+    </summary>
+  </entry>
   <entry>
     <id>http://perlbrew.pl/Release-0.68.html?8ec9f32e61ae3e55cfbacd242aa7cd98baacaae0</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.68.html" type="text/html"/>
@@ -273,18 +285,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.47 is released on August 23 2012, it contains these changes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>http://perlbrew.pl/Release-0.46.html?f62094f56de48369845f3c49324980b851f8e9bb</id>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.46.html" type="text/html"/>
-    <title>Perlbrew Release 0.46</title>
-    <updated>2012-07-21T08:16:40+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.46 contain these changes</div>
     </summary>
   </entry>
 </feed>
