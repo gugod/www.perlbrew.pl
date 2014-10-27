@@ -4,7 +4,19 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2014-09-13T18:16:24Z</updated>
+  <updated>2014-10-27T20:47:11Z</updated>
+  <entry>
+    <id>http://perlbrew.pl/Release-0.72.html?fb8764b5687ce0b751a87f4be59846965c70b043</id>
+    <link rel="alternate" href="http://perlbrew.pl/Release-0.72.html" type="text/html"/>
+    <title>Perlbrew Release 0.72</title>
+    <updated>2014-10-27T21:46:17+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.72 is released at 2014-10-27T21:38:19+0100 with these bug fixes:</div>
+    </summary>
+  </entry>
   <entry>
     <id>http://perlbrew.pl/Release-0.71.html?43770cd71f4eb60090dbd1295449d7166501b175</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.71.html" type="text/html"/>
@@ -273,18 +285,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.51 is released on 2012-09-29T09:17:14+0200 with the follow fixes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>http://perlbrew.pl/Release-0.49.html?868f007ae0fd0a0ff358c68219a6973fbcbe3ff2</id>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.49.html" type="text/html"/>
-    <title>Perlbrew Release 0.49</title>
-    <updated>2012-08-25T22:40:30+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.49 is bug-fixing release</div>
     </summary>
   </entry>
 </feed>
