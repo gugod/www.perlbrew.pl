@@ -4,7 +4,19 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2015-12-15T07:03:45Z</updated>
+  <updated>2015-12-16T21:23:29Z</updated>
+  <entry>
+    <id>http://perlbrew.pl/Perlbrew-Configuration.html?12d4db06443839d53694f4843147babb28180626</id>
+    <link rel="alternate" href="http://perlbrew.pl/Perlbrew-Configuration.html" type="text/html"/>
+    <title>Perlbrew Configuration</title>
+    <updated>2015-12-16T19:05:25+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew usually picks some nice defaults, but you can still tweaks some knobs.</div>
+    </summary>
+  </entry>
   <entry>
     <id>http://perlbrew.pl/Release-0.74.html?fdc12de8464d1200468f71ff297ffb3e0121a2ed</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.74.html" type="text/html"/>
@@ -273,18 +285,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.53 is released on 2012-10-14T17:41:17+0200 with the follow changes.</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>http://perlbrew.pl/Release-0.52.html?ad470ef69b8478eda6509d1a3cc0402db1fe31ca</id>
-    <link rel="alternate" href="http://perlbrew.pl/Release-0.52.html" type="text/html"/>
-    <title>Perlbrew Release 0.52</title>
-    <updated>2012-10-04T21:41:31+02:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.52 is released on 2012-10-04T21:30:40+0200 with the follow fixes</div>
     </summary>
   </entry>
 </feed>
