@@ -4,12 +4,12 @@
   <title>perlbrew</title>
   <link rel="alternate" href="http://perlbrew.pl" type="text/html"/>
   <link rel="self" href="http://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2016-03-16T22:57:19Z</updated>
+  <updated>2016-05-26T21:29:29Z</updated>
   <entry>
-    <id>http://perlbrew.pl/Release-0.75.html?ce84d977dbacf724a579fa1c29e2bfbea8a6d334</id>
+    <id>http://perlbrew.pl/Release-0.75.html?62820207a288df7d547842850e87573be49ab2d3</id>
     <link rel="alternate" href="http://perlbrew.pl/Release-0.75.html" type="text/html"/>
-    <title>Perlbrew Release 0.74</title>
-    <updated>2016-03-16T23:53:59+01:00</updated>
+    <title>Perlbrew Release 0.75</title>
+    <updated>2016-05-26T23:29:20+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
