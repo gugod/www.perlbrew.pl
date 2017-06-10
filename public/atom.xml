@@ -4,7 +4,7 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2016-12-08T08:37:42Z</updated>
+  <updated>2017-06-10T03:05:05Z</updated>
   <entry>
     <id>https://perlbrew.pl/Release-0.78.html?124e24da382e785f887b76489bf0c1abb1f25ce1</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.78.html" type="text/html"/>
@@ -210,18 +210,6 @@
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.25.html?865df1b22d6f0265c172bddfa22c83365a098071</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.25.html" type="text/html"/>
-    <title>Perlbrew Release 0.25</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">Big congrats to p5p for releasing 3 branches of perl5 in the same week!</div>
-    </summary>
-  </entry>
-  <entry>
     <id>https://perlbrew.pl/Release-0.22.html?95bff8e0ca5a9abad4bbf7cee858006893a7d267</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.22.html" type="text/html"/>
     <title>Perlbrew Release 0.22</title>
@@ -291,6 +279,18 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.46 contain these changes</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.32.html?e1c7e5391582d0ed10c18b1d19616767cb31c996</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.32.html" type="text/html"/>
+    <title>Perlbrew Release 0.32</title>
+    <updated>2016-11-12T07:49:54+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.32 is a hotfix change just to update the standalone executable for the 0.31 release, which is broken due to the lack of local::lib.</div>
     </summary>
   </entry>
 </feed>
