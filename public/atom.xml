@@ -4,12 +4,24 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2017-06-11T07:10:06Z</updated>
+  <updated>2017-06-25T22:05:55Z</updated>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.79.html?577bb9bc4b5ba2e00d1ebe699399a85f1dbcd810</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.79.html" type="text/html"/>
+    <title>Perlbrew Release 0.79</title>
+    <updated>2017-06-26T00:05:39+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">0.79 was released at 2017-06-25T23:40:45+0200 with these notable changes:</div>
+    </summary>
+  </entry>
   <entry>
     <id>https://perlbrew.pl/Home.html?2e75f3b327f993b73be127c6ef80fd29e840cbd5</id>
     <link rel="alternate" href="https://perlbrew.pl/Home.html" type="text/html"/>
     <title>Welcome to the App-perlbrew wiki!</title>
-    <updated>2017-06-11T09:08:25+02:00</updated>
+    <updated>2017-02-07T11:45:12+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -21,7 +33,7 @@
     <id>https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html?4a3ef212bd468b33b222dbf49380fa7f101a9fd0</id>
     <link rel="alternate" href="https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html" type="text/html"/>
     <title>I have been using Perlbrew happily on OS X to install custom/recent Perl versions. Sometimes I need a more or less exotic Perl binding that I could easily install using Homebrew. Recent updates to Homebrew made that process a bit less automatic.</title>
-    <updated>2017-06-11T09:08:25+02:00</updated>
+    <updated>2017-02-07T11:44:21+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -33,7 +45,7 @@
     <id>https://perlbrew.pl/Release-0.78.html?124e24da382e785f887b76489bf0c1abb1f25ce1</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.78.html" type="text/html"/>
     <title>Perlbrew Release 0.78</title>
-    <updated>2016-11-20T23:09:50+01:00</updated>
+    <updated>2016-11-20T23:10:06+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -45,7 +57,7 @@
     <id>https://perlbrew.pl/Release-0.77.html?93e540ecf62f19348a115d94446c8cdcd388b0ad</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.77.html" type="text/html"/>
     <title>Perlbrew Release 0.77</title>
-    <updated>2016-11-12T07:51:46+01:00</updated>
+    <updated>2016-11-12T07:54:46+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -54,82 +66,22 @@
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.64.html?5de4afee94790fdcbd6d4858771f986eac4e838c</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.64.html" type="text/html"/>
-    <title>Perlbrew Release 0.64</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <id>https://perlbrew.pl/Release-0.76.html?87bc7f6a18b3d8edd565c882ee7c36220e2b1069</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.76.html" type="text/html"/>
+    <title>Perlbrew Release 0.76</title>
+    <updated>2016-06-21T23:21:01+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.64 is released on 2013-06-02T09:44:59+0200</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.40.html?7940752b3dc155695b24e3dd28a5fcca07dddd35</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.40.html" type="text/html"/>
-    <title>Perlbrew Release 0.40</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.40 is the release greeting the Happy Chinese New Year of Dragon.</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.63.html?63faf600f4c2c7179b8a9766c487f33d38c981fe</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.63.html" type="text/html"/>
-    <title>Perlbrew Release 0.63</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.63 is released on 2013-05-06T16:53:48+0200 with a few changes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.51.html?baed38d8b077653d71b22926fe14e1ffd5756174</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.51.html" type="text/html"/>
-    <title>Perlbrew Release 0.51</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.51 is released on 2012-09-29T09:17:14+0200 with the follow fixes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.52.html?ad470ef69b8478eda6509d1a3cc0402db1fe31ca</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.52.html" type="text/html"/>
-    <title>Perlbrew Release 0.52</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.52 is released on 2012-10-04T21:30:40+0200 with the follow fixes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.50.html?40554414ce662703e1b55043d240eae1b9a31259</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.50.html" type="text/html"/>
-    <title>Perlbrew Release 0.50</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.50 is released on 2012-09-01T11:25:41+0200 with the follow changes.</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">0.76 is released at 2016-06-21T23:02:44+0200 with the following changes:</div>
     </summary>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.75.html?62820207a288df7d547842850e87573be49ab2d3</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.75.html" type="text/html"/>
     <title>Perlbrew Release 0.75</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <updated>2016-05-26T23:29:44+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -138,94 +90,10 @@
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.43.html?6b5b2ec9b47e31dc330469310bf0e142412b034c</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.43.html" type="text/html"/>
-    <title>Perlbrew Release 0.43</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.43 contain these changes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.42.html?a4e03ddc0becf917049bcd59c98ecda9c960a8f7</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.42.html" type="text/html"/>
-    <title>Perlbrew Release 0.42</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.42 contain these minor changes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html?ded450d14a50c75932673994cc09ce96b595163a</id>
-    <link rel="alternate" href="https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html" type="text/html"/>
-    <title>Install a sitecustomize.pl file with perlbrew</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">When perl is compiled with -Dusesitecustomize it will look for a file in the $Config{siteperl} directory called sitecustomize.pl and execute it extremely early in the life of the interpreter. (See perldoc perlrun and the -f switch for an explanation.)</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.62.html?182af5556ba8f83b8b6bc1c0836e6749bb9a592c</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.62.html" type="text/html"/>
-    <title>Perlbrew Release 0.62</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.62 is released on 2013-04-07T17:43:58+0800</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.33.html?56b21237f56fcc1dc028d7c9e39cae01ecbc77f8</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.33.html" type="text/html"/>
-    <title>Perlbrew Release 0.33</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.33 is a small maintenance release</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.23.html?dfb7123af11927a02e9880275cfd8ec4f844d10f</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.23.html" type="text/html"/>
-    <title>Perlbrew Release 0.23</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">The 0.23 release features these minor rchanges:</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.61.html?731d8c18dc630e87e707d783809f30a772688bc5</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.61.html" type="text/html"/>
-    <title>Perlbrew Release 0.61</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.61 is released on 2013-03-19T19:55:47+0100</div>
-    </summary>
-  </entry>
-  <entry>
     <id>https://perlbrew.pl/Perlbrew-Configuration.html?35e67ac6fd6cd8402932cd029b2dab8bdf2707c4</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-Configuration.html" type="text/html"/>
     <title>Perlbrew Configuration</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <updated>2015-12-16T22:25:32+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -234,63 +102,192 @@
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.22.html?95bff8e0ca5a9abad4bbf7cee858006893a7d267</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.22.html" type="text/html"/>
-    <title>Perlbrew Release 0.22</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <id>https://perlbrew.pl/Release-0.74.html?fdc12de8464d1200468f71ff297ffb3e0121a2ed</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.74.html" type="text/html"/>
+    <title>Perlbrew Release 0.74</title>
+    <updated>2015-11-24T21:43:32+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">The 0.22 release features these major changes:</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">0.74 is released at 2015-11-24T20:55:02+0100 with many changes and many contrtibutes during the past 9 months. Thank everyone who participated.</div>
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.54.html?bb6cf71e8f25cc99e35790cd95e1234844bd74ea</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.54.html" type="text/html"/>
-    <title>Perlbrew Release 0.54</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <id>https://perlbrew.pl/Release-0.73.html?2e80f7e22dfe14309530768b0a83823eeb111b47</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.73.html" type="text/html"/>
+    <title>Perlbrew Release 0.73</title>
+    <updated>2015-02-01T10:18:07+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.54 is released on 2012-10-24T21:21:25+0200 with the following changes</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.73 was release at 2015-02-01T09:59:45+0100 with many fixes and improvements from Manuel Streuhofer, Aristotle Pagaltzis, Sebastian Willert, David Hand, Eric Enns, Peter Roberts, Thomas Sibley, Ivan Baidakou, thanks a lot!</div>
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.44.html?d4a5fe85c9f95beb5efc4fabe4a221e20cbc4e7b</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.44.html" type="text/html"/>
-    <title>Perlbrew Release 0.44</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <id>https://perlbrew.pl/Release-0.72.html?fb8764b5687ce0b751a87f4be59846965c70b043</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.72.html" type="text/html"/>
+    <title>Perlbrew Release 0.72</title>
+    <updated>2014-10-27T21:46:28+01:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.44 contain these changes</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.72 is released at 2014-10-27T21:38:19+0100 with these bug fixes:</div>
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.45.html?af2bca85cf9bc59de0d6f3faf94bd1ddaebdf3fb</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.45.html" type="text/html"/>
-    <title>Perlbrew Release 0.45</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <id>https://perlbrew.pl/Release-0.70.html?578b757c59c2e017a93f5a65c1c590b6e3306f6f</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.70.html" type="text/html"/>
+    <title>Perlbrew Release 0.70</title>
+    <updated>2014-09-13T20:02:43+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.45 contain these changes</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.70 is released at 2014-09-02T20:41:15+0900</div>
     </summary>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.53.html?25be64719d82788f6018981e068d6bd036a27fa2</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.53.html" type="text/html"/>
-    <title>Perlbrew Release 0.53</title>
-    <updated>2016-11-12T07:49:54+01:00</updated>
+    <id>https://perlbrew.pl/Release-0.71.html?43770cd71f4eb60090dbd1295449d7166501b175</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.71.html" type="text/html"/>
+    <title>Perlbrew Release 0.71</title>
+    <updated>2014-09-13T20:02:43+02:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.53 is released on 2012-10-14T17:41:17+0200 with the follow changes.</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.71 is released at 2014-09-13T19:59:15+0200 with this bug fix:</div>
     </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.69.html?45b7d3e956222a2d3ae4303839dcf3fdd950571a</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.69.html" type="text/html"/>
+    <title>Perlbrew Release 0.69</title>
+    <updated>2014-06-10T23:53:00+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.69 is released at 2014-06-10T23:32:05+0200</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.68.html?8ec9f32e61ae3e55cfbacd242aa7cd98baacaae0</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.68.html" type="text/html"/>
+    <title>Perlbrew Release 0.68</title>
+    <updated>2014-06-07T15:19:41+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.68 is released at 2014-06-07T15:08:00+0200</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.67.html?27e348cf658e7f9221f32748993b820ee56eaeb3</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.67.html" type="text/html"/>
+    <title>Perlbrew Release 0.67</title>
+    <updated>2013-11-20T08:52:07+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.67 is released at 2013-11-20T08:40:52+0100 with contributions from many people. Thanks to All!</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.66.html?dad7a9869f4b5b2a0dcf9a1f65b2158fc4983d59</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.66.html" type="text/html"/>
+    <title>Perlbrew Release 0.66</title>
+    <updated>2013-08-03T00:33:28+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.66 is released on 2013-08-03T00:22:29+0200 with an important bug fix for 0.65.</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.65.html?2ae8c2619f998fdd34f33e64b8ba3de52df7c5d4</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.65.html" type="text/html"/>
+    <title>Perlbrew Release 0.65</title>
+    <updated>2013-08-01T07:25:38+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.65 is released on 2013-08-01T07:19:03+0200</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.64.html?5de4afee94790fdcbd6d4858771f986eac4e838c</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.64.html" type="text/html"/>
+    <title>Perlbrew Release 0.64</title>
+    <updated>2013-06-02T09:50:02+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.64 is released on 2013-06-02T09:44:59+0200</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.63.html?63faf600f4c2c7179b8a9766c487f33d38c981fe</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.63.html" type="text/html"/>
+    <title>Perlbrew Release 0.63</title>
+    <updated>2013-05-06T17:14:19+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.63 is released on 2013-05-06T16:53:48+0200 with a few changes</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.62.html?182af5556ba8f83b8b6bc1c0836e6749bb9a592c</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.62.html" type="text/html"/>
+    <title>Perlbrew Release 0.62</title>
+    <updated>2013-04-07T11:52:05+02:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.62 is released on 2013-04-07T17:43:58+0800</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.61.html?731d8c18dc630e87e707d783809f30a772688bc5</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.61.html" type="text/html"/>
+    <title>Perlbrew Release 0.61</title>
+    <updated>2013-03-19T19:57:17+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.61 is released on 2013-03-19T19:55:47+0100</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html?ad6f7ef394972ee19e7375cf12d2e04404ca9abd</id>
+    <link rel="alternate" href="https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html" type="text/html"/>
+    <title>How To Reinstall All Modules On New Perl</title>
+    <updated>2013-03-03T14:20:15+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.59.html?48c45a7fb556e7d9d6f877b27b3338866af93c90</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.59.html" type="text/html"/>
+    <title>perlbrew 0.59 is released on 2013-02-17T12:34:10+0100 with the following fixes</title>
+    <updated>2013-02-17T13:12:10+01:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
   </entry>
 </feed>
