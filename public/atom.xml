@@ -4,17 +4,29 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2017-12-09T08:46:52Z</updated>
+  <updated>2017-12-17T00:55:58Z</updated>
   <entry>
     <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.81.html?ae88dd572adbcf333665b71e159df55907af445f</id>
     <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Release-0.81.html" type="text/html"/>
     <title>Perlbrew Release 0.81</title>
-    <updated>2017-12-09T17:41:36+09:00</updated>
+    <updated>2017-12-17T09:54:38+09:00</updated>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.81 was released at 2017-12-09T15:12:04+0900 with these notable changes:</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.82.html?da5edba9572a5517eb0ef56c0f1689ec5cb59c9c</id>
+    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Release-0.82.html" type="text/html"/>
+    <title>Perlbrew Release 0.82</title>
+    <updated>2017-12-17T09:54:05+09:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.82 was released at 2017-12-17T09:53:00+0900 with these notable changes:</div>
     </summary>
   </entry>
   <entry>
@@ -279,18 +291,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.46 contain these changes</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.32.html?e1c7e5391582d0ed10c18b1d19616767cb31c996</id>
-    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Release-0.32.html" type="text/html"/>
-    <title>Perlbrew Release 0.32</title>
-    <updated>2017-12-09T15:44:38+09:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.32 is a hotfix change just to update the standalone executable for the 0.31 release, which is broken due to the lack of local::lib.</div>
     </summary>
   </entry>
 </feed>
