@@ -4,7 +4,19 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2018-05-30T00:05:18Z</updated>
+  <updated>2018-05-30T00:08:03Z</updated>
+  <entry>
+    <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.83.html?cee80c6080e5142f8adc7e415d6f91192cd71f03</id>
+    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Release-0.83.html" type="text/html"/>
+    <title>Perlbrew Release 0.83</title>
+    <updated>2018-05-30T09:08:01+09:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.82 was released at 2018-05-30T08:04:43+0900 with these notable changes:</div>
+    </summary>
+  </entry>
   <entry>
     <id>https://perlbrew.plhttps://perlbrew.pl/perlbrew-ing-on-$OS.html?564e43e265b91041ef9f7f7119753f8425232b3f</id>
     <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/perlbrew-ing-on-$OS.html" type="text/html"/>
@@ -27,18 +39,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">The content in the wiki will be semi-manually built as HTML and get published to http://perlbrew.pl . You are welcome to write up a page and ping me (@gugod) to get it published.</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.83.html?cee80c6080e5142f8adc7e415d6f91192cd71f03</id>
-    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Release-0.83.html" type="text/html"/>
-    <title>Perlbrew Release 0.83</title>
-    <updated>2018-05-30T09:01:35+09:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.82 was released at 2018-05-30T08:04:43+0900 with these notable changes:</div>
     </summary>
   </entry>
   <entry>
