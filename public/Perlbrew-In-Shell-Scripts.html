@@ -64,7 +64,8 @@ perlbrew use perl-5.28.0
 <p>If this shell script only invokes one program and do not call <code>perlbrew use</code> several times, it can be simplifed by utilizing <code>perlbrew exec</code> command to something like this:</p>
 
 <pre><code>#!/bin/bash
-exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 perl /apps/myapp/bin/myapp.pl $*
+exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 \
+    perl /apps/myapp/bin/myapp.pl $*
 </code></pre>
 
 <p>This runs <code>perl /apps/myapp/bin/myapp.pl</code>, passing through all command-line arguments, after switching perl-5.28.1. The <code>perlbrew</code> executable itself should be located within an initialized <code>$PERLBREW_ROOT</code> directory, as that is how it figures out the installation paths of perls. This last trick does not work with perlbrew instaledd via cpan clients.</p>
