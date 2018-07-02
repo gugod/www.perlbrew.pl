@@ -4,12 +4,36 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2018-06-24T01:20:35Z</updated>
+  <updated>2018-07-02T00:00:02Z</updated>
   <entry>
-    <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.84.html?0f472b50b6a7f42afd584479e4eaf667fb852581</id>
+    <id>https://perlbrew.plhttps://perlbrew.pl/Home.html?1bad9197ab7c6eb65db553ec1119fa8cce87a2d4</id>
+    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Home.html" type="text/html"/>
+    <title>Welcome to the App-perlbrew wiki!</title>
+    <updated>2018-07-02T08:25:34+09:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">The content in the wiki will be semi-manually built as HTML and get published to https://perlbrew.pl . You are welcome to write up a page and ping me (@gugod) to get it published.</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.plhttps://perlbrew.pl/Perlbrew-In-Shell-Scripts.html?75d76d7c019061a7b0ed01561c2767057cab903f</id>
+    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Perlbrew-In-Shell-Scripts.html" type="text/html"/>
+    <title>Perlbrew In Shell Scripts</title>
+    <updated>2018-07-02T08:25:34+09:00</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">It is generally easy to bootstrap perlbrew and use perlbrew function in shell scripts. In an interactive script, this preamble is usually what's needed:</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.84.html?c5c3dc33e0d2a165ff3f68e579c98858de2bd16f</id>
     <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Release-0.84.html" type="text/html"/>
     <title>Perlbrew Release 0.84</title>
-    <updated>2018-06-24T10:13:04+09:00</updated>
+    <updated>2018-06-24T10:21:30+09:00</updated>
     <author>
       <name>gugod</name>
     </author>
@@ -51,18 +75,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">Below I describe how to install the perl-shared binding for RRDTool on a recent OS X with a recent version of Homebrew.</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.plhttps://perlbrew.pl/Home.html?896e363d969f79aae5503fee969420d325a47c3d</id>
-    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Home.html" type="text/html"/>
-    <title>Welcome to the App-perlbrew wiki!</title>
-    <updated>2018-05-30T08:59:27+09:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">The content in the wiki will be semi-manually built as HTML and get published to http://perlbrew.pl . You are welcome to write up a page and ping me (@gugod) to get it published.</div>
     </summary>
   </entry>
   <entry>
@@ -279,18 +291,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.66 is released on 2013-08-03T00:22:29+0200 with an important bug fix for 0.65.</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.plhttps://perlbrew.pl/Release-0.65.html?2ae8c2619f998fdd34f33e64b8ba3de52df7c5d4</id>
-    <link rel="alternate" href="https://perlbrew.plhttps://perlbrew.pl/Release-0.65.html" type="text/html"/>
-    <title>Perlbrew Release 0.65</title>
-    <updated>2013-08-01T14:25:27+09:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.65 is released on 2013-08-01T07:19:03+0200</div>
     </summary>
   </entry>
 </feed>
