@@ -41,27 +41,21 @@
   <h2>Perlbrew In Shell Scripts</h2>
   <p>It is generally easy to bootstrap perlbrew and use perlbrew function in shell scripts. In an interactive script, this preamble is usually what's needed:</p>
 
-<p>```bash</p>
-
-<h1>!/bin/bash</h1>
-
-<p>source $HOME/perl5/perlbrew/etc/bashrc
+<pre><code>#!/bin/bash
+source $HOME/perl5/perlbrew/etc/bashrc
 perlbrew use perl-5.28.0
-```</p>
+</code></pre>
 
 <p>It is just the same as what's put in bashrc and executed everytime you open a new shell.</p>
 
 <p>However, this may not work for a cron script -- because cron scripts are executed without variablse like <code>$HOME</code>. The alternative shell preamble for cron scripts is something like:</p>
 
-<p>```bash</p>
-
-<h1>!/bin/bash</h1>
-
-<p>export PERLBREW_ROOT=/home/gugod/perl5/perlbrew
+<pre><code>#!/bin/bash
+export PERLBREW_ROOT=/home/gugod/perl5/perlbrew
 export PERLBREW_HOME=/home/gugod/.perlbrew
 source ${PERLBREW_ROOT}/etc/bashrc
 perlbrew use perl-5.28.0
-```</p>
+</code></pre>
 
 <p>The <code>$PERLBREW_ROOT</code> and <code>$PERLBREW_HOME</code> are special variables recognized by perlbrew for bootstrapping purposes. They are also used for specifying alternative installation directiory and let multiple accounts on the same machine share the same perlbrew installation.</p>
 
@@ -69,12 +63,9 @@ perlbrew use perl-5.28.0
 
 <p>If this shell script only invokes one program and do not call <code>perlbrew use</code> several times, it can be simplifed by utilizing <code>perlbrew exec</code> command to something like this:</p>
 
-<p>```bash</p>
-
-<h1>!/bin/bash</h1>
-
-<p>exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 perl /apps/myapp/bin/myapp.pl $*
-```</p>
+<pre><code>#!/bin/bash
+exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 perl /apps/myapp/bin/myapp.pl $*
+</code></pre>
 
 <p>This runs <code>perl /apps/myapp/bin/myapp.pl</code>, passing through all command-line arguments, after switching perl-5.28.1. The <code>perlbrew</code> executable itself should be located within an initialized <code>$PERLBREW_ROOT</code> directory, as that is how it figures out the installation paths of perls. This last trick does not work with perlbrew instaledd via cpan clients.</p>
 
