@@ -4,7 +4,19 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2018-12-15T14:37:06Z</updated>
+  <updated>2019-01-19T00:59:09Z</updated>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.86.html?8dac50a674b60ab4c566e8f27ddbdc86d651ea62</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.86.html" type="text/html"/>
+    <title>Perlbrew Release 0.86</title>
+    <updated>2019-01-19T09:49:45+09:00Z</updated>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.86 was released at 2019-01-19T09:39:55+0900 with these notable changes:</div>
+    </summary>
+  </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.83.html?43f4159830a0bc32a0446b1f875a92b4db562af9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.83.html" type="text/html"/>
@@ -279,18 +291,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.69 is released at 2014-06-10T23:32:05+0200</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.68.html?8ec9f32e61ae3e55cfbacd242aa7cd98baacaae0</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.68.html" type="text/html"/>
-    <title>Perlbrew Release 0.68</title>
-    <updated>2014-06-07T22:18:30+09:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.68 is released at 2014-06-07T15:08:00+0200</div>
     </summary>
   </entry>
 </feed>
