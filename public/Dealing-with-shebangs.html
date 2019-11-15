@@ -52,7 +52,7 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
 <pre><code>#!/usr/bin/env perl
 </code></pre>
 
-<p>Bascially they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang you'll find in most perl programs:</p>
+<p>Basically they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang you'll find in most perl programs:</p>
 
 <pre><code>#!/usr/bin/perl
 </code></pre>
