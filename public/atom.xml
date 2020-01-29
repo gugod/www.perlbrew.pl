@@ -4,7 +4,31 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2019-12-07T08:43:32Z</updated>
+  <updated>2020-01-29T13:09:05Z</updated>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.88.html?2dfaf98977fc0637f560a5004fc0b79ac17ce0f7</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.88.html" type="text/html"/>
+    <title>Perlbrew Release 0.88</title>
+    <published>2020-01-29T22:07:09+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">n=====================</div>
+    </summary>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Perlbrew-and-Friends.html?709382420bbad872a5f9ea82a252384e3390d252</id>
+    <link rel="alternate" href="https://perlbrew.pl/Perlbrew-and-Friends.html" type="text/html"/>
+    <title>Perlbrew and Friends</title>
+    <published>2020-01-28T21:22:31+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">If you install perlbrew with the installer as recommended, you might notice that an executable named patchperl is also installed to your ~/perl5/perlbrew/bin directory. Also when you read the perlbrew usage documentation, there is a command install-cpanm that installs a standalone executable cpanm to to the same bin directory. Why is perlbrew doing this ?</div>
+    </summary>
+  </entry>
   <entry>
     <id>https://perlbrew.pl/Home.html?0ce0d3c80b8f0a214df0df75fbc430a4ca1decf3</id>
     <link rel="alternate" href="https://perlbrew.pl/Home.html" type="text/html"/>
@@ -267,30 +291,6 @@
     </author>
     <summary type="xhtml">
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.72 is released at 2014-10-27T21:38:19+0100 with these bug fixes:</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.71.html?43770cd71f4eb60090dbd1295449d7166501b175</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.71.html" type="text/html"/>
-    <title>Perlbrew Release 0.71</title>
-    <updated>2014-09-14T03:01:12+09:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.71 is released at 2014-09-13T19:59:15+0200 with this bug fix:</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.70.html?578b757c59c2e017a93f5a65c1c590b6e3306f6f</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.70.html" type="text/html"/>
-    <title>Perlbrew Release 0.70</title>
-    <updated>2014-09-14T03:00:40+09:00</updated>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.70 is released at 2014-09-02T20:41:15+0900</div>
     </summary>
   </entry>
 </feed>
