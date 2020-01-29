@@ -4,17 +4,17 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2020-01-29T13:09:05Z</updated>
+  <updated>2020-01-29T13:11:19Z</updated>
   <entry>
-    <id>https://perlbrew.pl/Release-0.88.html?2dfaf98977fc0637f560a5004fc0b79ac17ce0f7</id>
+    <id>https://perlbrew.pl/Release-0.88.html?7abbaa95bfcc7a675d32eba5ff44863f0994e9c9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.88.html" type="text/html"/>
     <title>Perlbrew Release 0.88</title>
-    <published>2020-01-29T22:07:09+09:00Z</published>
+    <published>2020-01-29T22:11:12+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
     <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">n=====================</div>
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.88 was released at 2020-01-29T21:40:07+0900 with these notable changes:</div>
     </summary>
   </entry>
   <entry>
