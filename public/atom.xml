@@ -4,7 +4,18 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
-  <updated>2020-05-24T09:33:53Z</updated>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.89.html?d8b71c2394200ca9d7c2688ccc04961af438c3e2</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.89.html" type="text/html"/>
+    <title>Perlbrew Release 0.89</title>
+    <published>2020-10-19T10:06:54+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <summary type="xhtml">
+      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.89 was released at 2020-10-19T09:26:19+0900 with these notable changes:</div>
+    </summary>
+  </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.88.html?7abbaa95bfcc7a675d32eba5ff44863f0994e9c9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.88.html" type="text/html"/>
@@ -281,16 +292,5 @@
       <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.73 was release at 2015-02-01T09:59:45+0100 with many fixes and improvements from Manuel Streuhofer, Aristotle Pagaltzis, Sebastian Willert, David Hand, Eric Enns, Peter Roberts, Thomas Sibley, Ivan Baidakou, thanks a lot!</div>
     </summary>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.72.html?fb8764b5687ce0b751a87f4be59846965c70b043</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.72.html" type="text/html"/>
-    <title>Perlbrew Release 0.72</title>
-    <published>2014-10-28T05:48:44+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.72 is released at 2014-10-27T21:38:19+0100 with these bug fixes:</div>
-    </summary>
-  </entry>
+  <updated>1970-01-01T00:00:00Z</updated>
 </feed>
