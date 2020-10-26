@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="alternate" type="application/atom+xml" href="https://feeds.feedburner.com/Perlbrew">
-    <title>I have been using Perlbrew happily on OS X to install custom/recent Perl versions. Sometimes I need a more or less exotic Perl binding that I could easily install using Homebrew. Recent updates to Homebrew made that process a bit less automatic.</title>
+    <title>Deploying Perl bindings from tools installed with Homebrew on OS X</title>
 <![if gte IE 9]>
     <link href="//fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
     <link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -38,37 +38,27 @@
     </header>
     <div id="container" class="inner">
         <section>
-  <h2>I have been using Perlbrew happily on OS X to install custom/recent Perl versions. Sometimes I need a more or less exotic Perl binding that I could easily install using Homebrew. Recent updates to Homebrew made that process a bit less automatic.</h2>
-  <p>Below I describe how to install the perl-shared binding for RRDTool on a recent OS X with a recent version of Homebrew.</p>
-
-<h2>Why is it not working automatically</h2>
-
-<p>There are two issues with the combination of Perlbrew and Homebrew:
- * Homebrew assumes you're using the system Perl and does not automatically detect your locally-installed Perl.
- * Latest versions of Homebrew work in a sandbox environment. This means that the build chain has no write permissions to the folder that contains the Perlbrew site modules.</p>
-
-<h3>Detect locally-installed Perl version</h3>
-
-<p>This can be forced by passing to <code>brew</code> the option <code>--env=std</code>. For more information and the discussion about this please see the last posts in this <a href="https://github.com/Homebrew/legacy-homebrew/issues/12090">support ticket</a>.</p>
-
-<h3>Work around the sandbox</h3>
-
-<p>When you're install a packet with brew, the sandbox seems to prohibit writes to other folders than the target folder for the brew process. This means that if a packet creates a Perl module, this module cannot be written to the Perl site module folder. To work around that: 
- * enable the option to not delete the build folder
- * navigate to the build folder yourself and install the perl module.</p>
-
-<h2>Practical example for RRDtool</h2>
-
-<p><code>brew install --env=std --build-from-source --keep-tmp rrdtool</code></p>
-
-<p>Then navigate to the temp folder where the build results are retained. The full path is listed in the output of the previous command.</p>
-
-<p>Go into the subfolder <code>bindings/perl-shared</code> and do <code>make install</code> there. You'll see the RRDs.pm nicely be deployed into your favorite Perl version module folder.</p>
-
-<h2>References</h2>
-
-<p>I've <a href="http://discourse.brew.sh/t/installing-rrdtool-perl-module-on-local-perl-no-write-permission-to-local-folder/610">discussed</a> this with a developer from Homebrew. </p>
-
+  <h2>Deploying Perl bindings from tools installed with Homebrew on OS X</h2>
+  <p>by  Lieven Hollevoet <a href="https://github.com/hollie">@hollie</a>
+</p><p>I have been using Perlbrew happily on OS X to install custom/recent Perl versions. Sometimes I need a more or less exotic Perl binding that I could easily install using Homebrew. Recent updates to Homebrew made that process a bit less automatic.
+</p><p>Below I describe how to install the perl-shared binding for RRDTool on a recent OS X with a recent version of Homebrew.
+</p><h2>Why is it not working automatically
+</h2><p>There are two issues with the combination of Perlbrew and Homebrew:
+ <em> Homebrew assumes you're using the system Perl and does not automatically detect your locally-installed Perl.
+ </em> Latest versions of Homebrew work in a sandbox environment. This means that the build chain has no write permissions to the folder that contains the Perlbrew site modules.
+</p><h3>Detect locally-installed Perl version
+</h3><p>This can be forced by passing to <code>brew</code> the option <code>--env=std</code>. For more information and the discussion about this please see the last posts in this <a href="https://github.com/Homebrew/legacy-homebrew/issues/12090">support ticket</a>.
+</p><h3>Work around the sandbox
+</h3><p>When you're install a packet with brew, the sandbox seems to prohibit writes to other folders than the target folder for the brew process. This means that if a packet creates a Perl module, this module cannot be written to the Perl site module folder. To work around that: 
+ <em> enable the option to not delete the build folder
+ </em> navigate to the build folder yourself and install the perl module.
+</p><h2>Practical example for RRDtool
+</h2><p><code>brew install --env=std --build-from-source --keep-tmp rrdtool</code>
+</p><p>Then navigate to the temp folder where the build results are retained. The full path is listed in the output of the previous command.
+</p><p>Go into the subfolder <code>bindings/perl-shared</code> and do <code>make install</code> there. You'll see the RRDs.pm nicely be deployed into your favorite Perl version module folder.
+</p><h2>References
+</h2><p>I've <a href="http://discourse.brew.sh/t/installing-rrdtool-perl-module-on-local-perl-no-write-permission-to-local-folder/610">discussed</a> this with a developer from Homebrew. 
+</p>
         </section>
     </div>
     <footer>
