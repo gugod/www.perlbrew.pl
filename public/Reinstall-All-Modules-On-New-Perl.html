@@ -39,42 +39,26 @@
     <div id="container" class="inner">
         <section>
   <h2>How To Reinstall All Modules On New Perl</h2>
-  <p>Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.</p>
-
-<p>You can easily get the list of modules in the current perl installation with <code>list-modules</code> command:</p>
-
-<pre><code>perlbrew use perl-5.8.8@foo-project
+  <p>Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.
+</p><p>You can easily get the list of modules in the current perl installation with <code>list-modules</code> command:
+</p><pre><code>perlbrew use perl-5.8.8@foo-project
 perlbrew list-modules
-</code></pre>
-
-<p>That simply prints out module names that you can use latter.</p>
-
-<p>Since <code>perlbrew 0.81</code>, it is possible to use the <code>clone-modules</code> command to reinstall all the modules from a Perl instance to another.</p>
-
-<p>For instance:</p>
-
-<pre><code>perlbrew clone-modules 5.27.7 5.26.1
-</code></pre>
-
-<p>will <em>clone</em> all modules from instance <code>5.27.7</code> to instance <code>5.26.1</code>.</p>
-
-<p>For <code>perlbrew</code> version prior to <em>0.81</em> or in case the <code>clone-modules</code>
+</code></pre><p>That simply prints out module names that you can use latter.
+</p><p>Since <code>perlbrew 0.81</code>, it is possible to use the <code>clone-modules</code> command to reinstall all the modules from a Perl instance to another.
+</p><p>For instance:
+</p><pre><code>perlbrew clone-modules 5.26.1 5.27.7
+</code></pre><p>will <em>clone</em> all modules from instance <code>5.26.1</code> to instance <code>5.27.7</code>.
+</p><p>For <code>perlbrew</code> version prior to <em>0.81</em> or in case the <code>clone-modules</code>
 does not what you need, the following one liner can pipe all modules from one
-instance of Perl to another one asking <code>cpanm</code> to install each one on the latter:</p>
-
-<pre><code>perlbrew list-modules | perlbrew exec --with perl-5.16.2@foo-project cpanm
-</code></pre>
-
-<p>The <code>exec</code> command is particularly helpful to run any program as if it is in the
-environment of the specified perl installations. </p>
-
-<p>Get more details running the <code>help</code> command:</p>
-
-<pre><code>perlbrew help list-modules
+instance of Perl to another one asking <code>cpanm</code> to install each one on the latter:
+</p><pre><code>perlbrew list-modules | perlbrew exec --with perl-5.16.2@foo-project cpanm
+</code></pre><p>The <code>exec</code> command is particularly helpful to run any program as if it is in the
+environment of the specified perl installations. 
+</p><p>Get more details running the <code>help</code> command:
+</p><pre><code>perlbrew help list-modules
 perlbrew help exec
 perlbrew help clone-modules
 </code></pre>
-
         </section>
     </div>
     <footer>

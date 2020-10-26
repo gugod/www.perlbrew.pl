@@ -8,13 +8,129 @@
     <id>https://perlbrew.pl/Release-0.89.html?d8b71c2394200ca9d7c2688ccc04961af438c3e2</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.89.html" type="text/html"/>
     <title>Perlbrew Release 0.89</title>
-    <published>2020-10-19T10:06:54+09:00Z</published>
+    <published>2020-10-26T09:56:25+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.89 was released at 2020-10-19T09:26:19+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.89 was released at 2020-10-19T09:26:19+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Håkon Hægland, Nicolas R, Peter Tripp
+</li>
+          <li>Make the bashrc compatible with 'bash -u'. Github PR #694
+</li>
+          <li>Prevent build directory from being overwritten. Github PR #683
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html?520c4bb30f1f9056794e9ce14762932f14b5604b</id>
+    <link rel="alternate" href="https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html" type="text/html"/>
+    <title>How To Reinstall All Modules On New Perl</title>
+    <published>2020-10-26T09:55:07+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.
+</p>
+        <p>You can easily get the list of modules in the current perl installation with <code>list-modules</code> command:
+</p>
+        <pre>
+          <code>perlbrew use perl-5.8.8@foo-project
+perlbrew list-modules
+</code>
+        </pre>
+        <p>That simply prints out module names that you can use latter.
+</p>
+        <p>Since <code>perlbrew 0.81</code>, it is possible to use the <code>clone-modules</code> command to reinstall all the modules from a Perl instance to another.
+</p>
+        <p>For instance:
+</p>
+        <pre>
+          <code>perlbrew clone-modules 5.26.1 5.27.7
+</code>
+        </pre>
+        <p>will <em>clone</em> all modules from instance <code>5.26.1</code> to instance <code>5.27.7</code>.
+</p>
+        <p>For <code>perlbrew</code> version prior to <em>0.81</em> or in case the <code>clone-modules</code>
+does not what you need, the following one liner can pipe all modules from one
+instance of Perl to another one asking <code>cpanm</code> to install each one on the latter:
+</p>
+        <pre>
+          <code>perlbrew list-modules | perlbrew exec --with perl-5.16.2@foo-project cpanm
+</code>
+        </pre>
+        <p>The <code>exec</code> command is particularly helpful to run any program as if it is in the
+environment of the specified perl installations. 
+</p>
+        <p>Get more details running the <code>help</code> command:
+</p>
+        <pre>
+          <code>perlbrew help list-modules
+perlbrew help exec
+perlbrew help clone-modules
+</code>
+        </pre>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/CommandAlias.html?06a42c0e760f8eb11cb1435df96185ef715239d1</id>
+    <link rel="alternate" href="https://perlbrew.pl/CommandAlias.html" type="text/html"/>
+    <title>Description</title>
+    <published>2020-10-25T20:11:28+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Since 0.21, the <code>current</code> symlink is ditched in favor of bash-based multi-user support. However, the change discourage non-interactive uses of perlbrew because people will have to put the versioned path in shebang, which makes it troublesome when it is time to switch to different perl for those program.
+</p>
+        <p>An 'alias' command is introduced to generalize the need. <code>current</code> symlink is no longer a special one, but just a name specified by users.
+</p>
+        <h2>Usage
+</h2>
+        <pre>
+          <code>perlbrew alias [-f] &lt;action&gt; &lt;name&gt; [&lt;alias&gt;]
+</code>
+        </pre>
+        <p>Action is one of: create, delete, rename
+</p>
+        <p><code>-f</code> flag is used to forcibly perform the action.
+</p>
+        <p><code>&lt;name&gt;</code> should be one of the installation names, <code>&lt;alias&gt;</code> is the given alternative name.
+</p>
+        <h2>Synopsis
+</h2>
+        <p>    # essentially ln -s perl-5.14.0 current.
+    #     should fail if 'perl-5.14.0' does not exist.
+    #     should fail if 'current' already exists.
+    perlbrew alias create perl-5.14.0 current
+</p>
+        <pre>
+          <code># delete the alias
+perlbrew alias delete current
+
+# renaming
+#     should fail if `current` does not exist.
+#     should fail if `main` already exists.
+perlbrew alias rename current main
+
+# -f for force override
+#    should still fail if the alias refers to a non-alias installation.
+#    should still fail if the name does not exists (`perl-5.14.0` and `current` in the following cases)
+perlbrew alias -f create perl-5.14.0 current
+perlbrew alias -f rename current main
+</code>
+        </pre>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.88.html?7abbaa95bfcc7a675d32eba5ff44863f0994e9c9</id>
@@ -24,9 +140,20 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.88 was released at 2020-01-29T21:40:07+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.88 was released at 2020-01-29T21:40:07+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Dave Rolsky, Gil Magno, Zhu Sheng Li
+</li>
+          <li><code>install</code> command now shows errors message from http_downlod. Github PR #681.
+</li>
+          <li>Fix: The .tar.bz2 suffix are removed from the output ouf <code>available</code> PR #685
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Perlbrew-and-Friends.html?709382420bbad872a5f9ea82a252384e3390d252</id>
@@ -36,9 +163,24 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">If you install perlbrew with the installer as recommended, you might notice that an executable named patchperl is also installed to your ~/perl5/perlbrew/bin directory. Also when you read the perlbrew usage documentation, there is a command install-cpanm that installs a standalone executable cpanm to to the same bin directory. Why is perlbrew doing this ?</div>
-    </summary>
+    <content type="html" xml:base="https://perlbrew.pl">&lt;p&gt;If you install perlbrew with the installer as recommended, you might notice that an executable named &lt;code&gt;patchperl&lt;/code&gt; is also installed to your &lt;code&gt;~/perl5/perlbrew/bin&lt;/code&gt; directory. Also when you read the &lt;code&gt;perlbrew&lt;/code&gt; &lt;a href="http://metacpan.org/module/perlbrew"&gt;usage documentation&lt;/a&gt;, there is a command &lt;code&gt;install-cpanm&lt;/code&gt; that installs a standalone executable &lt;code&gt;cpanm&lt;/code&gt; to to the same &lt;code&gt;bin&lt;/code&gt; directory. Why is perlbrew doing this ?
+&lt;/p&gt;&lt;p&gt;The program &lt;code&gt;patchperl&lt;/code&gt; is a standalone executable of the distribution of &lt;a href="http://metacpan.org/module/Devel::PatchPerl"&gt;Devel::PatchPerl&lt;/a&gt; by &lt;a href="http://metacpan.org/author/BINGOS"&gt;BINGOS&lt;/a&gt;, which aims to solve the issues encountered when building old perls (5.6.x, 5.8.x, etc) on modern operating systems. Due to the updates in OS, gcc, or libc, those old perl distributions fail to build due to various configure or library errors. &lt;code&gt;Devel::PatchPerl&lt;/code&gt; patches the ancient perl source tree so it can be successfully built.
+&lt;/p&gt;&lt;p&gt;&lt;code&gt;perlbrew&lt;/code&gt; requires the &lt;code&gt;patchperl&lt;/code&gt; program to be there because it is the best way to make it Just Work. &lt;code&gt;cpanm&lt;/code&gt; is an awesome CPAN client that is lightweight, and fast. I use it exclusively these days.
+&lt;/p&gt;&lt;p&gt;The reason that these programs live under &lt;code&gt;~/perl5/perlbrew/bin&lt;/code&gt; is very simple: so they are always available no matter which perl you switch to.
+&lt;/p&gt;&lt;p&gt;With a proper perlbrew setup, &lt;code&gt;~/perl5/perlbrew/bin&lt;/code&gt; should be the first or second item in your &lt;code&gt;$PATH&lt;/code&gt;, since &lt;code&gt;perlbrew switch&lt;/code&gt; and &lt;code&gt;perlbrew use&lt;/code&gt; alters &lt;code&gt;$PATH&lt;/code&gt;, it is the best that mandatory programs lives somewhere that's always accessible.
+&lt;/p&gt;&lt;p&gt;If you install &lt;code&gt;cpanm&lt;/code&gt; by doing &lt;code&gt;cpan -i App::cpanminus&lt;/code&gt; within a perlbrew environment, you will run into this issue:
+&lt;/p&gt;&lt;pre&gt;&lt;code&gt;perlbrew switch perl-5.12.3
+cpan -i App::cpanminus
+cpanm Moose # works
+
+perlbrew switch perl-5.14.0
+cpanm Moose
+#=&amp;gt; cpanm is not found 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is because the first &lt;code&gt;cpan&lt;/code&gt; (5.12.3) installs &lt;code&gt;cpanm&lt;/code&gt; to &lt;code&gt;~/perl5/perlbrew/perls/5.12.3/bin&lt;/code&gt;, and the latter &lt;code&gt;perlbrew switch perl-5.14.0&lt;/code&gt; removes that from &lt;code&gt;$PATH&lt;/code&gt;. If you use &lt;code&gt;cpanm&lt;/code&gt; exclusively like I do, you should install it with &lt;code&gt;perlbrew install-cpanm&lt;/code&gt;.
+&lt;/p&gt;&lt;p&gt;In short, &lt;code&gt;patchperl&lt;/code&gt; and &lt;code&gt;cpanm&lt;/code&gt; are so important, it is best to make them always available.
+&lt;/p&gt;&lt;p&gt;peace out, gugod.
+&lt;/p&gt;&lt;hr&gt;&lt;p&gt;PS. You may also choose to manually install &lt;code&gt;cpanm&lt;/code&gt; to a system-wide path like &lt;code&gt;/usr/local/bin&lt;/code&gt;, that way it'll always available too. In that case you do not need to run &lt;code&gt;perlbrew install-cpanm&lt;/code&gt; command at all.
+&lt;/p&gt;</content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Home.html?0ce0d3c80b8f0a214df0df75fbc430a4ca1decf3</id>
@@ -48,9 +190,32 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">The content in the wiki will be semi-manually built as HTML and get published to https://perlbrew.pl . You are welcome to write up a page and ping me (@gugod) to get it published.</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>The content in the wiki will be semi-manually built as HTML and get published to <a href="https://perlbrew.pl">https://perlbrew.pl</a> . You are welcome to write up a page and ping me (@gugod) to get it published.
+</p>
+        <h2>How To Information
+</h2>
+        <ul>
+          <li><a href="perlbrew-ing-on-$OS.html">perlbrew-ing on $OS</a>
+</li>
+          <li><a href="Dealing-with-shebangs.html">Dealing with shebangs</a>
+</li>
+          <li><a href="Reinstall-All-Modules-On-New-Perl.html">Reinstall-All-Modules-On-New-Perl</a>
+</li>
+          <li><a href="Perlbrew-中文簡介.html">Perlbrew 中文簡介</a>
+</li>
+          <li><a href="Install-a-sitecustomize.pl-file-with-Perlbrew.html">Install a sitecustomize.pl file with Perlbrew</a>
+</li>
+          <li><a href="https://github.com/gugod/App-perlbrew/wiki/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X">Making Homebrew work with Perlbrew</a>
+</li>
+          <li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-perlbrew-and-manage-multiple-versions-of-perl-5-on-centos-7">How to Install Perlbrew and Manage Multiple Versions of Perl 5 on CentOS 7 | DigitalOcean</a>
+</li>
+          <li><a href="https://qiita.com/suesan/items/008da775f066a323bddb">perlbrewで構築するPerl環境</a> by <a href="https://qiita.com/suesan">@suesan</a>
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.87.html?263bbf8efbc5ea4670cb849f115ae825913eee03</id>
@@ -60,9 +225,30 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.87 was released at 2019-10-25T22:55:40+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.87 was released at 2019-10-25T22:55:40+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Branislav Zahradník, Christopher Chavez, Jon Jacobson, Konstantin S. Uvarin, Pali, Shoichi Kaji, Tomasz Konojacki, jkjacobson, rage311
+</li>
+          <li>Use the new official repo url for fetching perl blead. Github issue #677
+</li>
+          <li>Add <code>--min</code> and <code>--max</code> options to <code>exec</code> command. Github PR #656
+</li>
+          <li>Fix "ERROR: Cannot find the tarball for perl-$version". Github PR #669
+</li>
+          <li>Fix calling patchperl on readonly files. Github PR #674
+</li>
+          <li>Fix installation from local tarbal files. See <a href="https://rt.cpan.org/Ticket/Display.html?id=129871">https://rt.cpan.org/Ticket/Display.html?id=129871</a>
+</li>
+          <li>Internal refactoring. Github PR #667, #662
+</li>
+          <li>Various corrections of documentation. Github PR #676, #660
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Perlbrew-Configuration.html?9d00d7e0d5f9dc2e96f2bd046f84cc357e0ba195</id>
@@ -72,9 +258,27 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew usually picks some nice defaults, but you can still tweaks some knobs.</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew usually picks some nice defaults, but you can still tweaks some knobs.
+</p>
+        <h2>Set a CPAN Mirror
+</h2>
+        <p>Set environment variable PERLBREW_CPAN_MIRROR to the mirror site url. <code>http://</code> or <code>https://</code> URLs
+are both supported, but not <code>ftp://</code> or <code>rsync://</code> URLs.
+</p>
+        <p>For example:
+</p>
+        <pre>
+          <code># bash / zsh
+export PERLBREW_CPAN_MIRROR=https://cpan.metacpan.org/
+</code>
+        </pre>
+        <p>For the list of public CPAN mirror site URLs, please see this list <a href="http://www.cpan.org/SITES.html"/>
+Again, choose a <code>http://</code> URL.
+</p>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.86.html?8dac50a674b60ab4c566e8f27ddbdc86d651ea62</id>
@@ -84,21 +288,51 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.86 was released at 2019-01-19T09:39:55+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.86 was released at 2019-01-19T09:39:55+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Olaf Alders, Paul Cochrane
+</li>
+          <li>Fix an error from 'install' command.  <a href="https://rt.cpan.org/Public/Bug/Display.html?id=128083">https://rt.cpan.org/Public/Bug/Display.html?id=128083</a>
+</li>
+          <li>Tweak the separater characters of 'exec' command: See <a href="https://github.com/gugod/App-perlbrew/issues/648">https://github.com/gugod/App-perlbrew/issues/648</a>
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.83.html?43f4159830a0bc32a0446b1f875a92b4db562af9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.83.html" type="text/html"/>
     <title>Perlbrew Release 0.83</title>
-    <updated>2018-12-15T23:36:02+09:00</updated>
+    <published>2018-12-15T23:36:02+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.83 was released at 2018-05-30T08:04:43+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.83 was released at 2018-05-30T08:04:43+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Alceu Rodrigues de Freitas Junior, Dan Book, Luca Ferrari, María Inés Parnisari, Mohammad S Anwar, Shoichi Kaji, sylints
+</li>
+          <li>my respect to search.cpan.org
+</li>
+          <li>MAKE env var can now be used to specify the "make" program.
+</li>
+          <li>New command: install-cpm
+</li>
+          <li>"install" command now has a "--builddir" option for specifying a work directory
+</li>
+          <li>"list" command now takes "--verbose" option.
+</li>
+          <li>"clone-modules" command is now better documented.
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.84.html?08e7496e2467dcee95519a264aeea3ea06fde451</id>
@@ -108,9 +342,20 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.84 was released at 2018-06-24T08:26:14+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.84 was released at 2018-06-24T08:26:14+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Joelle Maslak
+</li>
+          <li>Unbreak 'available' command after some updates from cpan.org web site.
+</li>
+          <li>Unbreak the installation -- which missed "perlbrew" command due to a mistake when using mbtiny.
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.85.html?301826a78d85640ecfc6bc54ef290408881d0f91</id>
@@ -120,9 +365,20 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.85 was released at 2018-12-15T23:24:15+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.85 was released at 2018-12-15T23:24:15+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Branislav Zahradník, Guido Flohr, Joelle Maslak, Luca Ferrari, rage311
+</li>
+          <li>Fix the behaviour of 'clone-modules'
+</li>
+          <li>Various internal refactoring
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Dealing-with-shebangs.html?e92c8251bfbf1c4e91bb5baef15d082ad37bb1f8</id>
@@ -132,9 +388,67 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: </div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: 
+</p>
+        <pre>
+          <code>#!/bin/sh
+#! −*−perl−*−
+eval 'exec perl −x −wS $0 ${1+"$@"}'
+    if 0;
+</code>
+        </pre>
+        <p>The other is extremely simple:
+</p>
+        <pre>
+          <code>#!/usr/bin/env perl
+</code>
+        </pre>
+        <p>Basically they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang you'll find in most perl programs:
+</p>
+        <pre>
+          <code>#!/usr/bin/perl
+</code>
+        </pre>
+        <p>This is because most UNIX-like systems (especially Linux) comes with perl installed at <code>/usr/bin/perl</code>. Some UNIX does not have perl by default, but can be easily installed latter on. Just that they might end up being at <code>/usr/local/bin/perl</code>. Usually perl programmers call them "system perl".
+</p>
+        <p>A developer might install their own version of perl to anywhere like <code>/opt/perl5.14.2/bin/perl</code> or <code>/opt/local/bin/perl</code> or any other fancy paths. An put the bin path to the beginning of <code>$PATH</code> environment variable so that when they run perl programs as <code>perl foo.pl</code>, it'll invoke their own version of perl, not the system perl. There is no special names for such perl installation, let's call them as "env perl" in the article.
+</p>
+        <p>perlbrew rely on this mechanism to be functional properly. Whenever you say <code>perlbrew use 5.14.2</code>, perlbrew locates the path of 5.14.2 perl binary, and modify <code>$PATH</code> to point to there. Running perl programs with env perl requires you type "perl" in the beginning of the command. Relying shebang lines in the code does not.
+</p>
+        <p>The shebang schema is like Dokodemo Door, a convention that brings huge convenience to easily specify an compiler + runner of the code. Without this design, scripting/dynamic language authors might just create their own conventions.
+</p>
+        <p>However, it also creates problems. A cross-platform perl program might not be set be executable because the shebang line is valid on the author's platform, but not on the users' environment. A perl program authored on Mac can simply put <code>#!/usr/bin/perl</code> in the first line, but once that program gets copied to FreeBSD, perl can only be found at <code>#!/usr/local/bin/perl</code>. The user intend to run the program should modify the code a little bit in order to make it a valid executable. Which really invalids the statement that "perl programs are cross-platform."
+</p>
+        <p>Well, that sounds like picking bones from a egg. Developers will eventually learn that they can either symlink perl around, or have some fancy scripts that properly modify shebang in-place. True. However when a program does not run because of a invalid shebang line, it can be really frustrated for newbies
+</p>
+        <p>Sadly, there is really no perfect cross-platform shebang that works for all UNIX-like systems.
+</p>
+        <p>However, CPAN distributions built with <code>ExtUtil::MakeMaker</code> solves this issue in a very good way. When perl programs are distributed / installed as a CPAN distribution, its shebang line are rewritten to be the same perl that used to invoke cpan client itself. Or, if you download+extract a CPAN distribution on your own and run <code>perl Makefile.PL</code> to do manual installation, it will be your env perl.
+</p>
+        <p>Since shebang is hard to be cross-platfrom, it is also not trivial to decide what to put on the perlbrew executable shebang. You'll find that it currently contains <code>#!/usr/bin/perl</code>. However, the true is, when users runs this installer:
+</p>
+        <pre>
+          <code>curl -kL http://install.perlbrew.pl | bash
+</code>
+        </pre>
+        <p>The downloaded perlbrew will be modified to use your system perl shebang. To be more specific, it is the pre-perlbrew env perl shebang. That means <code>the first perl in $PATH that is not under $PERLRREW_ROOT</code>.
+</p>
+        <p>You might remember that it used to be just <code>#!/usr/bin/env perl</code>. But that has at least 2 drawbacks:
+</p>
+        <ol>
+          <li>CentOS Linux comes without <code>/usr/bin/env</code>, but only <code>/bin/env</code> (well, the same for many other UNIXs)
+</li>
+          <li><code>perlbrew use perl-5.6.0</code> will strangle perlbrew executable itself, because perlbrew requires 5.8.8.
+</li>
+        </ol>
+        <p>Therefore, it is the best to let <code>perlbrew</code> itself fixed to use system perl shebang. You may leave your own program to use the env shebang so that it can be invoked with env perl, which is managed with perlbrew. Optionally, you might want to hard-coded a perlbrew perl shebang in your code for some use cases.
+</p>
+        <p>Shebang is cool. It even feels like a cool word to be spoken. But having to manage shebang in programs really sucks. <em>shrug</em>
+</p>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html?493f02c679cdd8e30d543d2fbc83a6f808e74a47</id>
@@ -144,21 +458,65 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">It is generally easy to bootstrap perlbrew and use perlbrew function in shell scripts. In an interactive script, this preamble is usually what's needed:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>It is generally easy to bootstrap perlbrew and use perlbrew function in shell scripts. In an interactive script, this preamble is usually what's needed:
+</p>
+        <pre>
+          <code>#!/bin/bash
+source $HOME/perl5/perlbrew/etc/bashrc
+perlbrew use perl-5.28.0
+</code>
+        </pre>
+        <p>It is just the same as what's put in bashrc and executed everytime you open a new shell.
+</p>
+        <p>However, this may not work for a cron script -- because cron scripts are executed without variables like <code>$HOME</code>. The alternative shell preamble for cron scripts is something like:
+</p>
+        <pre>
+          <code>#!/bin/bash
+export PERLBREW_ROOT=/home/gugod/perl5/perlbrew
+export PERLBREW_HOME=/home/gugod/.perlbrew
+source ${PERLBREW_ROOT}/etc/bashrc
+perlbrew use perl-5.28.0
+</code>
+        </pre>
+        <p>The <code>$PERLBREW_ROOT</code> and <code>$PERLBREW_HOME</code> are special variables recognized by perlbrew for bootstrapping purposes. They are also used for specifying alternative installation directiory and let multiple accounts on the same machine share the same perlbrew installation.
+</p>
+        <p>In an interactive shell environment, the default value of <code>$PERLBREW_HOME</code> is <code>$HOME/.perlbrew</code>. If you don't use the <code>lib</code> feature in perlbrew, you can probably also skip setting this variable.
+</p>
+        <p>If this shell script only invokes one program and do not call <code>perlbrew use</code> several times, it can be simplifed by utilizing <code>perlbrew exec</code> command to something like this:
+</p>
+        <pre>
+          <code>#!/bin/bash
+exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 \
+    perl /apps/myapp/bin/myapp.pl $*
+</code>
+        </pre>
+        <p>This runs <code>perl /apps/myapp/bin/myapp.pl</code>, passing through all command-line arguments, after switching perl-5.28.1. The <code>perlbrew</code> executable itself should be located within an initialized <code>$PERLBREW_ROOT</code> directory, as that is how it figures out the installation paths of perls. This last trick does not work with perlbrew instaledd via cpan clients.
+</p>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.82.html?da5edba9572a5517eb0ef56c0f1689ec5cb59c9c</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.82.html" type="text/html"/>
     <title>Perlbrew Release 0.82</title>
-    <updated>2018-05-30T08:59:27+09:00</updated>
+    <published>2018-05-30T08:59:27+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.82 was released at 2017-12-17T09:53:00+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.82 was released at 2017-12-17T09:53:00+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Alceu Rodrigues de Freitas Junior, Paul Cochrane
+</li>
+          <li>Fix regression of 'perlbrew install blead'
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html?4a3ef212bd468b33b222dbf49380fa7f101a9fd0</id>
@@ -168,9 +526,40 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">Below I describe how to install the perl-shared binding for RRDTool on a recent OS X with a recent version of Homebrew.</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Below I describe how to install the perl-shared binding for RRDTool on a recent OS X with a recent version of Homebrew.
+</p>
+        <h2>Why is it not working automatically
+</h2>
+        <p>There are two issues with the combination of Perlbrew and Homebrew:
+ <em> Homebrew assumes you're using the system Perl and does not automatically detect your locally-installed Perl.
+ </em> Latest versions of Homebrew work in a sandbox environment. This means that the build chain has no write permissions to the folder that contains the Perlbrew site modules.
+</p>
+        <h3>Detect locally-installed Perl version
+</h3>
+        <p>This can be forced by passing to <code>brew</code> the option <code>--env=std</code>. For more information and the discussion about this please see the last posts in this <a href="https://github.com/Homebrew/legacy-homebrew/issues/12090">support ticket</a>.
+</p>
+        <h3>Work around the sandbox
+</h3>
+        <p>When you're install a packet with brew, the sandbox seems to prohibit writes to other folders than the target folder for the brew process. This means that if a packet creates a Perl module, this module cannot be written to the Perl site module folder. To work around that: 
+ <em> enable the option to not delete the build folder
+ </em> navigate to the build folder yourself and install the perl module.
+</p>
+        <h2>Practical example for RRDtool
+</h2>
+        <p><code>brew install --env=std --build-from-source --keep-tmp rrdtool</code>
+</p>
+        <p>Then navigate to the temp folder where the build results are retained. The full path is listed in the output of the previous command.
+</p>
+        <p>Go into the subfolder <code>bindings/perl-shared</code> and do <code>make install</code> there. You'll see the RRDs.pm nicely be deployed into your favorite Perl version module folder.
+</p>
+        <h2>References
+</h2>
+        <p>I've <a href="http://discourse.brew.sh/t/installing-rrdtool-perl-module-on-local-perl-no-write-permission-to-local-folder/610">discussed</a> this with a developer from Homebrew. 
+</p>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.78.html?124e24da382e785f887b76489bf0c1abb1f25ce1</id>
@@ -180,21 +569,15 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">0.78 was releaset at 2016-11-20T22:59:55+0100 with several fixes. Most importantly to accomodate changes on perl5.git.perl.org</div>
-    </summary>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html?9097740f2c698edb13ab28db70c2f18304eb8189</id>
-    <link rel="alternate" href="https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html" type="text/html"/>
-    <title>How To Reinstall All Modules On New Perl</title>
-    <published>2018-05-30T08:59:27+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">Sometimes when you install a new perl version, you want to put all the modules you were using on a previous version onto your new perl install.</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>0.78 was releaset at 2016-11-20T22:59:55+0100 with several fixes.
+Most importantly to accomodate changes on perl5.git.perl.org
+</p>
+        <p>Thanks to our contributors: Manuel Streuhofer, Sergey Aleynikov
+</p>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.79.html?577bb9bc4b5ba2e00d1ebe699399a85f1dbcd810</id>
@@ -204,9 +587,20 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">0.79 was released at 2017-06-25T23:40:45+0200 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>0.79 was released at 2017-06-25T23:40:45+0200 with these notable changes:
+</p>
+        <ul>
+          <li>deal with perl-5.26 change about @INC in Makefile.PL
+</li>
+          <li>"available" command now also shows the URLs
+</li>
+        </ul>
+        <p>Thanks to our contributer Luca Ferrari, Luís Miranda, and Manuel Streuhofer.
+</p>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/perlbrew-ing-on-$OS.html?564e43e265b91041ef9f7f7119753f8425232b3f</id>
@@ -216,9 +610,27 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">bash \curl -L https://install.perlbrew.pl | bash eval "$(./perl5/perlbrew/bin/perlbrew init-in-bash)" perlbrew install perl-5.26.1 --notest </div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <pre>
+          <code class="language-bash">\curl -L https://install.perlbrew.pl | bash
+eval "$(./perl5/perlbrew/bin/perlbrew init-in-bash)"
+perlbrew install perl-5.26.1 --notest</code>
+        </pre>
+        <p>you get a usable perl-5.26.1 installation.
+</p>
+        <h2>Debian and Ubuntu
+</h2>
+        <pre>
+          <code class="language-bash">sudo apt install -y build-essential curl perl</code>
+        </pre>
+        <h2>CentOS 7
+</h2>
+        <pre>
+          <code class="language-bash">sudo yum install -y gcc curl patch perl</code>
+        </pre>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.81.html?ae88dd572adbcf333665b71e159df55907af445f</id>
@@ -228,9 +640,28 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.81 was released at 2017-12-09T15:12:04+0900 with these notable changes:</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.81 was released at 2017-12-09T15:12:04+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Luca Ferrari, Zac Bentley, perlancar, Nicolas R, gregor herrmann, Paul Cochrane
+</li>
+          <li>New command: clone-modules
+</li>
+          <li>Recognize tarball in .tar.xz extension
+</li>
+          <li>The output of "availables" is now sorted by versions
+</li>
+          <li>Unbreak the integration with cperl releases
+</li>
+          <li>Make <code>perlbrew install</code> runs correctly on AIX
+</li>
+          <li>support the current perl blead (5.28)
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.77.html?93e540ecf62f19348a115d94446c8cdcd388b0ad</id>
@@ -240,9 +671,21 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">0.77 was releaset at 2016-11-12T06:42:45+0100 with the following changes, thanks to our contributors: Dennis Kaarsemaker, Roel Harbers.</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>0.77 was releaset at 2016-11-12T06:42:45+0100 with the following changes,
+thanks to our contributors: Dennis Kaarsemaker, Roel Harbers.
+</p>
+        <ul>
+          <li>The "uninstall" command now requires confirmation.
+</li>
+          <li>Fix bug with csh when PATH entries contain spaces
+</li>
+          <li>Accommodate git commit abbrivation changes on perl5.git.perl.org. See GH #524 <a href="https://github.com/gugod/App-perlbrew/pull/524">https://github.com/gugod/App-perlbrew/pull/524</a>
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.76.html?87bc7f6a18b3d8edd565c882ee7c36220e2b1069</id>
@@ -252,9 +695,27 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">0.76 is released at 2016-06-21T23:02:44+0200 with the following changes:</div>
-    </summary>
+    <content type="html" xml:base="https://perlbrew.pl">&lt;p&gt;0.76 is released at 2016-06-21T23:02:44+0200 with the following changes:
+&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Start supporting cperl installation.
+&lt;/li&gt;&lt;li&gt;cperl releases are sourced from: &lt;a href="https://github.com/perl11/cperl/releases"&gt;https://github.com/perl11/cperl/releases&lt;/a&gt;
+&lt;/li&gt;&lt;li&gt;Deal with a regex warning when testing perlbrew with perl-5.25. See RT: &lt;a href="https://rt.cpan.org/Ticket/Display.html?id=114871"&gt;https://rt.cpan.org/Ticket/Display.html?id=114871&lt;/a&gt;
+&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Special thanks to Alexey Melezhik for the intergation with [Sparrow project][&lt;a href="https://sparrowhub.org/]"&gt;https://sparrowhub.org/]&lt;/a&gt;
+&lt;/p&gt;&lt;p&gt;Notably thi is the first version of perlbrew to non-p5p perl releases. The cperl installation works
+only with the versions mentioned in cperl releases page at
+[&lt;a href="https://github.com/perl11/cperl/releases][]."&gt;https://github.com/perl11/cperl/releases][].&lt;/a&gt; perlbrew recognize the name format &amp;quot;cperl-&lt;version&gt;&amp;quot;
+as a convention for installing cperl. So this will do the trick:
+&lt;/p&gt;&lt;pre&gt;&lt;code&gt;perlbrew install cperl-5.22.3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This naming convention is sufficient for now and it'll probably be sufficient for a while.
+&lt;/p&gt;&lt;p&gt;Notice that after switching to a cperl installation:
+&lt;/p&gt;&lt;pre&gt;&lt;code&gt;perlbrew using cperl-5.22.3
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command &lt;code&gt;perl&lt;/code&gt; is then hashed to &lt;code&gt;cperl&lt;/code&gt;. By default, cperl releases install the main
+interpreter under the name &lt;code&gt;cperl&lt;/code&gt; but not &lt;code&gt;perl&lt;/code&gt;. However, with perlbrew, only one installations
+can be activated anyway, so we symlinked &lt;code&gt;cperl&lt;/code&gt; to &lt;code&gt;perl&lt;/code&gt; for convienence. If this turns out to be
+causing more troubles then its benifit, we might revert this decision.
+&lt;/p&gt;&lt;p&gt;According to the [perl11 project][&lt;a href="http://perl11.org/],"&gt;http://perl11.org/],&lt;/a&gt; cperl runs all CPAN code, so we expected
+minimum amonut of issues from activating it. For different perl-ish releases that we wish to support
+(for eg, perlito5) it'll be different stories.
+&lt;/p&gt;</content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.75.html?62820207a288df7d547842850e87573be49ab2d3</id>
@@ -264,33 +725,61 @@
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">0.75 is released at 2016-03-16T23:41:41+0100</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>0.75 is released at 2016-03-16T23:41:41+0100
+</p>
+        <ul>
+          <li>Thanks to our contributors: Dave Cross,  Dean Hamstead,  Mark J. Reed,  Mohammed El-Afifi,
+</li>
+          <li>Add '--no-patchperl' install option for skip running patchperl.
+</li>
+          <li>Add '--destdir' install option.
+</li>
+          <li>"uninstall" command now also delete associated libs.
+</li>
+          <li>"mirror" command is removed.
+</li>
+          <li>"config" command is removed.
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
   <entry>
     <id>https://perlbrew.pl/Release-0.74.html?fdc12de8464d1200468f71ff297ffb3e0121a2ed</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.74.html" type="text/html"/>
     <title>Perlbrew Release 0.74</title>
-    <updated>2015-11-25T05:41:06+09:00</updated>
+    <published>2015-11-25T05:41:06+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">0.74 is released at 2015-11-24T20:55:02+0100 with many changes and many contrtibutes during the past 9 months. Thank everyone who participated.</div>
-    </summary>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>0.74 is released at 2015-11-24T20:55:02+0100 with many changes and many contrtibutes during the past 9 months. Thank everyone who participated.
+</p>
+        <ul>
+          <li>A big thanks for our contributers: Aristotle Pagaltzis, Dave Jacoby, Dylan Cali, John Krull, Kevin Johnson, Nathan Day, Paul Cochrane, Tudor Constantin, Yanick Champoux, tm604
+</li>
+          <li>support PERLBREW_LIB_PREFIX. <a href="https://github.com/gugod/App-perlbrew/commit/c29813cd4633683bd049964178a9ac96647986bc">https://github.com/gugod/App-perlbrew/commit/c29813cd4633683bd049964178a9ac96647986bc</a>
+</li>
+          <li>prefer https and remove insecure download cli flags. <a href="https://github.com/gugod/App-perlbrew/commit/f49a908c1702942006de4654107edf77a48ead52">https://github.com/gugod/App-perlbrew/commit/f49a908c1702942006de4654107edf77a48ead52</a>
+</li>
+          <li>perlbrew now dies when switching to/use a lib that does not exist. <a href="https://github.com/gugod/App-perlbrew/issues/432">https://github.com/gugod/App-perlbrew/issues/432</a>
+</li>
+          <li>RHEL vendorlib fix <a href="https://github.com/gugod/App-perlbrew/issues/409">https://github.com/gugod/App-perlbrew/issues/409</a>
+</li>
+          <li>improvements with fish integration.
+</li>
+          <li>unbreak when running with perl 5.14 or earlier: "list" command now correctly display lib names.
+</li>
+          <li>retaining flags in upgrade-perl. <a href="https://github.com/gugod/App-perlbrew/commit/b8d466670bbfc8e214a9d3ff2e889a4860060d84">https://github.com/gugod/App-perlbrew/commit/b8d466670bbfc8e214a9d3ff2e889a4860060d84</a>
+</li>
+          <li>variour document clean up and improvements.
+</li>
+        </ul>
+      </div>
+    </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.73.html?2e80f7e22dfe14309530768b0a83823eeb111b47</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.73.html" type="text/html"/>
-    <title>Perlbrew Release 0.73</title>
-    <published>2015-02-01T18:17:51+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <summary type="xhtml">
-      <div xmlns="http://www.w3.org/1999/xhtml">perlbrew 0.73 was release at 2015-02-01T09:59:45+0100 with many fixes and improvements from Manuel Streuhofer, Aristotle Pagaltzis, Sebastian Willert, David Hand, Eric Enns, Peter Roberts, Thomas Sibley, Ivan Baidakou, thanks a lot!</div>
-    </summary>
-  </entry>
-  <updated>1970-01-01T00:00:00Z</updated>
+  <updated>2020-10-26T09:56:25+09:00Z</updated>
 </feed>
