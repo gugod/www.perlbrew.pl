@@ -5,10 +5,155 @@
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
   <entry>
-    <id>https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html?87c639e13a141181db0566b4877054af6b6b30e2</id>
+    <id>https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html?580a536701421412a9f13509dbb16983b6a1f785</id>
+    <link rel="alternate" href="https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html" type="text/html"/>
+    <title>Install a sitecustomize.pl file with perlbrew</title>
+    <published>2020-10-29T09:11:33+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>by <a href="https://github.com/xdg">@xdg</a>
+</p>
+        <p>When perl is compiled with <code>-Dusesitecustomize</code> it will look for a file in the <code>$Config{siteperl}</code> directory called <code>sitecustomize.pl</code> and execute it extremely early in the life of the interpreter.  (See <a href="http://perldoc.perl.org/perlrun.html">perldoc perlrun</a> and the <code>-f</code> switch for an explanation.)
+</p>
+        <p>Perlbrew 0.37 adds the <code>--sitecustomize</code> installation option to specify a Perl file to be installed as <code>sitecustomize.pl</code>. (Perlbrew will also set <code>-Dusesitecustomize</code> automatically.)
+</p>
+        <pre>
+          <code>$ perlbrew install perl-5.14.2 --sitecustomize /path/to/customize.pl
+</code>
+        </pre>
+        <p>This is extremely useful for doing dynamic manipulation of the environment or perl globals.  In particular, it can be used to modify @INC in a more customized way than can be achieved with <code>PERL5LIB</code>.
+</p>
+        <p>Consider this usage example: A user wants to be able to install a command line perl application like App::Ack and have it be available regardless of which perl is active with Perlbrew.  Further, the user would like to keep its dependencies isolated so that the Perlbrew-installed perl stays 'pure'.
+</p>
+        <p>A good way to install an isolated application is to use <code>local::lib</code> with Perlbrew:
+</p>
+        <pre>
+          <code>$ perlbrew lib create ack
+$ perlbrew use perl-5.14.2@ack
+$ cpanm App::Ack
+</code>
+        </pre>
+        <p>This installs the 'ack' program to the <code>bin</code> directory of the configured local library directory.  If the user switches to another Perl or another local library directory, <code>ack</code> won't be available.  The user can't run <code>ack</code> directly out of the local library <code>bin</code> directory because <code>PERL5LIB</code> won't be set correctly to find its dependencies.
+</p>
+        <p>There are many ways to solve this problem.  One approach is to use a <code>sitecustomize.pl</code> file.  The following <code>sitecustomize.pl</code> file checks to see if the executing script appears to be installed in a
+local library that follows the <code>INSTALL_BASE</code> convention.  If so, it <strong>automatically</strong> adds the proper library path to <code>@INC</code>:
+</p>
+        <pre>
+          <code>use strict;
+use Config;
+use Cwd ();
+my %seen;
+my @bindirs =
+  grep { defined &amp;&amp; !$seen{$_}++ } 
+  map { $Config{"install". $_} }
+  map { ("${_}bin", "${_}script") } "", "site", "vendor";
+
+my $script = Cwd::realpath($0);
+
+if ( ! grep { /\Q$script\E/ } @bindirs ) {
+  my @path = split "/", $script;
+  if ( @path &gt; 2 ) { # at least /bin/foo
+    pop @path; # get rid of script filename
+    my $installbase = join("/", @path[0 .. $#path-1], 'lib', 'perl5');
+    if ( $path[-1] eq 'bin' &amp;&amp; -d $installbase ) {
+      require lib;
+      lib-&gt;import($installbase);
+    }
+  }
+}
+</code>
+        </pre>
+        <p>That lets the user switch Perlbrew perls but still run the original <code>ack</code> program via an alias.
+</p>
+        <pre>
+          <code>$ alias ack=`which ack`
+$ perlbrew use perl-5.10.2
+$ ack PATTERN
+</code>
+        </pre>
+        <p>The <code>ack</code> that is run via the alias has a shebang line (<code>#!...</code>) that invoke the original perl, which will run <code>sitecustomize.pl</code>, which will fix up <code>@INC</code> and then <code>ack</code> will run successfully, finding its dependencies in <code>@INC</code>.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Dealing-with-shebangs.html?e8a92b77cf793dd793e83c70adde31420374e6ae</id>
+    <link rel="alternate" href="https://perlbrew.pl/Dealing-with-shebangs.html" type="text/html"/>
+    <title>Dealing with shebangs</title>
+    <published>2020-10-29T09:05:36+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: 
+</p>
+        <pre>
+          <code>#!/bin/sh
+#! −*−perl−*−
+eval 'exec perl −x −wS $0 ${1+"$@"}'
+    if 0;
+</code>
+        </pre>
+        <p>The other is extremely simple:
+</p>
+        <pre>
+          <code>#!/usr/bin/env perl
+</code>
+        </pre>
+        <p>Basically they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang you'll find in most perl programs:
+</p>
+        <pre>
+          <code>#!/usr/bin/perl
+</code>
+        </pre>
+        <p>This is because most UNIX-like systems (especially Linux) comes with perl installed at <code>/usr/bin/perl</code>. Some UNIX does not have perl by default, but can be easily installed latter on. Just that they might end up being at <code>/usr/local/bin/perl</code>. Usually perl programmers call them "system perl".
+</p>
+        <p>A developer might install their own version of perl to anywhere like <code>/opt/perl5.14.2/bin/perl</code> or <code>/opt/local/bin/perl</code> or any other fancy paths. An put the bin path to the beginning of <code>$PATH</code> environment variable so that when they run perl programs as <code>perl foo.pl</code>, it'll invoke their own version of perl, not the system perl. There is no special names for such perl installation, let's call them as "env perl" in the article.
+</p>
+        <p>perlbrew rely on this mechanism to be functional properly. Whenever you say <code>perlbrew use 5.14.2</code>, perlbrew locates the path of 5.14.2 perl binary, and modify <code>$PATH</code> to point to there. Running perl programs with env perl requires you type "perl" in the beginning of the command. Relying shebang lines in the code does not.
+</p>
+        <p>The shebang schema is like Dokodemo Door, a convention that brings huge convenience to easily specify an compiler + runner of the code. Without this design, scripting/dynamic language authors might just create their own conventions.
+</p>
+        <p>However, it also creates problems. A cross-platform perl program might not be set be executable because the shebang line is valid on the author's platform, but not on the users' environment. A perl program authored on Mac can simply put <code>#!/usr/bin/perl</code> in the first line, but once that program gets copied to FreeBSD, perl can only be found at <code>#!/usr/local/bin/perl</code>. The user intend to run the program should modify the code a little bit in order to make it a valid executable. Which really invalids the statement that "perl programs are cross-platform."
+</p>
+        <p>Well, that sounds like picking bones from a egg. Developers will eventually learn that they can either symlink perl around, or have some fancy scripts that properly modify shebang in-place. True. However when a program does not run because of a invalid shebang line, it can be really frustrated for newbies
+</p>
+        <p>Sadly, there is really no perfect cross-platform shebang that works for all UNIX-like systems.
+</p>
+        <p>However, CPAN distributions built with <code>ExtUtil::MakeMaker</code> solves this issue in a very good way. When perl programs are distributed / installed as a CPAN distribution, its shebang line are rewritten to be the same perl that used to invoke cpan client itself. Or, if you download+extract a CPAN distribution on your own and run <code>perl Makefile.PL</code> to do manual installation, it will be your env perl.
+</p>
+        <p>Since shebang is hard to be cross-platfrom, it is also not trivial to decide what to put on the perlbrew executable shebang. You'll find that it currently contains <code>#!/usr/bin/perl</code>. However, the true is, when users runs this installer:
+</p>
+        <pre>
+          <code>curl -kL http://install.perlbrew.pl | bash
+</code>
+        </pre>
+        <p>The downloaded perlbrew will be modified to use your system perl shebang. To be more specific, it is the pre-perlbrew env perl shebang. That means <code>the first perl in $PATH that is not under $PERLRREW_ROOT</code>.
+</p>
+        <p>You might remember that it used to be just <code>#!/usr/bin/env perl</code>. But that has at least 2 drawbacks:
+</p>
+        <ol>
+          <li>CentOS Linux comes without <code>/usr/bin/env</code>, but only <code>/bin/env</code> (well, the same for many other UNIXs)
+</li>
+          <li><code>perlbrew use perl-5.6.0</code> will strangle perlbrew executable itself, because perlbrew requires 5.8.8.
+</li>
+        </ol>
+        <p>Therefore, it is the best to let <code>perlbrew</code> itself fixed to use system perl shebang. You may leave your own program to use the env shebang so that it can be invoked with env perl, which is managed with perlbrew. Optionally, you might want to hard-coded a perlbrew perl shebang in your code for some use cases.
+</p>
+        <p>Shebang is cool. It even feels like a cool word to be spoken. But having to manage shebang in programs really sucks. <em>shrug</em>
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html?579036a659d3b285b7fcd0cdae147e3fc204af23</id>
     <link rel="alternate" href="https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html" type="text/html"/>
     <title>Deploying Perl bindings from tools installed with Homebrew on OS X</title>
-    <published>2020-10-26T10:04:04+09:00Z</published>
+    <published>2020-10-29T09:05:36+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
@@ -130,13 +275,15 @@ perlbrew help clone-modules
   <entry>
     <id>https://perlbrew.pl/CommandAlias.html?06a42c0e760f8eb11cb1435df96185ef715239d1</id>
     <link rel="alternate" href="https://perlbrew.pl/CommandAlias.html" type="text/html"/>
-    <title>Description</title>
+    <title>CommandAlias</title>
     <published>2020-10-25T20:11:28+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
     <content type="xhtml" xml:base="https://perlbrew.pl">
       <div xmlns="http://www.w3.org/1999/xhtml">
+        <h2>Description
+</h2>
         <p>Since 0.21, the <code>current</code> symlink is ditched in favor of bash-based multi-user support. However, the change discourage non-interactive uses of perlbrew because people will have to put the versioned path in shebang, which makes it troublesome when it is time to switch to different perl for those program.
 </p>
         <p>An 'alias' command is introduced to generalize the need. <code>current</code> symlink is no longer a special one, but just a name specified by users.
@@ -232,13 +379,15 @@ cpanm Moose
   <entry>
     <id>https://perlbrew.pl/Home.html?0ce0d3c80b8f0a214df0df75fbc430a4ca1decf3</id>
     <link rel="alternate" href="https://perlbrew.pl/Home.html" type="text/html"/>
-    <title>Welcome to the App-perlbrew wiki!</title>
+    <title>Home</title>
     <published>2019-12-05T22:29:48+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
     <content type="xhtml" xml:base="https://perlbrew.pl">
       <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Welcome to the App-perlbrew wiki!
+</p>
         <p>The content in the wiki will be semi-manually built as HTML and get published to <a href="https://perlbrew.pl">https://perlbrew.pl</a> . You are welcome to write up a page and ping me (@gugod) to get it published.
 </p>
         <h2>How To Information
@@ -428,76 +577,6 @@ Again, choose a <code>http://</code> URL.
     </content>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Dealing-with-shebangs.html?e92c8251bfbf1c4e91bb5baef15d082ad37bb1f8</id>
-    <link rel="alternate" href="https://perlbrew.pl/Dealing-with-shebangs.html" type="text/html"/>
-    <title>Dealing with shebangs</title>
-    <published>2018-12-15T23:33:24+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>In the POD of perlrun, we can find two possible perl program preambles that tries to use the environment-decided perl installation, one is very cryptic: 
-</p>
-        <pre>
-          <code>#!/bin/sh
-#! −*−perl−*−
-eval 'exec perl −x −wS $0 ${1+"$@"}'
-    if 0;
-</code>
-        </pre>
-        <p>The other is extremely simple:
-</p>
-        <pre>
-          <code>#!/usr/bin/env perl
-</code>
-        </pre>
-        <p>Basically they are both telling the OS (that understands the shebang) to find the first "perl" executable in the list of $PATH, and <code>exec</code> that program by appending the current file name after the shebang. The first snippets runs <code>/bin/sh</code>, the second runs <code>/usr/bin/env</code>. Neither of them invokes "perl" directly, like this shebang you'll find in most perl programs:
-</p>
-        <pre>
-          <code>#!/usr/bin/perl
-</code>
-        </pre>
-        <p>This is because most UNIX-like systems (especially Linux) comes with perl installed at <code>/usr/bin/perl</code>. Some UNIX does not have perl by default, but can be easily installed latter on. Just that they might end up being at <code>/usr/local/bin/perl</code>. Usually perl programmers call them "system perl".
-</p>
-        <p>A developer might install their own version of perl to anywhere like <code>/opt/perl5.14.2/bin/perl</code> or <code>/opt/local/bin/perl</code> or any other fancy paths. An put the bin path to the beginning of <code>$PATH</code> environment variable so that when they run perl programs as <code>perl foo.pl</code>, it'll invoke their own version of perl, not the system perl. There is no special names for such perl installation, let's call them as "env perl" in the article.
-</p>
-        <p>perlbrew rely on this mechanism to be functional properly. Whenever you say <code>perlbrew use 5.14.2</code>, perlbrew locates the path of 5.14.2 perl binary, and modify <code>$PATH</code> to point to there. Running perl programs with env perl requires you type "perl" in the beginning of the command. Relying shebang lines in the code does not.
-</p>
-        <p>The shebang schema is like Dokodemo Door, a convention that brings huge convenience to easily specify an compiler + runner of the code. Without this design, scripting/dynamic language authors might just create their own conventions.
-</p>
-        <p>However, it also creates problems. A cross-platform perl program might not be set be executable because the shebang line is valid on the author's platform, but not on the users' environment. A perl program authored on Mac can simply put <code>#!/usr/bin/perl</code> in the first line, but once that program gets copied to FreeBSD, perl can only be found at <code>#!/usr/local/bin/perl</code>. The user intend to run the program should modify the code a little bit in order to make it a valid executable. Which really invalids the statement that "perl programs are cross-platform."
-</p>
-        <p>Well, that sounds like picking bones from a egg. Developers will eventually learn that they can either symlink perl around, or have some fancy scripts that properly modify shebang in-place. True. However when a program does not run because of a invalid shebang line, it can be really frustrated for newbies
-</p>
-        <p>Sadly, there is really no perfect cross-platform shebang that works for all UNIX-like systems.
-</p>
-        <p>However, CPAN distributions built with <code>ExtUtil::MakeMaker</code> solves this issue in a very good way. When perl programs are distributed / installed as a CPAN distribution, its shebang line are rewritten to be the same perl that used to invoke cpan client itself. Or, if you download+extract a CPAN distribution on your own and run <code>perl Makefile.PL</code> to do manual installation, it will be your env perl.
-</p>
-        <p>Since shebang is hard to be cross-platfrom, it is also not trivial to decide what to put on the perlbrew executable shebang. You'll find that it currently contains <code>#!/usr/bin/perl</code>. However, the true is, when users runs this installer:
-</p>
-        <pre>
-          <code>curl -kL http://install.perlbrew.pl | bash
-</code>
-        </pre>
-        <p>The downloaded perlbrew will be modified to use your system perl shebang. To be more specific, it is the pre-perlbrew env perl shebang. That means <code>the first perl in $PATH that is not under $PERLRREW_ROOT</code>.
-</p>
-        <p>You might remember that it used to be just <code>#!/usr/bin/env perl</code>. But that has at least 2 drawbacks:
-</p>
-        <ol>
-          <li>CentOS Linux comes without <code>/usr/bin/env</code>, but only <code>/bin/env</code> (well, the same for many other UNIXs)
-</li>
-          <li><code>perlbrew use perl-5.6.0</code> will strangle perlbrew executable itself, because perlbrew requires 5.8.8.
-</li>
-        </ol>
-        <p>Therefore, it is the best to let <code>perlbrew</code> itself fixed to use system perl shebang. You may leave your own program to use the env shebang so that it can be invoked with env perl, which is managed with perlbrew. Optionally, you might want to hard-coded a perlbrew perl shebang in your code for some use cases.
-</p>
-        <p>Shebang is cool. It even feels like a cool word to be spoken. But having to manage shebang in programs really sucks. <em>shrug</em>
-</p>
-      </div>
-    </content>
-  </entry>
-  <entry>
     <id>https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html?493f02c679cdd8e30d543d2fbc83a6f808e74a47</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html" type="text/html"/>
     <title>Perlbrew In Shell Scripts</title>
@@ -609,13 +688,15 @@ Most importantly to accomodate changes on perl5.git.perl.org
   <entry>
     <id>https://perlbrew.pl/perlbrew-ing-on-$OS.html?564e43e265b91041ef9f7f7119753f8425232b3f</id>
     <link rel="alternate" href="https://perlbrew.pl/perlbrew-ing-on-$OS.html" type="text/html"/>
-    <title>This page is list of short cheatsheet on how to prepare your system so after it runs this bash script:</title>
+    <title>perlbrew ing on $OS</title>
     <published>2018-05-30T08:59:27+09:00Z</published>
     <author>
       <name>gugod</name>
     </author>
     <content type="xhtml" xml:base="https://perlbrew.pl">
       <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>This page is list of short cheatsheet on how to prepare your system so after it runs this bash script:
+</p>
         <pre>
           <code class="language-bash">\curl -L https://install.perlbrew.pl | bash
 eval "$(./perl5/perlbrew/bin/perlbrew init-in-bash)"
@@ -750,40 +831,5 @@ minimum amonut of issues from activating it. For different perl-ish releases tha
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.74.html?fdc12de8464d1200468f71ff297ffb3e0121a2ed</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.74.html" type="text/html"/>
-    <title>Perlbrew Release 0.74</title>
-    <published>2015-11-25T05:41:06+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>0.74 is released at 2015-11-24T20:55:02+0100 with many changes and many contrtibutes during the past 9 months. Thank everyone who participated.
-</p>
-        <ul>
-          <li>A big thanks for our contributers: Aristotle Pagaltzis, Dave Jacoby, Dylan Cali, John Krull, Kevin Johnson, Nathan Day, Paul Cochrane, Tudor Constantin, Yanick Champoux, tm604
-</li>
-          <li>support PERLBREW_LIB_PREFIX. <a href="https://github.com/gugod/App-perlbrew/commit/c29813cd4633683bd049964178a9ac96647986bc">https://github.com/gugod/App-perlbrew/commit/c29813cd4633683bd049964178a9ac96647986bc</a>
-</li>
-          <li>prefer https and remove insecure download cli flags. <a href="https://github.com/gugod/App-perlbrew/commit/f49a908c1702942006de4654107edf77a48ead52">https://github.com/gugod/App-perlbrew/commit/f49a908c1702942006de4654107edf77a48ead52</a>
-</li>
-          <li>perlbrew now dies when switching to/use a lib that does not exist. <a href="https://github.com/gugod/App-perlbrew/issues/432">https://github.com/gugod/App-perlbrew/issues/432</a>
-</li>
-          <li>RHEL vendorlib fix <a href="https://github.com/gugod/App-perlbrew/issues/409">https://github.com/gugod/App-perlbrew/issues/409</a>
-</li>
-          <li>improvements with fish integration.
-</li>
-          <li>unbreak when running with perl 5.14 or earlier: "list" command now correctly display lib names.
-</li>
-          <li>retaining flags in upgrade-perl. <a href="https://github.com/gugod/App-perlbrew/commit/b8d466670bbfc8e214a9d3ff2e889a4860060d84">https://github.com/gugod/App-perlbrew/commit/b8d466670bbfc8e214a9d3ff2e889a4860060d84</a>
-</li>
-          <li>variour document clean up and improvements.
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <updated>2020-10-26T10:04:04+09:00Z</updated>
+  <updated>2020-10-29T09:11:33+09:00Z</updated>
 </feed>
