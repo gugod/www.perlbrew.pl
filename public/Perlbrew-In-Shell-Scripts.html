@@ -14,9 +14,8 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
-                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
-                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
             </ul>
         </div>
     </nav>
@@ -39,41 +38,29 @@
     <div id="container" class="inner">
         <section>
   <h2>Perlbrew In Shell Scripts</h2>
-  <p>It is generally easy to bootstrap perlbrew and use perlbrew function in shell scripts. In an interactive script, this preamble is usually what's needed:</p>
-
-<pre><code>#!/bin/bash
+  <p>It is generally easy to bootstrap perlbrew and use perlbrew function in shell scripts. In an interactive script, this preamble is usually what's needed:
+</p><pre><code>#!/bin/bash
 source $HOME/perl5/perlbrew/etc/bashrc
 perlbrew use perl-5.28.0
-</code></pre>
-
-<p>It is just the same as what's put in bashrc and executed everytime you open a new shell.</p>
-
-<p>However, this may not work for a cron script -- because cron scripts are executed without variables like <code>$HOME</code>. The alternative shell preamble for cron scripts is something like:</p>
-
-<pre><code>#!/bin/bash
+</code></pre><p>It is just the same as what's put in bashrc and executed everytime you open a new shell.
+</p><p>However, this may not work for a cron script -- because cron scripts are executed without variables like <code>$HOME</code>. The alternative shell preamble for cron scripts is something like:
+</p><pre><code>#!/bin/bash
 export PERLBREW_ROOT=/home/gugod/perl5/perlbrew
 export PERLBREW_HOME=/home/gugod/.perlbrew
 source ${PERLBREW_ROOT}/etc/bashrc
 perlbrew use perl-5.28.0
-</code></pre>
-
-<p>The <code>$PERLBREW_ROOT</code> and <code>$PERLBREW_HOME</code> are special variables recognized by perlbrew for bootstrapping purposes. They are also used for specifying alternative installation directiory and let multiple accounts on the same machine share the same perlbrew installation.</p>
-
-<p>In an interactive shell environment, the default value of <code>$PERLBREW_HOME</code> is <code>$HOME/.perlbrew</code>. If you don't use the <code>lib</code> feature in perlbrew, you can probably also skip setting this variable.</p>
-
-<p>If this shell script only invokes one program and do not call <code>perlbrew use</code> several times, it can be simplifed by utilizing <code>perlbrew exec</code> command to something like this:</p>
-
-<pre><code>#!/bin/bash
+</code></pre><p>The <code>$PERLBREW_ROOT</code> and <code>$PERLBREW_HOME</code> are special variables recognized by perlbrew for bootstrapping purposes. They are also used for specifying alternative installation directiory and let multiple accounts on the same machine share the same perlbrew installation.
+</p><p>In an interactive shell environment, the default value of <code>$PERLBREW_HOME</code> is <code>$HOME/.perlbrew</code>. If you don't use the <code>lib</code> feature in perlbrew, you can probably also skip setting this variable.
+</p><p>If this shell script only invokes one program and do not call <code>perlbrew use</code> several times, it can be simplifed by utilizing <code>perlbrew exec</code> command to something like this:
+</p><pre><code>#!/bin/bash
 exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 \
     perl /apps/myapp/bin/myapp.pl $*
-</code></pre>
-
-<p>This runs <code>perl /apps/myapp/bin/myapp.pl</code>, passing through all command-line arguments, after switching perl-5.28.1. The <code>perlbrew</code> executable itself should be located within an initialized <code>$PERLBREW_ROOT</code> directory, as that is how it figures out the installation paths of perls. This last trick does not work with perlbrew instaledd via cpan clients.</p>
-
+</code></pre><p>This runs <code>perl /apps/myapp/bin/myapp.pl</code>, passing through all command-line arguments, after switching perl-5.28.1. The <code>perlbrew</code> executable itself should be located within an initialized <code>$PERLBREW_ROOT</code> directory, as that is how it figures out the installation paths of perls. This last trick does not work with perlbrew instaledd via cpan clients.
+</p>
         </section>
     </div>
     <footer>
-        <p>© 2016 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="alternate" type="application/atom+xml" href="https://feeds.feedburner.com/Perlbrew">
-    <title>Description</title>
+    <title>CommandAlias</title>
 <![if gte IE 9]>
     <link href="//fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
     <link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -14,9 +14,8 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
-                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
-                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
             </ul>
         </div>
     </nav>
@@ -38,30 +37,21 @@
     </header>
     <div id="container" class="inner">
         <section>
-  <h2>Description</h2>
-  <p>Since 0.21, the <code>current</code> symlink is ditched in favor of bash-based multi-user support. However, the change discourage non-interactive uses of perlbrew because people will have to put the versioned path in shebang, which makes it troublesome when it is time to switch to different perl for those program.</p>
-
-<p>An 'alias' command is introduced to generalize the need. <code>current</code> symlink is no longer a special one, but just a name specified by users.</p>
-
-<h2>Usage</h2>
-
-<pre><code>perlbrew alias [-f] &lt;action&gt; &lt;name&gt; [&lt;alias&gt;]
-</code></pre>
-
-<p>Action is one of: create, delete, rename</p>
-
-<p><code>-f</code> flag is used to forcibly perform the action.</p>
-
-<p><code>&lt;name&gt;</code> should be one of the installation names, <code>&lt;alias&gt;</code> is the given alternative name.</p>
-
-<h2>Synopsis</h2>
-
-<pre><code># essentially ln -s perl-5.14.0 current.
-#     should fail if 'perl-5.14.0' does not exist.
-#     should fail if 'current' already exists.
-perlbrew alias create perl-5.14.0 current
-
-# delete the alias
+  <h2>CommandAlias</h2>
+  <h2>Description
+</h2><p>Since 0.21, the <code>current</code> symlink is ditched in favor of bash-based multi-user support. However, the change discourage non-interactive uses of perlbrew because people will have to put the versioned path in shebang, which makes it troublesome when it is time to switch to different perl for those program.
+</p><p>An 'alias' command is introduced to generalize the need. <code>current</code> symlink is no longer a special one, but just a name specified by users.
+</p><h2>Usage
+</h2><pre><code>perlbrew alias [-f] &lt;action&gt; &lt;name&gt; [&lt;alias&gt;]
+</code></pre><p>Action is one of: create, delete, rename
+</p><p><code>-f</code> flag is used to forcibly perform the action.
+</p><p><code>&lt;name&gt;</code> should be one of the installation names, <code>&lt;alias&gt;</code> is the given alternative name.
+</p><h2>Synopsis
+</h2><p>    # essentially ln -s perl-5.14.0 current.
+    #     should fail if 'perl-5.14.0' does not exist.
+    #     should fail if 'current' already exists.
+    perlbrew alias create perl-5.14.0 current
+</p><pre><code># delete the alias
 perlbrew alias delete current
 
 # renaming
@@ -75,11 +65,10 @@ perlbrew alias rename current main
 perlbrew alias -f create perl-5.14.0 current
 perlbrew alias -f rename current main
 </code></pre>
-
         </section>
     </div>
     <footer>
-        <p>© 2016 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>

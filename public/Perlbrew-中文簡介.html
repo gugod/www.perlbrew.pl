@@ -14,9 +14,8 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
-                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
-                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
             </ul>
         </div>
     </nav>
@@ -39,81 +38,43 @@
     <div id="container" class="inner">
         <section>
   <h2>Perlbrew</h2>
-  <p>本篇文章同步刊載於中研院自由軟體鑄造場 <a href="http://www.openfoundry.org/tw/tech-column/8514-perlbrew-perl-installation-management-tool">http://www.openfoundry.org/tw/tech-column/8514-perlbrew-perl-installation-management-tool</a>.</p>
-
-<ul>
-<li>林佑安 (c9s) <a href="&#x6D;&#x61;&#105;&#108;&#116;o:&#99;&#x6F;&#x72;&#110;&#x65;&#108;&#105;&#117;&#115;&#46;&#104;&#111;&#119;&#x6C;&#64;&#103;&#x6D;&#x61;&#x69;&#108;&#46;&#x63;&#x6F;&#109;">&#99;&#x6F;&#x72;&#110;&#x65;&#108;&#105;&#117;&#115;&#46;&#104;&#111;&#119;&#x6C;&#64;&#103;&#x6D;&#x61;&#x69;&#108;&#46;&#x63;&#x6F;&#109;</a></li>
-</ul>
-
-<h2>緣起</h2>
-
-<p>Perl5 的開發，以往有個習俗，也就是每一次的版本釋出，都由一位 Pumpking (patch pumpkin) 來主導，這位 Pumpking 得處理 patch，處理新功能，更新核心模組，處理 Regression, Build 以及一般的修正，處理二進位檔的相容性等等的工作。</p>
-
-<p>也就是說，在以往，作為一位 Pumpking ，你必須是一位硬底子的 C 語言黑客，相當熱愛 Perl，且必須要有責任感，然後得同時為專案管理經理，要處理新版本釋出，得相當了解編譯器，能處理 Patch，也要能夠設計程式語言。</p>
-
-<p>這些工作相當的難，而且也相當花時間。</p>
-
-<p>舉例來說，Perl 5.8.8 至 Perl 5.10.0 的釋出，就花了 5 年的時間，且燒光了兩位相當厲害的黑客的氣力，其中包含 Hugo van der sanden(hvds) 以及 Rafael Garcia Suarez (rgs)，他們分別在 2004 年以及 2009 年退出了這項工作。</p>
-
-<p>處理 perl5.10.1 釋出的 Dave Mitchell 也說 「這些事情實在*<em>相當的</em>*難」，最後 Dave Mitchell 也在 2009 年十月時退出了這份工作。</p>
-
-<p>所以 Perl 團隊改善了版本釋出流程，將各種不同工作委派給專職的人員，讓 Pumpking 專心在版本釋出的工作上。</p>
-
-<p>以往從 2007 年開始，Perl 5.9.0, 5.9.1, 5.9.2 一直到 5.9.5，每個版本之間的釋出都至少花了一年的時間，而流程改善之後， 5.11.0, 5.11.1, 5.11.2 一直到 5.13 ，每個版本只花了一個月的時間釋出。 一直到現在，Perl 釋出的版本已經到 5.15.3 。</p>
-
-<p>Jesse Vincent 說，處理 5.11.0 釋出只花了他四天時間，5.11.1 只花了他兩天的時間，而現在處理每個新版的釋出，甚至不用到一天。</p>
-
-<p>除了釋出變快了，每次釋出能夠納入的修正、新設計也變多了。</p>
-
-<p>也因此，為了能夠使用最新的、不同版本的 Perl，新的需求產生出來了，而滿足這個需求的解決方案就是 Perlbrew。</p>
-
-<h2>簡介</h2>
-
-<p>2010 年二月，CPAN 模組開發者，劉康民 (gugod) 釋出了 App::perlbrew 模組，該模組是以 Ruby 的 RVM 概念出發，也就是使用者可以使用 Perlbrew 將不同版本的 Perl 安裝在 $HOME 路徑內，並且使用 Perlbrew 來切換不同版本的 Perl 使用。</p>
-
-<p>使用 Perlbrew 有幾個優點:</p>
-
-<ul>
-<li>不需要使用 sudo 來安裝 CPAN 模組</li>
-<li>可以使用每個月不斷釋出的新的 Perl</li>
-<li>可嘗試新的程式語言功能</li>
-<li>可以不再被 Vendor Perl 限制 (平台內建的 Perl)</li>
-<li>可在不同版本的 Perl 下測試模組</li>
-<li>可整合至 bash, zsh, csh 環境變數</li>
-</ul>
-
-<h2>安裝</h2>
-
-<p>將下面這行 Shell 指令貼入您的終端機內執行:</p>
-
-<pre><code>curl -L http://xrl.us/perlbrewinstall | bash
-</code></pre>
-
-<p>或者你也可由 CPAN Shell 安裝</p>
-
-<pre><code>sudo cpan App::perlbrew
+  <p>本篇文章同步刊載於中研院自由軟體鑄造場 <a href="http://www.openfoundry.org/tw/tech-column/8514-perlbrew-perl-installation-management-tool">http://www.openfoundry.org/tw/tech-column/8514-perlbrew-perl-installation-management-tool</a>.
+</p><ul><li>林佑安 (c9s) <cornelius.howl@gmail.com>
+</li></ul><h2>緣起
+</h2><p>Perl5 的開發，以往有個習俗，也就是每一次的版本釋出，都由一位 Pumpking (patch pumpkin) 來主導，這位 Pumpking 得處理 patch，處理新功能，更新核心模組，處理 Regression, Build 以及一般的修正，處理二進位檔的相容性等等的工作。
+</p><p>也就是說，在以往，作為一位 Pumpking ，你必須是一位硬底子的 C 語言黑客，相當熱愛 Perl，且必須要有責任感，然後得同時為專案管理經理，要處理新版本釋出，得相當了解編譯器，能處理 Patch，也要能夠設計程式語言。
+</p><p>這些工作相當的難，而且也相當花時間。
+</p><p>舉例來說，Perl 5.8.8 至 Perl 5.10.0 的釋出，就花了 5 年的時間，且燒光了兩位相當厲害的黑客的氣力，其中包含 Hugo van der sanden(hvds) 以及 Rafael Garcia Suarez (rgs)，他們分別在 2004 年以及 2009 年退出了這項工作。
+</p><p>處理 perl5.10.1 釋出的 Dave Mitchell 也說 「這些事情實在<strong>相當的</strong>難」，最後 Dave Mitchell 也在 2009 年十月時退出了這份工作。
+</p><p>所以 Perl 團隊改善了版本釋出流程，將各種不同工作委派給專職的人員，讓 Pumpking 專心在版本釋出的工作上。
+</p><p>以往從 2007 年開始，Perl 5.9.0, 5.9.1, 5.9.2 一直到 5.9.5，每個版本之間的釋出都至少花了一年的時間，而流程改善之後， 5.11.0, 5.11.1, 5.11.2 一直到 5.13 ，每個版本只花了一個月的時間釋出。 一直到現在，Perl 釋出的版本已經到 5.15.3 。
+</p><p>Jesse Vincent 說，處理 5.11.0 釋出只花了他四天時間，5.11.1 只花了他兩天的時間，而現在處理每個新版的釋出，甚至不用到一天。
+</p><p>除了釋出變快了，每次釋出能夠納入的修正、新設計也變多了。
+</p><p>也因此，為了能夠使用最新的、不同版本的 Perl，新的需求產生出來了，而滿足這個需求的解決方案就是 Perlbrew。
+</p><h2>簡介
+</h2><p>2010 年二月，CPAN 模組開發者，劉康民 (gugod) 釋出了 App::perlbrew 模組，該模組是以 Ruby 的 RVM 概念出發，也就是使用者可以使用 Perlbrew 將不同版本的 Perl 安裝在 $HOME 路徑內，並且使用 Perlbrew 來切換不同版本的 Perl 使用。
+</p><p>使用 Perlbrew 有幾個優點:
+</p><ul><li>不需要使用 sudo 來安裝 CPAN 模組
+</li><li>可以使用每個月不斷釋出的新的 Perl
+</li><li>可嘗試新的程式語言功能
+</li><li>可以不再被 Vendor Perl 限制 (平台內建的 Perl)
+</li><li>可在不同版本的 Perl 下測試模組
+</li><li>可整合至 bash, zsh, csh 環境變數
+</li></ul><h2>安裝
+</h2><p>將下面這行 Shell 指令貼入您的終端機內執行:
+</p><pre><code>curl -L http://xrl.us/perlbrewinstall | bash
+</code></pre><p>或者你也可由 CPAN Shell 安裝
+</p><pre><code>sudo cpan App::perlbrew
 perlbrew init
-</code></pre>
-
-<p>安裝完畢後，預設的 Perlbrew 根目錄會在 ~/perl5/perlbrew 底下。</p>
-
-<p>並且將以下指令加入到你的 bashrc, zshrc 或是 csh 內:</p>
-
-<p>For bash / zsh</p>
-
-<pre><code>source ~/perl5/perlbrew/etc/bashrc
-</code></pre>
-
-<p>For csh</p>
-
-<pre><code>source ~/perl5/perlbrew/etc/cshrc
-</code></pre>
-
-<h2>使用</h2>
-
-<p>使用下列指令可以查看現有哪些版本的 Perl 可以使用</p>
-
-<pre><code>$ perlbrew available
+</code></pre><p>安裝完畢後，預設的 Perlbrew 根目錄會在 ~/perl5/perlbrew 底下。
+</p><p>並且將以下指令加入到你的 bashrc, zshrc 或是 csh 內:
+</p><p>For bash / zsh
+</p><pre><code>source ~/perl5/perlbrew/etc/bashrc
+</code></pre><p>For csh
+</p><pre><code>source ~/perl5/perlbrew/etc/cshrc
+</code></pre><h2>使用
+</h2><p>使用下列指令可以查看現有哪些版本的 Perl 可以使用
+</p><pre><code>$ perlbrew available
 
 perl-5.15.3
 perl-5.14.2
@@ -124,11 +85,8 @@ perl-5.6.2
 perl5.005_04
 perl5.004_05
 perl5.003_07
-</code></pre>
-
-<p>接著，選擇你想安裝的 Perl ，安裝他:</p>
-
-<pre><code>$ perlbrew install 5.14.2
+</code></pre><p>接著，選擇你想安裝的 Perl ，安裝他:
+</p><pre><code>$ perlbrew install 5.14.2
 
 Fetching perl-5.14.2 as /Users/c9s/perl5/perlbrew/dists/perl-5.12.4.tar.gz
 
@@ -137,70 +95,36 @@ Installing /Users/c9s/perl5/perlbrew/build/perl-5.14.2 into ~/perl5/perlbrew/per
 This could take a while. You can run the following command on another shell to track the status:
 
     tail -f ~/perl5/perlbrew/build.log
-</code></pre>
-
-<p>如果你對於安裝進度好奇，可以使用上面指示的 tail 指令來查看目前安裝的狀態。</p>
-
-<p>安裝完畢，你可以使用 list 命令來查看那些版本的 Perl 被安裝了:</p>
-
-<pre><code>$ perlbrew list
-</code></pre>
-
-<p>接著，要切換到不同版本的 Perl ，你可以使用:</p>
-
-<pre><code>$ perlbrew switch perl-5.14.2
-</code></pre>
-
-<p>接著確認一下你現在使用的 Perl:</p>
-
-<pre><code>$ perl -v
+</code></pre><p>如果你對於安裝進度好奇，可以使用上面指示的 tail 指令來查看目前安裝的狀態。
+</p><p>安裝完畢，你可以使用 list 命令來查看那些版本的 Perl 被安裝了:
+</p><pre><code>$ perlbrew list
+</code></pre><p>接著，要切換到不同版本的 Perl ，你可以使用:
+</p><pre><code>$ perlbrew switch perl-5.14.2
+</code></pre><p>接著確認一下你現在使用的 Perl:
+</p><pre><code>$ perl -v
 This is perl 5, version 14, subversion 2 (v5.14.2) built for darwin-2level
-</code></pre>
-
-<p>如果你暫時不想使用 perlbrew ，可執行 <code>off</code> 命令</p>
-
-<pre><code>$ perlbrew off
-</code></pre>
-
-<p>如此就會將 perlbrew 關掉，再使用 <code>which</code> 命令查看一下目前使用的 Perl ，就會回到 Vendor 版本的 Perl 了。</p>
-
-<pre><code>$ which perl
+</code></pre><p>如果你暫時不想使用 perlbrew ，可執行 <code>off</code> 命令
+</p><pre><code>$ perlbrew off
+</code></pre><p>如此就會將 perlbrew 關掉，再使用 <code>which</code> 命令查看一下目前使用的 Perl ，就會回到 Vendor 版本的 Perl 了。
+</p><pre><code>$ which perl
 /opt/local/bin/perl
-</code></pre>
-
-<h3>cpanminus</h3>
-
-<p>cpanminus 是日本的 @miyagawa (bulknews.typepad.com) 所開發的一個極小、不需設定、無相依性、快速的 CPAN 模組安裝工具。</p>
-
-<p>如果你喜歡 cpanminus ，也可使用下列指令安裝 perlbrew 提供的 cpanm</p>
-
-<pre><code>perlbrew install-cpanm
-</code></pre>
-
-<p>該 cpanm 可安裝模組至目前使用的 Perl 版本函式庫內。</p>
-
-<p>可以透過 which 命令來觀察一下現在所使用的 cpanm</p>
-
-<pre><code>$ which cpanm
+</code></pre><h3>cpanminus
+</h3><p>cpanminus 是日本的 @miyagawa (bulknews.typepad.com) 所開發的一個極小、不需設定、無相依性、快速的 CPAN 模組安裝工具。
+</p><p>如果你喜歡 cpanminus ，也可使用下列指令安裝 perlbrew 提供的 cpanm
+</p><pre><code>perlbrew install-cpanm
+</code></pre><p>該 cpanm 可安裝模組至目前使用的 Perl 版本函式庫內。
+</p><p>可以透過 which 命令來觀察一下現在所使用的 cpanm
+</p><pre><code>$ which cpanm
 /Users/c9s/perl5/perlbrew/bin/cpanm
-</code></pre>
-
-<p>透過該 cpanm 安裝模組，是不需要 <code>sudo</code> 的:</p>
-
-<pre><code>$ cpanm Moose
-</code></pre>
-
-<p>使用該 cpanm 安裝模組，則會將模組安裝到目前使用版本的 Perl 函式庫內，這些函式庫放置在 ~/perl5/perlbrew/perls 底下:</p>
-
-<pre><code>% ls -l ~/perl5/perlbrew/perls 
+</code></pre><p>透過該 cpanm 安裝模組，是不需要 <code>sudo</code> 的:
+</p><pre><code>$ cpanm Moose
+</code></pre><p>使用該 cpanm 安裝模組，則會將模組安裝到目前使用版本的 Perl 函式庫內，這些函式庫放置在 ~/perl5/perlbrew/perls 底下:
+</p><pre><code>% ls -l ~/perl5/perlbrew/perls 
 drwxr-xr-x  5 c9s  staff  170  9 25 13:12 perl-5.14.1
 drwxr-xr-x  6 c9s  staff  204 10  7 11:27 perl-5.14.2-llvm
 drwxr-xr-x  5 c9s  staff  170  9 25 02:33 perl-5.15.3
-</code></pre>
-
-<p>若使用 tree 命令觀察路徑結構，則如下:</p>
-
-<pre><code>$ tree ~/perl5/perlbrew/perls/perl-5.14.1/lib | head 
+</code></pre><p>若使用 tree 命令觀察路徑結構，則如下:
+</p><pre><code>$ tree ~/perl5/perlbrew/perls/perl-5.14.1/lib | head 
 /Users/c9s/perl5/perlbrew/perls/perl-5.14.1/lib
 ├── 5.14.1
 │   ├── AnyDBM_File.pm
@@ -211,175 +135,105 @@ drwxr-xr-x  5 c9s  staff  170  9 25 02:33 perl-5.15.3
 │   │   │   │   ├── Result
 │   │   │   │   │   └── Test.pm
 │   │   │   │   └── Result.pm
-</code></pre>
-
-<p>你也可以使用 perl -V 查看目前所使用的 @INC (函式庫搜尋路徑)</p>
-
-<pre><code>$ perl -V
+</code></pre><p>你也可以使用 perl -V 查看目前所使用的 @INC (函式庫搜尋路徑)
+</p><pre><code>$ perl -V
 Summary of my perl5 (revision 5 version 14 subversion 2) configuration:
 ... 略 ...
 Built under darwin
 Compiled at Oct  4 2011 13:56:16
 %ENV:
-    PERLBREW_HOME="/Users/c9s/.perlbrew"
-    PERLBREW_PATH="/Users/c9s/perl5/perlbrew/bin:/Users/c9s/perl5/perlbrew/perls/perl-5.14.2-llvm/bin"
-    PERLBREW_PERL="perl-5.14.2-llvm"
-    PERLBREW_ROOT="/Users/c9s/perl5/perlbrew"
-    PERLBREW_VERSION="0.29"
-    PERLDOC="-otext"
-    PERL_MM_USE_DEFAULT="1"
+    PERLBREW_HOME=&quot;/Users/c9s/.perlbrew&quot;
+    PERLBREW_PATH=&quot;/Users/c9s/perl5/perlbrew/bin:/Users/c9s/perl5/perlbrew/perls/perl-5.14.2-llvm/bin&quot;
+    PERLBREW_PERL=&quot;perl-5.14.2-llvm&quot;
+    PERLBREW_ROOT=&quot;/Users/c9s/perl5/perlbrew&quot;
+    PERLBREW_VERSION=&quot;0.29&quot;
+    PERLDOC=&quot;-otext&quot;
+    PERL_MM_USE_DEFAULT=&quot;1&quot;
 @INC:
     /Users/c9s/perl5/perlbrew/perls/perl-5.14.2-llvm/lib/site_perl/5.14.2/darwin-2level
     /Users/c9s/perl5/perlbrew/perls/perl-5.14.2-llvm/lib/site_perl/5.14.2
     /Users/c9s/perl5/perlbrew/perls/perl-5.14.2-llvm/lib/5.14.2/darwin-2level
     /Users/c9s/perl5/perlbrew/perls/perl-5.14.2-llvm/lib/5.14.2
-</code></pre>
-
-<p>Perl 相關的環境變數也會列舉出來。</p>
-
-<h3>local::lib</h3>
-
-<p>local::lib 模組是可讓你將所有模組安裝至某特定路徑下的工具，也因此，利用 local::lib ，你可以在不需要 Root permission (sudo) 的情況下，
-安裝模組至某一目錄，然後讓你的 Perl 去使用他。</p>
-
-<p>local::lib 的範例如下:</p>
-
-<pre><code>  # Install LWP and its missing dependencies to the '~/perl5' directory
+</code></pre><p>Perl 相關的環境變數也會列舉出來。
+</p><h3>local::lib
+</h3><p>local::lib 模組是可讓你將所有模組安裝至某特定路徑下的工具，也因此，利用 local::lib ，你可以在不需要 Root permission (sudo) 的情況下，
+安裝模組至某一目錄，然後讓你的 Perl 去使用他。
+</p><p>local::lib 的範例如下:
+</p><pre><code>  # Install LWP and its missing dependencies to the '~/perl5' directory
   perl -MCPAN -Mlocal::lib -e 'CPAN::install(LWP)'
-</code></pre>
-
-<p>以上可安裝 LWP 模組至 ~/perl5 目錄下。</p>
-
-<p>你也可將 local::lib 環境變數列印出來:</p>
-
-<pre><code>  $ perl -Mlocal::lib
+</code></pre><p>以上可安裝 LWP 模組至 ~/perl5 目錄下。
+</p><p>你也可將 local::lib 環境變數列印出來:
+</p><pre><code>  $ perl -Mlocal::lib
   export PERL_MB_OPT='--install_base /home/username/perl5'
   export PERL_MM_OPT='INSTALL_BASE=/home/username/perl5'
   export PERL5LIB='/home/username/perl5/lib/perl5/i386-linux:/home/username/perl5/lib/perl5'
-  export PATH="/home/username/perl5/bin:$PATH"
-</code></pre>
-
-<p>在使用 Perlbrew 的情況下，如果你在不同版本的 Perl 中，使用同一個 local::lib 路徑，很可能會遇到編譯的二進位檔案不相容的問題。</p>
-
-<p>也因此，Perlbrew 提供了新的功能 -- <code>lib</code> ，在不同版本的 Perl 中，你可以建立出獨立的 local::lib 空間，而不受到影響:</p>
-
-<pre><code>$ perlbrew lib create nobita
-</code></pre>
-
-<p>以上指令可在目前版本的 Perl 中，建立一個名為 nobita 的 local::lib 函式庫空間。</p>
-
-<p>若要指令版本建立 local::lib 函式庫空間，也可執行以下指令:</p>
-
-<pre><code>$ perlbrew lib create perl-5.12.3@shizuka
-</code></pre>
-
-<p>若要列出所有的 local::lib 空間:</p>
-
-<pre><code>$ perlbrew lib list
-</code></pre>
-
-<p>若要切換使用的 local::lib 空間:</p>
-
-<pre><code>$ perlbrew lib use nobita
-</code></pre>
-
-<p>如此，你可以利用 cpanm 將模組安裝至不同的 local::lib 函式庫空間內，在不同專案中，很可能會使用到
-不同版本、不同相依性的模組，你便可以利用這樣的功能，來測試專案、模組之間的相容性。</p>
-
-<h3>Perl Delta</h3>
-
-<p>關於 Perl 版本的變動，可以使用 perldoc 查閱相關資訊</p>
-
-<pre><code>$ perldoc perl
-</code></pre>
-
-<p>可查閱 perl 文件的索引，如以下這些文件項目，便包含了該版本修改、新增的地方:</p>
-
-<pre><code>perldelta           Perl changes since previous version
+  export PATH=&quot;/home/username/perl5/bin:$PATH&quot;
+</code></pre><p>在使用 Perlbrew 的情況下，如果你在不同版本的 Perl 中，使用同一個 local::lib 路徑，很可能會遇到編譯的二進位檔案不相容的問題。
+</p><p>也因此，Perlbrew 提供了新的功能 -- <code>lib</code> ，在不同版本的 Perl 中，你可以建立出獨立的 local::lib 空間，而不受到影響:
+</p><pre><code>$ perlbrew lib create nobita
+</code></pre><p>以上指令可在目前版本的 Perl 中，建立一個名為 nobita 的 local::lib 函式庫空間。
+</p><p>若要指令版本建立 local::lib 函式庫空間，也可執行以下指令:
+</p><pre><code>$ perlbrew lib create perl-5.12.3@shizuka
+</code></pre><p>若要列出所有的 local::lib 空間:
+</p><pre><code>$ perlbrew lib list
+</code></pre><p>若要切換使用的 local::lib 空間:
+</p><pre><code>$ perlbrew lib use nobita
+</code></pre><p>如此，你可以利用 cpanm 將模組安裝至不同的 local::lib 函式庫空間內，在不同專案中，很可能會使用到
+不同版本、不同相依性的模組，你便可以利用這樣的功能，來測試專案、模組之間的相容性。
+</p><h3>Perl Delta
+</h3><p>關於 Perl 版本的變動，可以使用 perldoc 查閱相關資訊
+</p><pre><code>$ perldoc perl
+</code></pre><p>可查閱 perl 文件的索引，如以下這些文件項目，便包含了該版本修改、新增的地方:
+</p><pre><code>perldelta           Perl changes since previous version
 perl5141delta       Perl changes in version 5.14.1
 perl5140delta       Perl changes in version 5.14.0
 perl51311delta      Perl changes in version 5.13.11
 perl51310delta      Perl changes in version 5.13.10
 perl5139delta       Perl changes in version 5.13.9
-</code></pre>
-
-<p>欲查閱項目，可下以下指令:</p>
-
-<pre><code>perldoc perl5140delta
-</code></pre>
-
-<p>或者可在 Meta CPAN (https://metacpan.org/module/perl) 
-或 CPAN Search (http://search.cpan.org/dist/perl/pod/perl5141delta.pod) 上找到。</p>
-
-<h2>結論</h2>
-
-<p>由於近年來 Perl 版本快速的釋出，Perlbrew 可讓使用者及早使用新版本的 Perl，
-這些都帶動了 Perl 程式語言以及社群蓬勃發展。</p>
-
-<p>開發者可以使用不同版本的 Perl 來確保模組的運行
+</code></pre><p>欲查閱項目，可下以下指令:
+</p><pre><code>perldoc perl5140delta
+</code></pre><p>或者可在 Meta CPAN (<a href="https://metacpan.org/module/perl)">https://metacpan.org/module/perl)</a> 
+或 CPAN Search (<a href="http://search.cpan.org/dist/perl/pod/perl5141delta.pod)">http://search.cpan.org/dist/perl/pod/perl5141delta.pod)</a> 上找到。
+</p><h2>結論
+</h2><p>由於近年來 Perl 版本快速的釋出，Perlbrew 可讓使用者及早使用新版本的 Perl，
+這些都帶動了 Perl 程式語言以及社群蓬勃發展。
+</p><p>開發者可以使用不同版本的 Perl 來確保模組的運行
 ，也可使用較舊版的 Perl 來為模組除錯，確保 Perl5 中重要的向後相容，
-也可為了效能的改善，而安裝較新的 Perl。</p>
-
-<p>也因此，Perlbrew 可稱為現代 Perl 工具鏈中的一大利器。</p>
-
-<h3>相關模組</h3>
-
-<ul>
-<li>local::lib</li>
-<li>App::cpanminus</li>
-<li>cpansearch</li>
-<li>cpan-outdated</li>
-</ul>
-
-<h2>關於 Perlbrew 作者</h2>
-
-<p>劉康民 (gugod)</p>
-
-<p>Twitter: twitter.com/gugod </p>
-
-<p>Blog: gugod.org</p>
-
-<p>劉康民 ( gugod ) 為和多股份有限公司創辨人之一, 目前任職程式設計師。</p>
-
-<p>主要專長：Perl、Javascript、Ruby 程式語言。</p>
-
-<h2>作者</h2>
-
-<p>林佑安 (c9s) <a href="&#x6D;&#x61;&#105;&#108;&#x74;&#x6F;:&#99;&#111;&#114;&#x6E;&#x65;&#x6C;&#105;&#x75;&#x73;&#x2E;&#104;&#x6F;&#119;&#108;&#64;&#x67;m&#97;&#x69;&#x6C;&#x2E;&#99;&#x6F;&#x6D;">&#99;&#111;&#114;&#x6E;&#x65;&#x6C;&#105;&#x75;&#x73;&#x2E;&#104;&#x6F;&#119;&#108;&#64;&#x67;m&#97;&#x69;&#x6C;&#x2E;&#99;&#x6F;&#x6D;</a></p>
-
-<p>目前任職程式設計師。 主要專長：Perl、Vim、Javascript、PHP 等程式語言。</p>
-
-<p>為 CPAN 模組開發者，於 CPAN 上開發 20 多個 CPAN 模組專案，如 Vimana, cpansearch 等。
-以及 Vim Plugin 相關開發，如 perlomni.vim Perl 自動補完插件。</p>
-
-<p>Twitter: <a href="http://twitter.com/c9s">http://twitter.com/c9s</a></p>
-
-<p>Blog: <a href="http://c9s.blogspot.com">http://c9s.blogspot.com</a></p>
-
-<h2>參考</h2>
-
-<p>perldoc local::lib</p>
-
-<p>perldoc App::perlbrew</p>
-
-<p>Perl source: porting/release_manager_guide.pod</p>
-
-<p><a href="http://www.slideshare.net/obrajesse/perl-5120">perl5.12.0</a></p>
-
-<p><a href="http://www.slideshare.net/obrajesse/perl-516-and-beyond">perl5.16 and beyond</a></p>
-
-<p><a href="http://www.slideshare.net/alex.muntada/modern-perl-toolchain">Modern Perl Toolchain</a></p>
-
-<p><a href="http://www.perlbrew.pl/">Perlbrew.pl</a></p>
-
-<p><a href="http://www.slideshare.net/gugod/perlbrew-yapcasia2010talk">Perlbrew YAPC Asia 2010</a></p>
-
-<p><a href="http://gugod.org/2011/09/perlbrew-development-and-git-flow/">Perlbrew development and the git flow</a></p>
-
+也可為了效能的改善，而安裝較新的 Perl。
+</p><p>也因此，Perlbrew 可稱為現代 Perl 工具鏈中的一大利器。
+</p><h3>相關模組
+</h3><ul><li>local::lib
+</li><li>App::cpanminus
+</li><li>cpansearch
+</li><li>cpan-outdated
+</li></ul><h2>關於 Perlbrew 作者
+</h2><p>劉康民 (gugod)
+</p><p>Twitter: twitter.com/gugod 
+</p><p>Blog: gugod.org
+</p><p>劉康民 ( gugod ) 為和多股份有限公司創辨人之一, 目前任職程式設計師。
+</p><p>主要專長：Perl、Javascript、Ruby 程式語言。
+</p><h2>作者
+</h2><p>林佑安 (c9s) <cornelius.howl@gmail.com>
+</p><p>目前任職程式設計師。 主要專長：Perl、Vim、Javascript、PHP 等程式語言。
+</p><p>為 CPAN 模組開發者，於 CPAN 上開發 20 多個 CPAN 模組專案，如 Vimana, cpansearch 等。
+以及 Vim Plugin 相關開發，如 perlomni.vim Perl 自動補完插件。
+</p><p>Twitter: <a href="http://twitter.com/c9s">http://twitter.com/c9s</a>
+</p><p>Blog: <a href="http://c9s.blogspot.com">http://c9s.blogspot.com</a>
+</p><h2>參考
+</h2><p>perldoc local::lib
+</p><p>perldoc App::perlbrew
+</p><p>Perl source: porting/release_manager_guide.pod
+</p><p><a href="http://www.slideshare.net/obrajesse/perl-5120">perl5.12.0</a>
+</p><p><a href="http://www.slideshare.net/obrajesse/perl-516-and-beyond">perl5.16 and beyond</a>
+</p><p><a href="http://www.slideshare.net/alex.muntada/modern-perl-toolchain">Modern Perl Toolchain</a>
+</p><p><a href="http://www.perlbrew.pl/">Perlbrew.pl</a>
+</p><p><a href="http://www.slideshare.net/gugod/perlbrew-yapcasia2010talk">Perlbrew YAPC Asia 2010</a>
+</p><p><a href="http://gugod.org/2011/09/perlbrew-development-and-git-flow/">Perlbrew development and the git flow</a>
+</p>
         </section>
     </div>
     <footer>
-        <p>© 2016 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>

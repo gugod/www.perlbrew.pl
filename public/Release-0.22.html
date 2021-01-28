@@ -14,9 +14,8 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
-                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
-                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
             </ul>
         </div>
     </nav>
@@ -39,83 +38,44 @@
     <div id="container" class="inner">
         <section>
   <h2>Perlbrew Release 0.22</h2>
-  <p>The 0.22 release features these major changes:</p>
-
-<ul>
-<li>Fix ccache support on Linux
-<ul>
-<li>To compile perl with ccache, <code>perlbrew install -Dcc=ccache\ gcc' -Dld=gcc perl-5.14.0</code></li>
-</ul></li>
-<li>Better installation management
-<ul>
-<li>Fix: <code>install</code> command no longer clobber existing installations.</li>
-<li>New command: uninstall</li>
-<li>New command: alias</li>
-</ul></li>
-<li>New command: self-upgrade</li>
-</ul>
-
-<h2>Better Installation Management</h2>
-
-<p>The <code>install</code> command used to clobber existing perl installations without noticing users, now it does not. perlbrew simply stops the installation process when it detects any naming collision. If it is intended to reinstall with the exact same name, you need to explicitly uninstall the old one first.</p>
-
-<p>Yes, finally the <code>uninstall</code> command is here, to remove the specified perl installation.</p>
-
-<pre><code>perlbrew uninstall perl-5.10.1
-</code></pre>
-
-<p>Also a mechanism to make aliases is introduced. Which provides a better non-interactive usage.</p>
-
-<p>Let's say you have both perl-5.12.3 and perl-5.14.0 installed, and want to migrate all your programs to use perl-5.14.0 eventually. Previously, you need to put the exact path to perl-5.12.3 in the shebang, like:</p>
-
-<pre><code>#!/Users/gugod/perl5/perlbrew/perls/perl-5.12.3/bin/perl
-</code></pre>
-
-<p>To migrate your programs to perl-5.14.0, you need to replace that line to</p>
-
-<pre><code>#!/Users/gugod/perl5/perlbrew/perls/perl-5.14.0/bin/perl
-</code></pre>
-
-<p>Which might not be a big issue, until you have to do that for tens, or hundreds of programs.</p>
-
-<p>The solution to this scenario, is to use alias. First create an alias for perl-5.12.3, here the name of choice is "stable":</p>
-
-<pre><code>perlbrew alias create perl-5.12.3 stable
-</code></pre>
-
-<p>And the shebang for the "stable" perl is just:</p>
-
-<pre><code>#!/Users/gugod/perl5/perlbrew/perls/stable/bin/perl
-</code></pre>
-
-<p>Under the hood it is just a symlink that does the trick. Once you need to fullly migrate to perl-5.14.0, just upgrade the symlink with:</p>
-
-<pre><code>perlbrew alias delete stable
+  <p>The 0.22 release features these major changes:
+</p><ul><li>Fix ccache support on Linux
+<ul><li>To compile perl with ccache, <code>perlbrew install -Dcc=ccache\ gcc' -Dld=gcc perl-5.14.0</code>
+</li></ul></li><li>Better installation management
+<ul><li>Fix: <code>install</code> command no longer clobber existing installations.
+</li><li>New command: uninstall
+</li><li>New command: alias
+</li></ul></li><li>New command: self-upgrade
+</li></ul><h2>Better Installation Management
+</h2><p>The <code>install</code> command used to clobber existing perl installations without noticing users, now it does not. perlbrew simply stops the installation process when it detects any naming collision. If it is intended to reinstall with the exact same name, you need to explicitly uninstall the old one first.
+</p><p>Yes, finally the <code>uninstall</code> command is here, to remove the specified perl installation.
+</p><pre><code>perlbrew uninstall perl-5.10.1
+</code></pre><p>Also a mechanism to make aliases is introduced. Which provides a better non-interactive usage.
+</p><p>Let's say you have both perl-5.12.3 and perl-5.14.0 installed, and want to migrate all your programs to use perl-5.14.0 eventually. Previously, you need to put the exact path to perl-5.12.3 in the shebang, like:
+</p><pre><code>#!/Users/gugod/perl5/perlbrew/perls/perl-5.12.3/bin/perl
+</code></pre><p>To migrate your programs to perl-5.14.0, you need to replace that line to
+</p><pre><code>#!/Users/gugod/perl5/perlbrew/perls/perl-5.14.0/bin/perl
+</code></pre><p>Which might not be a big issue, until you have to do that for tens, or hundreds of programs.
+</p><p>The solution to this scenario, is to use alias. First create an alias for perl-5.12.3, here the name of choice is &quot;stable&quot;:
+</p><pre><code>perlbrew alias create perl-5.12.3 stable
+</code></pre><p>And the shebang for the &quot;stable&quot; perl is just:
+</p><pre><code>#!/Users/gugod/perl5/perlbrew/perls/stable/bin/perl
+</code></pre><p>Under the hood it is just a symlink that does the trick. Once you need to fullly migrate to perl-5.14.0, just upgrade the symlink with:
+</p><pre><code>perlbrew alias delete stable
 perlbrew alias create perl-5.14.0 stable
-</code></pre>
-
-<p>Or alternatively, do a force create to override the existing alias</p>
-
-<pre><code>perlbrew alias -f create perl-5.14.0 stable
-</code></pre>
-
-<p>No need to change shebang of programs anymore.</p>
-
-<p>perlbrew used to have a special symlink named <code>current</code> to keep what's the default perl for users. This <code>current</code> symlink is no longer special. You may still create an alias named "current" if you need to.</p>
-
-<h2>New command: self-upgrade</h2>
-
-<p>A <code>self-upgrade</code> command is also introduced for easier upgrading. It essentially just run this line:</p>
-
-<pre><code>curl -L http://xrl.us/perlbrewinstall | bash
-</code></pre>
-
-<p>However, if the perlbrew executable is installed with CPAN, this command does not do anything at all, but just showing a message telling that it cannot be auto-upgraded. If your perlbrew is installed with CPAN, you need to upgrade it with CPAN.</p>
-
+</code></pre><p>Or alternatively, do a force create to override the existing alias
+</p><pre><code>perlbrew alias -f create perl-5.14.0 stable
+</code></pre><p>No need to change shebang of programs anymore.
+</p><p>perlbrew used to have a special symlink named <code>current</code> to keep what's the default perl for users. This <code>current</code> symlink is no longer special. You may still create an alias named &quot;current&quot; if you need to.
+</p><h2>New command: self-upgrade
+</h2><p>A <code>self-upgrade</code> command is also introduced for easier upgrading. It essentially just run this line:
+</p><pre><code>curl -L http://xrl.us/perlbrewinstall | bash
+</code></pre><p>However, if the perlbrew executable is installed with CPAN, this command does not do anything at all, but just showing a message telling that it cannot be auto-upgraded. If your perlbrew is installed with CPAN, you need to upgrade it with CPAN.
+</p>
         </section>
     </div>
     <footer>
-        <p>© 2016 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>

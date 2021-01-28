@@ -14,9 +14,8 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
-                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
-                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
             </ul>
         </div>
     </nav>
@@ -39,44 +38,31 @@
     <div id="container" class="inner">
         <section>
   <h2>Perlbrew Release 0.76</h2>
-  <p>0.76 is released at 2016-06-21T23:02:44+0200 with the following changes:</p>
-
-<ul>
-<li>Start supporting cperl installation.</li>
-<li>cperl releases are sourced from: https://github.com/perl11/cperl/releases</li>
-<li>Deal with a regex warning when testing perlbrew with perl-5.25. See RT: https://rt.cpan.org/Ticket/Display.html?id=114871</li>
-</ul>
-
-<p>Special thanks to Alexey Melezhik for the intergation with [Sparrow project][https://sparrowhub.org/]</p>
-
-<p>Notably thi is the first version of perlbrew to non-p5p perl releases. The cperl installation works
+  <p>0.76 is released at 2016-06-21T23:02:44+0200 with the following changes:
+</p><ul><li>Start supporting cperl installation.
+</li><li>cperl releases are sourced from: <a href="https://github.com/perl11/cperl/releases">https://github.com/perl11/cperl/releases</a>
+</li><li>Deal with a regex warning when testing perlbrew with perl-5.25. See RT: <a href="https://rt.cpan.org/Ticket/Display.html?id=114871">https://rt.cpan.org/Ticket/Display.html?id=114871</a>
+</li></ul><p>Special thanks to Alexey Melezhik for the intergation with [Sparrow project][<a href="https://sparrowhub.org/]">https://sparrowhub.org/]</a>
+</p><p>Notably thi is the first version of perlbrew to non-p5p perl releases. The cperl installation works
 only with the versions mentioned in cperl releases page at
-[https://github.com/perl11/cperl/releases][]. perlbrew recognize the name format "cperl-<version>"
-as a convention for installing cperl. So this will do the trick:</p>
-
-<pre><code>perlbrew install cperl-5.22.3
-</code></pre>
-
-<p>This naming convention is sufficient for now and it'll probably be sufficient for a while.</p>
-
-<p>Notice that after switching to a cperl installation:</p>
-
-<pre><code>perlbrew using cperl-5.22.3
-</code></pre>
-
-<p>The command <code>perl</code> is then hashed to <code>cperl</code>. By default, cperl releases install the main
+[<a href="https://github.com/perl11/cperl/releases][].">https://github.com/perl11/cperl/releases][].</a> perlbrew recognize the name format &quot;cperl-<version>&quot;
+as a convention for installing cperl. So this will do the trick:
+</p><pre><code>perlbrew install cperl-5.22.3
+</code></pre><p>This naming convention is sufficient for now and it'll probably be sufficient for a while.
+</p><p>Notice that after switching to a cperl installation:
+</p><pre><code>perlbrew using cperl-5.22.3
+</code></pre><p>The command <code>perl</code> is then hashed to <code>cperl</code>. By default, cperl releases install the main
 interpreter under the name <code>cperl</code> but not <code>perl</code>. However, with perlbrew, only one installations
 can be activated anyway, so we symlinked <code>cperl</code> to <code>perl</code> for convienence. If this turns out to be
-causing more troubles then its benifit, we might revert this decision.</p>
-
-<p>According to the [perl11 project][http://perl11.org/], cperl runs all CPAN code, so we expected
+causing more troubles then its benifit, we might revert this decision.
+</p><p>According to the [perl11 project][<a href="http://perl11.org/],">http://perl11.org/],</a> cperl runs all CPAN code, so we expected
 minimum amonut of issues from activating it. For different perl-ish releases that we wish to support
-(for eg, perlito5) it'll be different stories.</p>
-
+(for eg, perlito5) it'll be different stories.
+</p>
         </section>
     </div>
     <footer>
-        <p>© 2016 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>

@@ -14,9 +14,8 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
-                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
-                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
             </ul>
         </div>
     </nav>
@@ -40,71 +39,50 @@
         <section>
   <h2>Perlbrew Release 0.31</h2>
   <p>perlbrew 0.31 is a rather experimenting release with these major changes, please
-fully read this release note before upgrading.</p>
-
-<ul>
-<li>NOTICE: Remove $PERLBREW_ROOT/Conf.pm if it's there, and re-run <code>perlbrew mirror</code></li>
-<li>perlbrew help system is changing. <code>perlbrew help &lt;command&gt;</code> now displays brief documentation for the command.</li>
-<li>Add a global <code>--root</code> argument for all commands that can be used as a quick alternative to set PERLBREW_ROOT env var.</li>
-<li>Avoid display paths to external/system perl in the output of <code>perlbrew list</code></li>
-<li>Replace Text::Levenshtein with a minimal implementation -- the standalone executable get to be smaller.</li>
-</ul>
-
-<h2>Renaming the Conf.pm file</h2>
-
-<p>If you ever used <code>perlbrew mirror</code> to choose mirror sites, you need to re-run
-<code>perlbrew mirror</code> after installing this release.</p>
-
-<h2>Better for scripting</h2>
-
-<p>There are demands to invoke perlberw commands from shell scripts, crontab or
+fully read this release note before upgrading.
+</p><ul><li>NOTICE: Remove $PERLBREW_ROOT/Conf.pm if it's there, and re-run <code>perlbrew mirror</code>
+</li><li>perlbrew help system is changing. <code>perlbrew help &lt;command&gt;</code> now displays brief documentation for the command.
+</li><li>Add a global <code>--root</code> argument for all commands that can be used as a quick alternative to set PERLBREW_ROOT env var.
+</li><li>Avoid display paths to external/system perl in the output of <code>perlbrew list</code>
+</li><li>Replace Text::Levenshtein with a minimal implementation -- the standalone executable get to be smaller.
+</li></ul><h2>Renaming the Conf.pm file
+</h2><p>If you ever used <code>perlbrew mirror</code> to choose mirror sites, you need to re-run
+<code>perlbrew mirror</code> after installing this release.
+</p><h2>Better for scripting
+</h2><p>There are demands to invoke perlberw commands from shell scripts, crontab or
 anywhere that is not an interactive shell. perlbrew has been improving to make
 it easier to run commands from a shell script. One of the biggest hassle is
-the requirement of PERLBREW_ROOT environment variable.</p>
-
-<p>Almost all perlbrew commands now recognize a <code>--root</code> arg and treat its value as
+the requirement of PERLBREW_ROOT environment variable.
+</p><p>Almost all perlbrew commands now recognize a <code>--root</code> arg and treat its value as
 a path of perlberw root dir. For example, you can run these command to install
-perls into different locations:</p>
-
-<pre><code>/usr/local/bin/perlbrew --root /usr/perls install 5.14.2
+perls into different locations:
+</p><pre><code>/usr/local/bin/perlbrew --root /usr/perls install 5.14.2
 /usr/local/bin/perlbrew --root /opt/perls install 5.14.2
 /usr/local/bin/perlbrew --root /mnt/perls install 5.14.2
-</code></pre>
-
-<p>Full path to perlbrew is used in the example to denote that it is not invoking
-<code>perlbrew</code> bash function.</p>
-
-<p>The perlbrew root dirs need to be a previously initialized directory, but you may
-do so with:</p>
-
-<pre><code>/usr/local/bin/perlbrew --root /usr/perls init
+</code></pre><p>Full path to perlbrew is used in the example to denote that it is not invoking
+<code>perlbrew</code> bash function.
+</p><p>The perlbrew root dirs need to be a previously initialized directory, but you may
+do so with:
+</p><pre><code>/usr/local/bin/perlbrew --root /usr/perls init
 /usr/local/bin/perlbrew --root /opt/perls init
 /usr/local/bin/perlbrew --root /mnt/perls init
-</code></pre>
-
-<p>In this case, it is not mandatory to follow the on-screen instruction to include
-the bashrc/cshrc in you shell at all.</p>
-
-<p>A small caveat for the <code>exec</code> command with <code>--root</code> arg: put <code>--root</code> arg before
-the word <code>exec</code> like this:</p>
-
-<pre><code>/usr/local/bin/perlbrew --root /mnt/perls exec myprog.pl --arg value
-</code></pre>
-
-<p>Since it is expected that every words after <code>exec</code> are the actual command to run.</p>
-
-<p>General rule of thumb: put <code>--root</code> arg right after <code>perlbrew</code> when you need to
-specify it.</p>
-
-<p>However, if you need to invoke <code>use</code> or <code>switch</code> command from your shell script,
+</code></pre><p>In this case, it is not mandatory to follow the on-screen instruction to include
+the bashrc/cshrc in you shell at all.
+</p><p>A small caveat for the <code>exec</code> command with <code>--root</code> arg: put <code>--root</code> arg before
+the word <code>exec</code> like this:
+</p><pre><code>/usr/local/bin/perlbrew --root /mnt/perls exec myprog.pl --arg value
+</code></pre><p>Since it is expected that every words after <code>exec</code> are the actual command to run.
+</p><p>General rule of thumb: put <code>--root</code> arg right after <code>perlbrew</code> when you need to
+specify it.
+</p><p>However, if you need to invoke <code>use</code> or <code>switch</code> command from your shell script,
 it is still required to include the perlbrew bashrc file in your shell script.
 Without doing so, they spawn a sub-shell process, which is never a desired
-outcome.</p>
-
+outcome.
+</p>
         </section>
     </div>
     <footer>
-        <p>© 2016 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>

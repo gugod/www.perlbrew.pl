@@ -14,9 +14,8 @@
     <nav>
         <div class="inner">
             <ul>
-                <li><a href="http://perl.org/" title="What makes everything.">Perl</a></li>
-                <li><a href="http://cpan.org/" title="Where everthing lives.">CPAN</a></li>
-                <li><a href="http://handlino.com" title="Who sponsors the design of this awesome website.">Handlino</a></li>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
             </ul>
         </div>
     </nav>
@@ -39,35 +38,27 @@
     <div id="container" class="inner">
         <section>
   <h2>Perlbrew Release 0.30</h2>
-  <p>perlbrew 0.30 contain these major changes</p>
-
-<ul>
-<li>local::lib integration</li>
-<li>Skip runs of exec on aliases</li>
-<li>Respect -f flag when installing to replace an already installed perl.</li>
-<li>Redefine the default value of -q flag to be false, and define it's meaning to be "complete silent"</li>
-</ul>
-
-<h2>The YAPC release</h2>
-
-<p>This is the release for YAPC::Asia 2011, featuring the local::lib integraton. Use the new command <code>lib</code>
-to manage local::lib containers:</p>
-
-<pre><code>perlbrew lib create nobita
+  <p>perlbrew 0.30 contain these major changes
+</p><ul><li>local::lib integration
+</li><li>Skip runs of exec on aliases
+</li><li>Respect -f flag when installing to replace an already installed perl.
+</li><li>Redefine the default value of -q flag to be false, and define it's meaning to be &quot;complete silent&quot;
+</li></ul><h2>The YAPC release
+</h2><p>This is the release for YAPC::Asia 2011, featuring the local::lib integraton. Use the new command <code>lib</code>
+to manage local::lib containers:
+</p><pre><code>perlbrew lib create nobita
 perlbrew lib create perl-5.12.3@shizuka
 perlbrew lib list
 perlbrew use perl-5.12.3@shizuka
 perlbrew use perl-5.14.2@nobita
 perlbrew switch perl-5.14.2@nobita
 perlbrew lib delete perl-5.12.3@nobita
-</code></pre>
-
-<p>The usage example and documentation is available by running <code>perlbrew lib</code> or <code>perlbrew help lib</code>.</p>
-
+</code></pre><p>The usage example and documentation is available by running <code>perlbrew lib</code> or <code>perlbrew help lib</code>.
+</p>
         </section>
     </div>
     <footer>
-        <p>© 2016 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by <a href="http://handlino.com">Handlino. Inc</a></p>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>
