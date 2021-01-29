@@ -5,6 +5,33 @@
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
   <entry>
+    <id>https://perlbrew.pl/Release-0.90.html?3291ca5b7d3c2061540315f4f29f8761c0d4b402</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.90.html" type="text/html"/>
+    <title>Perlbrew Release 0.90</title>
+    <published>2021-01-29T09:53:11+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.90 was released at 2021-01-29T09:43:17+0900 with these notable changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Mose Schmiedel, gucchisk
+</li>
+          <li>The output of 'available' command is split into sections of different type of distributions. Github issue #646.
+</li>
+          <li>Let the output of <code>perlbrew -h</code> be the short usage. Github issue #647
+</li>
+          <li>Unbreak env script for fish users. GitHub PR #698 and #708
+</li>
+          <li>Prefer https URLs of www.cpan.org
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html?580a536701421412a9f13509dbb16983b6a1f785</id>
     <link rel="alternate" href="https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html" type="text/html"/>
     <title>Install a sitecustomize.pl file with perlbrew</title>
@@ -802,34 +829,5 @@ minimum amonut of issues from activating it. For different perl-ish releases tha
 (for eg, perlito5) it'll be different stories.
 &lt;/p&gt;</content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.75.html?62820207a288df7d547842850e87573be49ab2d3</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.75.html" type="text/html"/>
-    <title>Perlbrew Release 0.75</title>
-    <published>2016-05-27T06:29:20+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>0.75 is released at 2016-03-16T23:41:41+0100
-</p>
-        <ul>
-          <li>Thanks to our contributors: Dave Cross,  Dean Hamstead,  Mark J. Reed,  Mohammed El-Afifi,
-</li>
-          <li>Add '--no-patchperl' install option for skip running patchperl.
-</li>
-          <li>Add '--destdir' install option.
-</li>
-          <li>"uninstall" command now also delete associated libs.
-</li>
-          <li>"mirror" command is removed.
-</li>
-          <li>"config" command is removed.
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <updated>2020-10-29T09:11:33+09:00Z</updated>
+  <updated>2021-01-29T09:53:11+09:00Z</updated>
 </feed>
