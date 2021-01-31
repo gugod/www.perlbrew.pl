@@ -16,15 +16,21 @@ sub grok_changelog {
     # Take the latest section in the changelog
     my ($version, $release_time, $updates_txt) = (undef, '');
     my $io = io->catfile($perlbrew_git_dir, "Changes")->utf8;
+
     while(my $line = $io->getline()) {
-        if ($line =~ /^([0-9]+\.[0-9]+): +# +(.+) *$/) {
+        if ($line =~ /^([0-9]+\.[0-9]+)$/) {
             last if ($version);
             $version = $1;
-            $release_time = $2;
-        } else {
-            $updates_txt .= $line;
+        } elsif ($line =~ /^\s+- Released at (\S+)$/o) {
+            $release_time = $1;
+        } elsif ($line =~ /^\s+- (.+)$/o) {
+            $updates_txt .= "- $1";
         }
     }
+
+    die "Failed to extract the latest version from Changes. Abort.\n" unless $version;
+    die "Failed to extract the release time from Changes. Abort.\n" unless $release_time;
+    die "Failed to extract the release note Changes. Abort.\n" unless $updates_txt;
 
     return {
         version => $version,
@@ -40,7 +46,7 @@ sub build_release_notes {
 Perlbrew Release $release_detail->{version}
 =====================
 
-perlbrew $release_detail->{version} was released at $release_detail->{time} with these notable changes:
+perlbrew $release_detail->{version} was released at $release_detail->{time} with these  changes:
 
 $release_detail->{updates}
 
