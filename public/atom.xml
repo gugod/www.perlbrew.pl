@@ -5,6 +5,25 @@
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
   <entry>
+    <id>https://perlbrew.pl/Release-0.91.html?964be9f1be7c365c0f06c7aef1da9fdb76735178</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.91.html" type="text/html"/>
+    <title>Perlbrew Release 0.91</title>
+    <published>2021-01-31T17:27:18+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.91 was released at 2021-01-31T17:10:27+0900 with these  changes:
+</p>
+        <ul>
+          <li>Fix META info included in 0.90. No other feature changes.
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Release-0.90.html?3291ca5b7d3c2061540315f4f29f8761c0d4b402</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.90.html" type="text/html"/>
     <title>Perlbrew Release 0.90</title>
@@ -799,35 +818,5 @@ thanks to our contributors: Dennis Kaarsemaker, Roel Harbers.
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.76.html?87bc7f6a18b3d8edd565c882ee7c36220e2b1069</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.76.html" type="text/html"/>
-    <title>Perlbrew Release 0.76</title>
-    <published>2016-06-22T06:20:27+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="html" xml:base="https://perlbrew.pl">&lt;p&gt;0.76 is released at 2016-06-21T23:02:44+0200 with the following changes:
-&lt;/p&gt;&lt;ul&gt;&lt;li&gt;Start supporting cperl installation.
-&lt;/li&gt;&lt;li&gt;cperl releases are sourced from: &lt;a href="https://github.com/perl11/cperl/releases"&gt;https://github.com/perl11/cperl/releases&lt;/a&gt;
-&lt;/li&gt;&lt;li&gt;Deal with a regex warning when testing perlbrew with perl-5.25. See RT: &lt;a href="https://rt.cpan.org/Ticket/Display.html?id=114871"&gt;https://rt.cpan.org/Ticket/Display.html?id=114871&lt;/a&gt;
-&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;Special thanks to Alexey Melezhik for the intergation with [Sparrow project][&lt;a href="https://sparrowhub.org/]"&gt;https://sparrowhub.org/]&lt;/a&gt;
-&lt;/p&gt;&lt;p&gt;Notably thi is the first version of perlbrew to non-p5p perl releases. The cperl installation works
-only with the versions mentioned in cperl releases page at
-[&lt;a href="https://github.com/perl11/cperl/releases][]."&gt;https://github.com/perl11/cperl/releases][].&lt;/a&gt; perlbrew recognize the name format &amp;quot;cperl-&lt;version&gt;&amp;quot;
-as a convention for installing cperl. So this will do the trick:
-&lt;/p&gt;&lt;pre&gt;&lt;code&gt;perlbrew install cperl-5.22.3
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This naming convention is sufficient for now and it'll probably be sufficient for a while.
-&lt;/p&gt;&lt;p&gt;Notice that after switching to a cperl installation:
-&lt;/p&gt;&lt;pre&gt;&lt;code&gt;perlbrew using cperl-5.22.3
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The command &lt;code&gt;perl&lt;/code&gt; is then hashed to &lt;code&gt;cperl&lt;/code&gt;. By default, cperl releases install the main
-interpreter under the name &lt;code&gt;cperl&lt;/code&gt; but not &lt;code&gt;perl&lt;/code&gt;. However, with perlbrew, only one installations
-can be activated anyway, so we symlinked &lt;code&gt;cperl&lt;/code&gt; to &lt;code&gt;perl&lt;/code&gt; for convienence. If this turns out to be
-causing more troubles then its benifit, we might revert this decision.
-&lt;/p&gt;&lt;p&gt;According to the [perl11 project][&lt;a href="http://perl11.org/],"&gt;http://perl11.org/],&lt;/a&gt; cperl runs all CPAN code, so we expected
-minimum amonut of issues from activating it. For different perl-ish releases that we wish to support
-(for eg, perlito5) it'll be different stories.
-&lt;/p&gt;</content>
-  </entry>
-  <updated>2021-01-29T09:53:11+09:00Z</updated>
+  <updated>2021-01-31T17:27:18+09:00Z</updated>
 </feed>
