@@ -24,7 +24,7 @@ sub grok_changelog {
         } elsif ($line =~ /^\s+- Released at (\S+)$/o) {
             $release_time = $1;
         } elsif ($line =~ /^\s+- (.+)$/o) {
-            $updates_txt .= "- $1";
+            $updates_txt .= "- $1\n";
         }
     }
 
