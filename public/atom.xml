@@ -5,6 +5,31 @@
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
   <entry>
+    <id>https://perlbrew.pl/Release-0.92.html?552632d99a2fc7e7bef6b89f79e787df2f4cc551</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.92.html" type="text/html"/>
+    <title>Perlbrew Release 0.92</title>
+    <published>2021-04-15T23:58:35+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.92 was released at 2021-04-15T23:53:55+0900 with these  changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: chee
+</li>
+          <li>Fix a message mentioning fish config. GitHub PR #712
+</li>
+          <li>Fetch cperl releases from <a href="https://github.com/perl11/cperl/releases">https://github.com/perl11/cperl/releases</a> instead
+</li>
+          <li>Let <code>clone-modules</code> command accept <code>--notest</code> and skip running module tests
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Release-0.91.html?964be9f1be7c365c0f06c7aef1da9fdb76735178</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.91.html" type="text/html"/>
     <title>Perlbrew Release 0.91</title>
@@ -506,7 +531,7 @@ cpanm Moose
 </p>
         <h2>Set a CPAN Mirror
 </h2>
-        <p>Set environment variable PERLBREW_CPAN_MIRROR to the mirror site url. <code>http://</code> or <code>https://</code> URLs
+        <p>Set environment variable PERLBREW_CPAN_MIRROR to the mirror site url. <code><a href="http://`">http://`</a> or</code><a href="https://`">https://`</a> URLs
 are both supported, but not <code>ftp://</code> or <code>rsync://</code> URLs.
 </p>
         <p>For example:
@@ -517,7 +542,7 @@ export PERLBREW_CPAN_MIRROR=https://cpan.metacpan.org/
 </code>
         </pre>
         <p>For the list of public CPAN mirror site URLs, please see this list <a href="http://www.cpan.org/SITES.html"/>
-Again, choose a <code>http://</code> URL.
+Again, choose a `<a href="http://`">http://`</a> URL.
 </p>
       </div>
     </content>
@@ -794,29 +819,5 @@ perlbrew install perl-5.26.1 --notest</code>
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.77.html?93e540ecf62f19348a115d94446c8cdcd388b0ad</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.77.html" type="text/html"/>
-    <title>Perlbrew Release 0.77</title>
-    <published>2018-05-30T08:59:27+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>0.77 was releaset at 2016-11-12T06:42:45+0100 with the following changes,
-thanks to our contributors: Dennis Kaarsemaker, Roel Harbers.
-</p>
-        <ul>
-          <li>The "uninstall" command now requires confirmation.
-</li>
-          <li>Fix bug with csh when PATH entries contain spaces
-</li>
-          <li>Accommodate git commit abbrivation changes on perl5.git.perl.org. See GH #524 <a href="https://github.com/gugod/App-perlbrew/pull/524">https://github.com/gugod/App-perlbrew/pull/524</a>
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <updated>2021-01-31T17:27:18+09:00Z</updated>
+  <updated>2021-04-15T23:58:35+09:00Z</updated>
 </feed>
