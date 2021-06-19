@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="alternate" type="application/atom+xml" href="https://feeds.feedburner.com/Perlbrew">
+    <title>Installation</title>
+<![if gte IE 9]>
+    <link href="//fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Installation</h2>
+  <p>Copy &amp; Paste this line into your terminal:
+</p><pre><code>\curl -L https://install.perlbrew.pl | bash
+</code></pre><p>Or, if your system does not have curl but something else:
+</p><pre><code># Linux
+\wget -O - https://install.perlbrew.pl | bash
+
+# FreeBSD
+\fetch -o- https://install.perlbrew.pl | sh
+</code></pre><p>If you prefer to install with cpan, there are two steps:
+</p><pre><code>sudo cpan App::perlbrew
+perlbrew init
+</code></pre><p>If it is installed with cpan, the perlbrew executable should be installed as
+<code>/usr/bin/perlbrew</code> or <code>/usr/local/bin/perlbrew</code>. For all users who want to use
+perlbrew, a prior <code>perlbrew init</code> needs to be executed.
+</p><p>The default perlbrew root directory is <code>~/perl5/perlbrew</code>, which can be changed
+by setting <code>PERLBREW_ROOT</code> environment variable before the installation and
+initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
+perlbrew document</a>.
+</p><h3>Install, other ways
+</h3><p>If you use <a href="https://metacpan.org/pod/Sparrow">Sparrow</a> there is sparrow plugin named <a href="https://github.com/melezhik/perlbrew">perlbrew</a> to install perlbrew. It's poorly tested but proved to be working for Ubuntu/Debian platforms.
+</p><p>If you are using Windows, please take a look at <a href="https://github.com/stevieb9/berrybrew">Berrybrew</a>
+</p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
+
+        <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
+    </footer>
+</body>
+</html>

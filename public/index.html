@@ -40,32 +40,13 @@
   <h2>Perlbrew</h2>
   <p>perlbrew is an admin-free perl installation management tool. The latest version
 is 0.92, read the release note: <a href="Release-0.92.html">Release 0.92</a>.
-</p><h2>Install, quickly
-</h2><p>Copy &amp; Paste this line into your terminal:
+</p><p>For a quick installation, do this:
 </p><pre><code>\curl -L https://install.perlbrew.pl | bash
-</code></pre><p>Or, if your system does not have curl but something else:
-</p><pre><code># Linux
-\wget -O - https://install.perlbrew.pl | bash
-
-# FreeBSD
-\fetch -o- https://install.perlbrew.pl | sh
-</code></pre><p>If you prefer to install with cpan, there are two steps:
-</p><pre><code>sudo cpan App::perlbrew
-perlbrew init
-</code></pre><p>If it is installed with cpan, the perlbrew executable should be installed as
-<code>/usr/bin/perlbrew</code> or <code>/usr/local/bin/perlbrew</code>. For all users who want to use
-perlbrew, a prior <code>perlbrew init</code> needs to be executed.
-</p><p>The default perlbrew root directory is <code>~/perl5/perlbrew</code>, which can be changed
-by setting <code>PERLBREW_ROOT</code> environment variable before the installation and
-initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
-perlbrew document</a>.
-</p><h3>Install, other ways
-</h3><p>If you use <a href="https://metacpan.org/pod/Sparrow">Sparrow</a> there is sparrow plugin named <a href="https://github.com/melezhik/perlbrew">perlbrew</a> to install perlbrew. It's poorly tested but proved to be working for Ubuntu/Debian platforms.
-</p><p>If you are using Windows, please take a look at <a href="https://github.com/stevieb9/berrybrew">Berrybrew</a>
-</p><h2>What is perlbrew
-</h2><p>perlbrew is a tool to manage multiple perl installations in your
-<code>$HOME</code> directory. They are completely isolated perl universes.
-This approach has many benefits:
+</code></pre><p>Check the document of <a href="Installation.html">Installation</a> for more descriptions and options.
+</p><p>perlbrew is a tool to manage multiple perl installations in your
+<code>$HOME</code> directory (or wherever you specify). They are completely
+isolated perl universes, and has no relationship with system perl.
+</p><p>This approach has many benefits:
 </p><ul><li>No need to run <code>sudo</code> to install CPAN modules, any more.
 </li><li>Try the monthly released new perls with ease and learn new language features.
 </li><li>Test your code against different perl versions.
@@ -90,7 +71,8 @@ perlbrew use perl-blead
 </code></pre><p>For more descriptions about commands,
 </p><pre><code>perlbrew help
 </code></pre><h2>Articles
-</h2><ul><li><a href="Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html">Deploying Perl bindings from tools installed with Homebrew on OS X</a>
+</h2><ul><li><a href="Installation.html">Installation</a>
+</li><li><a href="Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html">Deploying Perl bindings from tools installed with Homebrew on OS X</a>
 </li><li><a href="Perlbrew-Configuration.html">Perlbrew Configuration</a>
 </li><li><a href="Reinstall-All-Modules-On-New-Perl.html">Reinstall All Modules On New Perl</a>
 </li><li><a href="Install-a-sitecustomize.pl-file-with-perlbrew.html">Install a sitecustomize.pl file with perlbrew</a>

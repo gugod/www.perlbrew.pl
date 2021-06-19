@@ -5,6 +5,57 @@
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
   <entry>
+    <id>https://perlbrew.pl/Installation.html?5d2478b2a08da3116ab0ae3d4152fd730248f9d5</id>
+    <link rel="alternate" href="https://perlbrew.pl/Installation.html" type="text/html"/>
+    <title>Installation</title>
+    <published>2021-06-19T16:21:37+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>Copy &amp; Paste this line into your terminal:
+</p>
+        <pre>
+          <code>\curl -L https://install.perlbrew.pl | bash
+</code>
+        </pre>
+        <p>Or, if your system does not have curl but something else:
+</p>
+        <pre>
+          <code># Linux
+\wget -O - https://install.perlbrew.pl | bash
+
+# FreeBSD
+\fetch -o- https://install.perlbrew.pl | sh
+</code>
+        </pre>
+        <p>If you prefer to install with cpan, there are two steps:
+</p>
+        <pre>
+          <code>sudo cpan App::perlbrew
+perlbrew init
+</code>
+        </pre>
+        <p>If it is installed with cpan, the perlbrew executable should be installed as
+<code>/usr/bin/perlbrew</code> or <code>/usr/local/bin/perlbrew</code>. For all users who want to use
+perlbrew, a prior <code>perlbrew init</code> needs to be executed.
+</p>
+        <p>The default perlbrew root directory is <code>~/perl5/perlbrew</code>, which can be changed
+by setting <code>PERLBREW_ROOT</code> environment variable before the installation and
+initialization. For more advanced installation process, please read <a href="http://metacpan.org/module/App::perlbrew">the
+perlbrew document</a>.
+</p>
+        <h3>Install, other ways
+</h3>
+        <p>If you use <a href="https://metacpan.org/pod/Sparrow">Sparrow</a> there is sparrow plugin named <a href="https://github.com/melezhik/perlbrew">perlbrew</a> to install perlbrew. It's poorly tested but proved to be working for Ubuntu/Debian platforms.
+</p>
+        <p>If you are using Windows, please take a look at <a href="https://github.com/stevieb9/berrybrew">Berrybrew</a>
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Release-0.92.html?552632d99a2fc7e7bef6b89f79e787df2f4cc551</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.92.html" type="text/html"/>
     <title>Perlbrew Release 0.92</title>
@@ -788,36 +839,5 @@ perlbrew install perl-5.26.1 --notest</code>
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.81.html?ae88dd572adbcf333665b71e159df55907af445f</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.81.html" type="text/html"/>
-    <title>Perlbrew Release 0.81</title>
-    <published>2018-05-30T08:59:27+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>perlbrew 0.81 was released at 2017-12-09T15:12:04+0900 with these notable changes:
-</p>
-        <ul>
-          <li>Thanks to our contributors: Luca Ferrari, Zac Bentley, perlancar, Nicolas R, gregor herrmann, Paul Cochrane
-</li>
-          <li>New command: clone-modules
-</li>
-          <li>Recognize tarball in .tar.xz extension
-</li>
-          <li>The output of "availables" is now sorted by versions
-</li>
-          <li>Unbreak the integration with cperl releases
-</li>
-          <li>Make <code>perlbrew install</code> runs correctly on AIX
-</li>
-          <li>support the current perl blead (5.28)
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <updated>2021-04-15T23:58:35+09:00Z</updated>
+  <updated>2021-06-19T16:21:37+09:00Z</updated>
 </feed>
