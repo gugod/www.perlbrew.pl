@@ -3,7 +3,29 @@
   <id>https://perlbrew.pl/</id>
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
-  <link rel="self" href="https://perlbrew.pl/atom.xml" type="application/atom+xml"/>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.93.html?868d199c24fd4214768d7071a8e01fcffa66e145</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.93.html" type="text/html"/>
+    <title>Perlbrew Release 0.93</title>
+    <published>2021-11-22T23:25:23+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.93 was released at 2021-11-22T23:09:25+0900 with these  changes:
+</p>
+        <ul>
+          <li>Let <code>clone-modules</code> takes just one arguments and mean 'cloning modules from that perl'.
+</li>
+          <li>Let <code>list-modules</code> and <code>clone-modules</code> map certain output to their representative module name. Github issue #722
+</li>
+          <li><code>exec</code> command now takes aliases explicitly specified in <code>--with</code> args and run commands with those aliases -- even if that would run the same thing twice. Github issue #725
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
   <entry>
     <id>https://perlbrew.pl/Installation.html?5d2478b2a08da3116ab0ae3d4152fd730248f9d5</id>
     <link rel="alternate" href="https://perlbrew.pl/Installation.html" type="text/html"/>
@@ -807,37 +829,5 @@ Most importantly to accomodate changes on perl5.git.perl.org
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/perlbrew-ing-on-$OS.html?564e43e265b91041ef9f7f7119753f8425232b3f</id>
-    <link rel="alternate" href="https://perlbrew.pl/perlbrew-ing-on-$OS.html" type="text/html"/>
-    <title>perlbrew ing on $OS</title>
-    <published>2018-05-30T08:59:27+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>This page is list of short cheatsheet on how to prepare your system so after it runs this bash script:
-</p>
-        <pre>
-          <code class="language-bash">\curl -L https://install.perlbrew.pl | bash
-eval "$(./perl5/perlbrew/bin/perlbrew init-in-bash)"
-perlbrew install perl-5.26.1 --notest</code>
-        </pre>
-        <p>you get a usable perl-5.26.1 installation.
-</p>
-        <h2>Debian and Ubuntu
-</h2>
-        <pre>
-          <code class="language-bash">sudo apt install -y build-essential curl perl</code>
-        </pre>
-        <h2>CentOS 7
-</h2>
-        <pre>
-          <code class="language-bash">sudo yum install -y gcc curl patch perl</code>
-        </pre>
-      </div>
-    </content>
-  </entry>
-  <updated>2021-06-19T16:21:37+09:00Z</updated>
+  <updated>2021-11-22T23:25:23+09:00Z</updated>
 </feed>
