@@ -4,6 +4,31 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
+    <id>https://perlbrew.pl/The-Discussion-forum-of-perlbrew-project.html?61e416f132705ec11c566899732136589d322b4e</id>
+    <link rel="alternate" href="https://perlbrew.pl/The-Discussion-forum-of-perlbrew-project.html" type="text/html"/>
+    <title>The Discussion forum of perlbrew project</title>
+    <published>2021-12-05T19:58:43+09:00Z</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>There has never being a online forum / discussion channel for general questions for perlbrew projects and therefoe such needs are dispatched to... everywhere.
+</p>
+        <p>From time to time, people also use GitHub issue as the channel for Q and A... because it seems feasible. I also don't mind having general discussions via that interface becaues... well, I'm not really the everything-has-to-be-tidy-up kind of guy.
+</p>
+        <p>That said.. a while ago I've discovered the "Discussions" feature is added to GitHub and enabled it for the repo "gugod/App-perlbrew":
+</p>
+        <p>Here: <a href="https://github.com/gugod/App-perlbrew/discussions">https://github.com/gugod/App-perlbrew/discussions</a>
+</p>
+        <p>So... now there is only more place for general questions to go. Interface-wise it seems to be identila to GitHub issues. Since it is essentially free (it does not cost me extra mony to enable such feature) I'll just leave it on.
+</p>
+        <p>Feel free to just drop by and share how perlbrew is useful  o you (or how it isn't -- that's cool too.)
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Release-0.94.html?cfe3cbcbe7a11ffec31fc56698c7693942dc1d72</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.94.html" type="text/html"/>
     <title>Perlbrew Release 0.94</title>
@@ -807,23 +832,5 @@ exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 \
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.78.html?124e24da382e785f887b76489bf0c1abb1f25ce1</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.78.html" type="text/html"/>
-    <title>Perlbrew Release 0.78</title>
-    <published>2018-05-30T08:59:27+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>0.78 was releaset at 2016-11-20T22:59:55+0100 with several fixes.
-Most importantly to accomodate changes on perl5.git.perl.org
-</p>
-        <p>Thanks to our contributors: Manuel Streuhofer, Sergey Aleynikov
-</p>
-      </div>
-    </content>
-  </entry>
-  <updated>2021-12-05T08:43:56+09:00Z</updated>
+  <updated>2021-12-05T19:58:43+09:00Z</updated>
 </feed>
