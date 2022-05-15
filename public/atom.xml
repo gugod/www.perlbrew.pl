@@ -4,10 +4,35 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
+    <id>https://perlbrew.pl/Release-0.95.html?bd639c4992008ac63d93b6509549886ef7cbce5c</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.95.html" type="text/html"/>
+    <title>Perlbrew Release 0.95</title>
+    <published>2022-05-15T23:08:16+08:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.95 was released at 2022-05-15T22:59:11+0800 with these  changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Leon Timmermans
+</li>
+          <li>Now we use metacpan api for fetching perl versions and for downloading. Github PR #743
+</li>
+          <li><code>--verbose</code> flag now also enable verbosity of underlying curl/wget commands. Github PR #740.
+</li>
+          <li>Avoid perl test errors when NO_COLOR is set. Github PR #738
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/The-Discussion-forum-of-perlbrew-project.html?61e416f132705ec11c566899732136589d322b4e</id>
     <link rel="alternate" href="https://perlbrew.pl/The-Discussion-forum-of-perlbrew-project.html" type="text/html"/>
     <title>The Discussion forum of perlbrew project</title>
-    <published>2021-12-05T19:58:43+09:00Z</published>
+    <published>2021-12-05T18:58:43+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -32,7 +57,7 @@
     <id>https://perlbrew.pl/Release-0.94.html?cfe3cbcbe7a11ffec31fc56698c7693942dc1d72</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.94.html" type="text/html"/>
     <title>Perlbrew Release 0.94</title>
-    <published>2021-12-05T08:43:56+09:00Z</published>
+    <published>2021-12-05T07:43:56+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -51,7 +76,7 @@
     <id>https://perlbrew.pl/Release-0.93.html?868d199c24fd4214768d7071a8e01fcffa66e145</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.93.html" type="text/html"/>
     <title>Perlbrew Release 0.93</title>
-    <published>2021-11-22T23:25:23+09:00Z</published>
+    <published>2021-11-22T22:25:23+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -74,7 +99,7 @@
     <id>https://perlbrew.pl/Installation.html?5d2478b2a08da3116ab0ae3d4152fd730248f9d5</id>
     <link rel="alternate" href="https://perlbrew.pl/Installation.html" type="text/html"/>
     <title>Installation</title>
-    <published>2021-06-19T16:21:37+09:00Z</published>
+    <published>2021-06-19T15:21:37+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -125,7 +150,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Release-0.92.html?552632d99a2fc7e7bef6b89f79e787df2f4cc551</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.92.html" type="text/html"/>
     <title>Perlbrew Release 0.92</title>
-    <published>2021-04-15T23:58:35+09:00Z</published>
+    <published>2021-04-15T22:58:35+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -150,7 +175,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Release-0.91.html?964be9f1be7c365c0f06c7aef1da9fdb76735178</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.91.html" type="text/html"/>
     <title>Perlbrew Release 0.91</title>
-    <published>2021-01-31T17:27:18+09:00Z</published>
+    <published>2021-01-31T16:27:18+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -169,7 +194,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Release-0.90.html?3291ca5b7d3c2061540315f4f29f8761c0d4b402</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.90.html" type="text/html"/>
     <title>Perlbrew Release 0.90</title>
-    <published>2021-01-29T09:53:11+09:00Z</published>
+    <published>2021-01-29T08:53:11+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -196,7 +221,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html?580a536701421412a9f13509dbb16983b6a1f785</id>
     <link rel="alternate" href="https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html" type="text/html"/>
     <title>Install a sitecustomize.pl file with perlbrew</title>
-    <published>2020-10-29T09:11:33+09:00Z</published>
+    <published>2020-10-29T08:11:33+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -271,7 +296,7 @@ $ ack PATTERN
     <id>https://perlbrew.pl/Dealing-with-shebangs.html?e8a92b77cf793dd793e83c70adde31420374e6ae</id>
     <link rel="alternate" href="https://perlbrew.pl/Dealing-with-shebangs.html" type="text/html"/>
     <title>Dealing with shebangs</title>
-    <published>2020-10-29T09:05:36+09:00Z</published>
+    <published>2020-10-29T08:05:36+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -341,7 +366,7 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
     <id>https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html?579036a659d3b285b7fcd0cdae147e3fc204af23</id>
     <link rel="alternate" href="https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html" type="text/html"/>
     <title>Deploying Perl bindings from tools installed with Homebrew on OS X</title>
-    <published>2020-10-29T09:05:36+09:00Z</published>
+    <published>2020-10-29T08:05:36+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -388,7 +413,7 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
     <id>https://perlbrew.pl/Release-0.89.html?d8b71c2394200ca9d7c2688ccc04961af438c3e2</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.89.html" type="text/html"/>
     <title>Perlbrew Release 0.89</title>
-    <published>2020-10-26T09:56:25+09:00Z</published>
+    <published>2020-10-26T08:56:25+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -411,7 +436,7 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
     <id>https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html?520c4bb30f1f9056794e9ce14762932f14b5604b</id>
     <link rel="alternate" href="https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html" type="text/html"/>
     <title>How To Reinstall All Modules On New Perl</title>
-    <published>2020-10-26T09:55:07+09:00Z</published>
+    <published>2020-10-26T08:55:07+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -464,7 +489,7 @@ perlbrew help clone-modules
     <id>https://perlbrew.pl/CommandAlias.html?06a42c0e760f8eb11cb1435df96185ef715239d1</id>
     <link rel="alternate" href="https://perlbrew.pl/CommandAlias.html" type="text/html"/>
     <title>CommandAlias</title>
-    <published>2020-10-25T20:11:28+09:00Z</published>
+    <published>2020-10-25T19:11:28+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -518,7 +543,7 @@ perlbrew alias -f rename current main
     <id>https://perlbrew.pl/Release-0.88.html?7abbaa95bfcc7a675d32eba5ff44863f0994e9c9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.88.html" type="text/html"/>
     <title>Perlbrew Release 0.88</title>
-    <published>2020-01-29T22:11:12+09:00Z</published>
+    <published>2020-01-29T21:11:12+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -541,7 +566,7 @@ perlbrew alias -f rename current main
     <id>https://perlbrew.pl/Perlbrew-and-Friends.html?709382420bbad872a5f9ea82a252384e3390d252</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-and-Friends.html" type="text/html"/>
     <title>Perlbrew and Friends</title>
-    <published>2020-01-28T21:22:31+09:00Z</published>
+    <published>2020-01-28T20:22:31+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -568,7 +593,7 @@ cpanm Moose
     <id>https://perlbrew.pl/Home.html?0ce0d3c80b8f0a214df0df75fbc430a4ca1decf3</id>
     <link rel="alternate" href="https://perlbrew.pl/Home.html" type="text/html"/>
     <title>Home</title>
-    <published>2019-12-05T22:29:48+09:00Z</published>
+    <published>2019-12-05T21:29:48+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -605,7 +630,7 @@ cpanm Moose
     <id>https://perlbrew.pl/Release-0.87.html?263bbf8efbc5ea4670cb849f115ae825913eee03</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.87.html" type="text/html"/>
     <title>Perlbrew Release 0.87</title>
-    <published>2019-10-25T23:20:39+09:00Z</published>
+    <published>2019-10-25T22:20:39+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -638,7 +663,7 @@ cpanm Moose
     <id>https://perlbrew.pl/Perlbrew-Configuration.html?9d00d7e0d5f9dc2e96f2bd046f84cc357e0ba195</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-Configuration.html" type="text/html"/>
     <title>Perlbrew Configuration</title>
-    <published>2019-10-25T23:18:38+09:00Z</published>
+    <published>2019-10-25T22:18:38+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -668,7 +693,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.86.html?8dac50a674b60ab4c566e8f27ddbdc86d651ea62</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.86.html" type="text/html"/>
     <title>Perlbrew Release 0.86</title>
-    <published>2019-01-19T09:49:45+09:00Z</published>
+    <published>2019-01-19T08:49:45+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -691,7 +716,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.83.html?43f4159830a0bc32a0446b1f875a92b4db562af9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.83.html" type="text/html"/>
     <title>Perlbrew Release 0.83</title>
-    <published>2018-12-15T23:36:02+09:00Z</published>
+    <published>2018-12-15T22:36:02+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -722,7 +747,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.84.html?08e7496e2467dcee95519a264aeea3ea06fde451</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.84.html" type="text/html"/>
     <title>Perlbrew Release 0.84</title>
-    <published>2018-12-15T23:35:56+09:00Z</published>
+    <published>2018-12-15T22:35:56+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -745,7 +770,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.85.html?301826a78d85640ecfc6bc54ef290408881d0f91</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.85.html" type="text/html"/>
     <title>Perlbrew Release 0.85</title>
-    <published>2018-12-15T23:34:11+09:00Z</published>
+    <published>2018-12-15T22:34:11+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -768,7 +793,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html?493f02c679cdd8e30d543d2fbc83a6f808e74a47</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html" type="text/html"/>
     <title>Perlbrew In Shell Scripts</title>
-    <published>2018-12-15T23:33:24+09:00Z</published>
+    <published>2018-12-15T22:33:24+08:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -811,26 +836,5 @@ exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 \
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.82.html?da5edba9572a5517eb0ef56c0f1689ec5cb59c9c</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.82.html" type="text/html"/>
-    <title>Perlbrew Release 0.82</title>
-    <published>2018-05-30T08:59:27+09:00Z</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>perlbrew 0.82 was released at 2017-12-17T09:53:00+0900 with these notable changes:
-</p>
-        <ul>
-          <li>Thanks to our contributors: Alceu Rodrigues de Freitas Junior, Paul Cochrane
-</li>
-          <li>Fix regression of 'perlbrew install blead'
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <updated>2021-12-05T19:58:43+09:00Z</updated>
+  <updated>2022-05-15T23:08:16+08:00</updated>
 </feed>
