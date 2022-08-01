@@ -4,10 +4,35 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
+    <id>https://perlbrew.pl/Release-0.96.html?77b016ff24f4757a27b6dd0ded01d927cbceb21b</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.96.html" type="text/html"/>
+    <title>Perlbrew Release 0.96</title>
+    <published>2022-08-01T09:13:50+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.96 was released at 2022-07-31T15:42:39+0900 with these changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Rolf Stöckli
+</li>
+          <li><code>install-cpm</code> is now properly documented. Thanks to Tekki.
+</li>
+          <li>Let <code>install</code> hint for <code>init</code> when PERLBREW_ROOT does not exist. .RT #57669.
+</li>
+          <li>Reveal the actual error code of curl/wget etc. Github issue #748.
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Release-0.95.html?bd639c4992008ac63d93b6509549886ef7cbce5c</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.95.html" type="text/html"/>
     <title>Perlbrew Release 0.95</title>
-    <published>2022-05-15T23:08:16+08:00</published>
+    <published>2022-05-16T00:08:58+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -32,7 +57,7 @@
     <id>https://perlbrew.pl/The-Discussion-forum-of-perlbrew-project.html?61e416f132705ec11c566899732136589d322b4e</id>
     <link rel="alternate" href="https://perlbrew.pl/The-Discussion-forum-of-perlbrew-project.html" type="text/html"/>
     <title>The Discussion forum of perlbrew project</title>
-    <published>2021-12-05T18:58:43+08:00</published>
+    <published>2021-12-05T19:58:23+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -57,7 +82,7 @@
     <id>https://perlbrew.pl/Release-0.94.html?cfe3cbcbe7a11ffec31fc56698c7693942dc1d72</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.94.html" type="text/html"/>
     <title>Perlbrew Release 0.94</title>
-    <published>2021-12-05T07:43:56+08:00</published>
+    <published>2021-12-05T08:56:34+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -76,7 +101,7 @@
     <id>https://perlbrew.pl/Release-0.93.html?868d199c24fd4214768d7071a8e01fcffa66e145</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.93.html" type="text/html"/>
     <title>Perlbrew Release 0.93</title>
-    <published>2021-11-22T22:25:23+08:00</published>
+    <published>2021-11-22T23:52:02+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -99,7 +124,7 @@
     <id>https://perlbrew.pl/Installation.html?5d2478b2a08da3116ab0ae3d4152fd730248f9d5</id>
     <link rel="alternate" href="https://perlbrew.pl/Installation.html" type="text/html"/>
     <title>Installation</title>
-    <published>2021-06-19T15:21:37+08:00</published>
+    <published>2021-06-19T16:28:18+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -150,7 +175,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Release-0.92.html?552632d99a2fc7e7bef6b89f79e787df2f4cc551</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.92.html" type="text/html"/>
     <title>Perlbrew Release 0.92</title>
-    <published>2021-04-15T22:58:35+08:00</published>
+    <published>2021-04-15T23:59:40+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -175,7 +200,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Release-0.91.html?964be9f1be7c365c0f06c7aef1da9fdb76735178</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.91.html" type="text/html"/>
     <title>Perlbrew Release 0.91</title>
-    <published>2021-01-31T16:27:18+08:00</published>
+    <published>2021-01-31T17:28:51+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -194,7 +219,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Release-0.90.html?3291ca5b7d3c2061540315f4f29f8761c0d4b402</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.90.html" type="text/html"/>
     <title>Perlbrew Release 0.90</title>
-    <published>2021-01-29T08:53:11+08:00</published>
+    <published>2021-01-29T09:53:50+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -221,7 +246,7 @@ perlbrew document</a>.
     <id>https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html?580a536701421412a9f13509dbb16983b6a1f785</id>
     <link rel="alternate" href="https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html" type="text/html"/>
     <title>Install a sitecustomize.pl file with perlbrew</title>
-    <published>2020-10-29T08:11:33+08:00</published>
+    <published>2020-10-29T09:08:44+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -296,7 +321,7 @@ $ ack PATTERN
     <id>https://perlbrew.pl/Dealing-with-shebangs.html?e8a92b77cf793dd793e83c70adde31420374e6ae</id>
     <link rel="alternate" href="https://perlbrew.pl/Dealing-with-shebangs.html" type="text/html"/>
     <title>Dealing with shebangs</title>
-    <published>2020-10-29T08:05:36+08:00</published>
+    <published>2020-10-29T09:03:40+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -366,7 +391,7 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
     <id>https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html?579036a659d3b285b7fcd0cdae147e3fc204af23</id>
     <link rel="alternate" href="https://perlbrew.pl/Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html" type="text/html"/>
     <title>Deploying Perl bindings from tools installed with Homebrew on OS X</title>
-    <published>2020-10-29T08:05:36+08:00</published>
+    <published>2020-10-29T09:03:19+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -410,33 +435,10 @@ eval 'exec perl −x −wS $0 ${1+"$@"}'
     </content>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Release-0.89.html?d8b71c2394200ca9d7c2688ccc04961af438c3e2</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.89.html" type="text/html"/>
-    <title>Perlbrew Release 0.89</title>
-    <published>2020-10-26T08:56:25+08:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>perlbrew 0.89 was released at 2020-10-19T09:26:19+0900 with these notable changes:
-</p>
-        <ul>
-          <li>Thanks to our contributors: Håkon Hægland, Nicolas R, Peter Tripp
-</li>
-          <li>Make the bashrc compatible with 'bash -u'. Github PR #694
-</li>
-          <li>Prevent build directory from being overwritten. Github PR #683
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <entry>
     <id>https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html?520c4bb30f1f9056794e9ce14762932f14b5604b</id>
     <link rel="alternate" href="https://perlbrew.pl/Reinstall-All-Modules-On-New-Perl.html" type="text/html"/>
     <title>How To Reinstall All Modules On New Perl</title>
-    <published>2020-10-26T08:55:07+08:00</published>
+    <published>2020-10-23T10:16:29+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -486,56 +488,25 @@ perlbrew help clone-modules
     </content>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/CommandAlias.html?06a42c0e760f8eb11cb1435df96185ef715239d1</id>
-    <link rel="alternate" href="https://perlbrew.pl/CommandAlias.html" type="text/html"/>
-    <title>CommandAlias</title>
-    <published>2020-10-25T19:11:28+08:00</published>
+    <id>https://perlbrew.pl/Release-0.89.html?d8b71c2394200ca9d7c2688ccc04961af438c3e2</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.89.html" type="text/html"/>
+    <title>Perlbrew Release 0.89</title>
+    <published>2020-10-19T10:07:30+09:00</published>
     <author>
       <name>gugod</name>
     </author>
     <content type="xhtml" xml:base="https://perlbrew.pl">
       <div xmlns="http://www.w3.org/1999/xhtml">
-        <h2>Description
-</h2>
-        <p>Since 0.21, the <code>current</code> symlink is ditched in favor of bash-based multi-user support. However, the change discourage non-interactive uses of perlbrew because people will have to put the versioned path in shebang, which makes it troublesome when it is time to switch to different perl for those program.
+        <p>perlbrew 0.89 was released at 2020-10-19T09:26:19+0900 with these notable changes:
 </p>
-        <p>An 'alias' command is introduced to generalize the need. <code>current</code> symlink is no longer a special one, but just a name specified by users.
-</p>
-        <h2>Usage
-</h2>
-        <pre>
-          <code>perlbrew alias [-f] &lt;action&gt; &lt;name&gt; [&lt;alias&gt;]
-</code>
-        </pre>
-        <p>Action is one of: create, delete, rename
-</p>
-        <p><code>-f</code> flag is used to forcibly perform the action.
-</p>
-        <p><code>&lt;name&gt;</code> should be one of the installation names, <code>&lt;alias&gt;</code> is the given alternative name.
-</p>
-        <h2>Synopsis
-</h2>
-        <p>    # essentially ln -s perl-5.14.0 current.
-    #     should fail if 'perl-5.14.0' does not exist.
-    #     should fail if 'current' already exists.
-    perlbrew alias create perl-5.14.0 current
-</p>
-        <pre>
-          <code># delete the alias
-perlbrew alias delete current
-
-# renaming
-#     should fail if `current` does not exist.
-#     should fail if `main` already exists.
-perlbrew alias rename current main
-
-# -f for force override
-#    should still fail if the alias refers to a non-alias installation.
-#    should still fail if the name does not exists (`perl-5.14.0` and `current` in the following cases)
-perlbrew alias -f create perl-5.14.0 current
-perlbrew alias -f rename current main
-</code>
-        </pre>
+        <ul>
+          <li>Thanks to our contributors: Håkon Hægland, Nicolas R, Peter Tripp
+</li>
+          <li>Make the bashrc compatible with 'bash -u'. Github PR #694
+</li>
+          <li>Prevent build directory from being overwritten. Github PR #683
+</li>
+        </ul>
       </div>
     </content>
   </entry>
@@ -543,7 +514,7 @@ perlbrew alias -f rename current main
     <id>https://perlbrew.pl/Release-0.88.html?7abbaa95bfcc7a675d32eba5ff44863f0994e9c9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.88.html" type="text/html"/>
     <title>Perlbrew Release 0.88</title>
-    <published>2020-01-29T21:11:12+08:00</published>
+    <published>2020-01-29T22:11:37+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -563,37 +534,10 @@ perlbrew alias -f rename current main
     </content>
   </entry>
   <entry>
-    <id>https://perlbrew.pl/Perlbrew-and-Friends.html?709382420bbad872a5f9ea82a252384e3390d252</id>
-    <link rel="alternate" href="https://perlbrew.pl/Perlbrew-and-Friends.html" type="text/html"/>
-    <title>Perlbrew and Friends</title>
-    <published>2020-01-28T20:22:31+08:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="html" xml:base="https://perlbrew.pl">&lt;p&gt;If you install perlbrew with the installer as recommended, you might notice that an executable named &lt;code&gt;patchperl&lt;/code&gt; is also installed to your &lt;code&gt;~/perl5/perlbrew/bin&lt;/code&gt; directory. Also when you read the &lt;code&gt;perlbrew&lt;/code&gt; &lt;a href="http://metacpan.org/module/perlbrew"&gt;usage documentation&lt;/a&gt;, there is a command &lt;code&gt;install-cpanm&lt;/code&gt; that installs a standalone executable &lt;code&gt;cpanm&lt;/code&gt; to to the same &lt;code&gt;bin&lt;/code&gt; directory. Why is perlbrew doing this ?
-&lt;/p&gt;&lt;p&gt;The program &lt;code&gt;patchperl&lt;/code&gt; is a standalone executable of the distribution of &lt;a href="http://metacpan.org/module/Devel::PatchPerl"&gt;Devel::PatchPerl&lt;/a&gt; by &lt;a href="http://metacpan.org/author/BINGOS"&gt;BINGOS&lt;/a&gt;, which aims to solve the issues encountered when building old perls (5.6.x, 5.8.x, etc) on modern operating systems. Due to the updates in OS, gcc, or libc, those old perl distributions fail to build due to various configure or library errors. &lt;code&gt;Devel::PatchPerl&lt;/code&gt; patches the ancient perl source tree so it can be successfully built.
-&lt;/p&gt;&lt;p&gt;&lt;code&gt;perlbrew&lt;/code&gt; requires the &lt;code&gt;patchperl&lt;/code&gt; program to be there because it is the best way to make it Just Work. &lt;code&gt;cpanm&lt;/code&gt; is an awesome CPAN client that is lightweight, and fast. I use it exclusively these days.
-&lt;/p&gt;&lt;p&gt;The reason that these programs live under &lt;code&gt;~/perl5/perlbrew/bin&lt;/code&gt; is very simple: so they are always available no matter which perl you switch to.
-&lt;/p&gt;&lt;p&gt;With a proper perlbrew setup, &lt;code&gt;~/perl5/perlbrew/bin&lt;/code&gt; should be the first or second item in your &lt;code&gt;$PATH&lt;/code&gt;, since &lt;code&gt;perlbrew switch&lt;/code&gt; and &lt;code&gt;perlbrew use&lt;/code&gt; alters &lt;code&gt;$PATH&lt;/code&gt;, it is the best that mandatory programs lives somewhere that's always accessible.
-&lt;/p&gt;&lt;p&gt;If you install &lt;code&gt;cpanm&lt;/code&gt; by doing &lt;code&gt;cpan -i App::cpanminus&lt;/code&gt; within a perlbrew environment, you will run into this issue:
-&lt;/p&gt;&lt;pre&gt;&lt;code&gt;perlbrew switch perl-5.12.3
-cpan -i App::cpanminus
-cpanm Moose # works
-
-perlbrew switch perl-5.14.0
-cpanm Moose
-#=&amp;gt; cpanm is not found 
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;This is because the first &lt;code&gt;cpan&lt;/code&gt; (5.12.3) installs &lt;code&gt;cpanm&lt;/code&gt; to &lt;code&gt;~/perl5/perlbrew/perls/5.12.3/bin&lt;/code&gt;, and the latter &lt;code&gt;perlbrew switch perl-5.14.0&lt;/code&gt; removes that from &lt;code&gt;$PATH&lt;/code&gt;. If you use &lt;code&gt;cpanm&lt;/code&gt; exclusively like I do, you should install it with &lt;code&gt;perlbrew install-cpanm&lt;/code&gt;.
-&lt;/p&gt;&lt;p&gt;In short, &lt;code&gt;patchperl&lt;/code&gt; and &lt;code&gt;cpanm&lt;/code&gt; are so important, it is best to make them always available.
-&lt;/p&gt;&lt;p&gt;peace out, gugod.
-&lt;/p&gt;&lt;hr&gt;&lt;p&gt;PS. You may also choose to manually install &lt;code&gt;cpanm&lt;/code&gt; to a system-wide path like &lt;code&gt;/usr/local/bin&lt;/code&gt;, that way it'll always available too. In that case you do not need to run &lt;code&gt;perlbrew install-cpanm&lt;/code&gt; command at all.
-&lt;/p&gt;</content>
-  </entry>
-  <entry>
     <id>https://perlbrew.pl/Home.html?0ce0d3c80b8f0a214df0df75fbc430a4ca1decf3</id>
     <link rel="alternate" href="https://perlbrew.pl/Home.html" type="text/html"/>
     <title>Home</title>
-    <published>2019-12-05T21:29:48+08:00</published>
+    <published>2019-12-05T22:33:08+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -630,7 +574,7 @@ cpanm Moose
     <id>https://perlbrew.pl/Release-0.87.html?263bbf8efbc5ea4670cb849f115ae825913eee03</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.87.html" type="text/html"/>
     <title>Perlbrew Release 0.87</title>
-    <published>2019-10-25T22:20:39+08:00</published>
+    <published>2019-10-25T23:20:56+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -663,7 +607,7 @@ cpanm Moose
     <id>https://perlbrew.pl/Perlbrew-Configuration.html?9d00d7e0d5f9dc2e96f2bd046f84cc357e0ba195</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-Configuration.html" type="text/html"/>
     <title>Perlbrew Configuration</title>
-    <published>2019-10-25T22:18:38+08:00</published>
+    <published>2019-10-03T02:43:35+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -693,7 +637,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.86.html?8dac50a674b60ab4c566e8f27ddbdc86d651ea62</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.86.html" type="text/html"/>
     <title>Perlbrew Release 0.86</title>
-    <published>2019-01-19T08:49:45+08:00</published>
+    <published>2019-01-19T09:50:13+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -716,7 +660,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.83.html?43f4159830a0bc32a0446b1f875a92b4db562af9</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.83.html" type="text/html"/>
     <title>Perlbrew Release 0.83</title>
-    <published>2018-12-15T22:36:02+08:00</published>
+    <published>2018-12-15T23:36:20+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -747,7 +691,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.84.html?08e7496e2467dcee95519a264aeea3ea06fde451</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.84.html" type="text/html"/>
     <title>Perlbrew Release 0.84</title>
-    <published>2018-12-15T22:35:56+08:00</published>
+    <published>2018-12-15T23:36:20+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -770,7 +714,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Release-0.85.html?301826a78d85640ecfc6bc54ef290408881d0f91</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.85.html" type="text/html"/>
     <title>Perlbrew Release 0.85</title>
-    <published>2018-12-15T22:34:11+08:00</published>
+    <published>2018-12-15T23:36:09+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -793,7 +737,7 @@ Again, choose a `<a href="http://`">http://`</a> URL.
     <id>https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html?493f02c679cdd8e30d543d2fbc83a6f808e74a47</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html" type="text/html"/>
     <title>Perlbrew In Shell Scripts</title>
-    <published>2018-12-15T22:33:24+08:00</published>
+    <published>2018-07-02T10:22:32+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -836,5 +780,37 @@ exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 \
       </div>
     </content>
   </entry>
-  <updated>2022-05-15T23:08:16+08:00</updated>
+  <entry>
+    <id>https://perlbrew.pl/perlbrew-ing-on-$OS.html?564e43e265b91041ef9f7f7119753f8425232b3f</id>
+    <link rel="alternate" href="https://perlbrew.pl/perlbrew-ing-on-$OS.html" type="text/html"/>
+    <title>perlbrew ing on $OS</title>
+    <published>2018-04-06T09:54:47+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>This page is list of short cheatsheet on how to prepare your system so after it runs this bash script:
+</p>
+        <pre>
+          <code class="language-bash">\curl -L https://install.perlbrew.pl | bash
+eval "$(./perl5/perlbrew/bin/perlbrew init-in-bash)"
+perlbrew install perl-5.26.1 --notest</code>
+        </pre>
+        <p>you get a usable perl-5.26.1 installation.
+</p>
+        <h2>Debian and Ubuntu
+</h2>
+        <pre>
+          <code class="language-bash">sudo apt install -y build-essential curl perl</code>
+        </pre>
+        <h2>CentOS 7
+</h2>
+        <pre>
+          <code class="language-bash">sudo yum install -y gcc curl patch perl</code>
+        </pre>
+      </div>
+    </content>
+  </entry>
+  <updated>2022-08-01T09:13:50+09:00</updated>
 </feed>
