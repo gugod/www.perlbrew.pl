@@ -43,24 +43,11 @@ is 0.96, read the release note: <a href="Release-0.96.html">Release 0.96</a>.
 </p><p>For a quick installation, do this:
 </p><pre><code>\curl -L https://install.perlbrew.pl | bash
 </code></pre><p>Check the document of <a href="Installation.html">Installation</a> for more descriptions and options.
-</p><p>perlbrew is a tool to manage multiple perl installations in your
-<code>$HOME</code> directory (or wherever you specify). They are completely
-isolated perl universes, and has no relationship with system perl.
-</p><p>This approach has many benefits:
-</p><ul><li>No need to run <code>sudo</code> to install CPAN modules, any more.
-</li><li>Try the monthly released new perls with ease and learn new language features.
-</li><li>Test your code against different perl versions.
-</li><li>Leave vendor perl (the one that comes with OS) alone and avoid multiple hazards
-</li><li>Vendor perl usually serves its own purposes, and it might be a bad idea to mess it up too much.
-</li><li>Especially PITA when trying to upgrade system perl.
-</li><li>Some vendors <a href="http://web.archive.org/web/20110809020042/http://perlnews.org/2011/04/dealing-with-xcode-4-and-cpan-breakage/">introduced their own perl bugs</a>, <a href="http://www.theregister.co.uk/2009/02/16/apple_update_perl_breakage/">twice</a>!
-</li><li>Hacking perl internals.
-</li><li>Just to keep up with fashion.
-</li></ul><p>You may optionally chose alternative places for installation, or even let multiple uses share the whole perlbrew environment.
-</p><h2>perlbrew is simple
-</h2><p>To install the latest stable release, and use it from now on:
-</p><pre><code>perlbrew install perl-5.34.0
-perlbrew switch perl-5.34.0
+</p><h2>Quickstart
+</h2><p>After installing perlbrew itself, now it is time to install some versions of perl
+</p><p>To install the latest stable release, and use it as default in the current shell and in all future shell sessions.
+</p><pre><code>perlbrew install perl-5.36.0
+perlbrew switch perl-5.36.0
 </code></pre><p>To play with the bleeding-edge version, but only in the current shell:
 </p><pre><code>perlbrew install perl-blead
 perlbrew use perl-blead
@@ -70,7 +57,23 @@ perlbrew use perl-blead
 </p><pre><code>perlbrew -h
 </code></pre><p>For more descriptions about commands,
 </p><pre><code>perlbrew help
-</code></pre><h2>Articles
+</code></pre><h2>What is perlbrew
+</h2><p>perlbrew is a tool to manage multiple perl installations in your
+<code>$HOME</code> directory (or wherever you specify). They are completely
+isolated perl universes, and has no relationship with system perl, or
+between each others.
+</p><p>This approach has many benefits:
+</p><ul><li>No need to run <code>sudo</code> to install CPAN modules, any more.
+</li><li>Try the monthly released new perls with ease and learn new language features.
+</li><li>Test your code against different perl versions.
+</li><li>Avoid some usual hazards when using verndor perl (the one that comes with OS) for running your app, for example:
+</li><li>Vendor perl usually serves its own purposes, and it might be a bad idea to mess it up too much. upgrade CPAN modules provided by vendor might already be a bad idea.
+</li><li>Upgrading vendor perl usually comes with upgrade of all CPAN modules that comes with it -- which may not be desired.
+</li><li>Some vendors <a href="http://web.archive.org/web/20110809020042/http://perlnews.org/2011/04/dealing-with-xcode-4-and-cpan-breakage/">introduced their own perl bugs</a>, <a href="http://www.theregister.co.uk/2009/02/16/apple_update_perl_breakage/">twice</a>!
+</li><li>For hacking perl internals, and thus required to install multilpe versions from specific commits in perl5.git
+</li><li>Just to keep up with fashion and use the latest perl release all the time.
+</li></ul><p>You may optionally chose alternative places for installation, or even let multiple uses share the whole perlbrew environment.
+</p><h2>Articles
 </h2><ul><li><a href="Installation.html">Installation</a>
 </li><li><a href="The-Discussion-forum-of-perlbrew-project.html">The Discussion forum of perlbrew project</a>
 </li><li><a href="Deploying-Perl-bindings-from-tools-installed-with-Homebrew-on-OS-X.html">Deploying Perl bindings from tools installed with Homebrew on OS X</a>
@@ -96,7 +99,7 @@ perlbrew use perl-blead
 </li></ul><h2>Development
 </h2><p>perlbrew has always been improving, it is an open source project for
 everyone to participate. There are currently over
-<a href="https://github.com/gugod/App-perlbrew/contributors">80 contributors</a> and
+<a href="https://github.com/gugod/App-perlbrew/contributors">145 contributors</a> and
 growing.  The code repository is located on
 <a href="https://github.com/gugod/App-perlbrew">github</a>. Feel free to send a
 bug report, a pull request, or a beer. Everything helps :)
@@ -104,7 +107,7 @@ bug report, a pull request, or a beer. Everything helps :)
         </section>
     </div>
     <footer>
-        <p>© 2021 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
+        <p>© 2022 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
 
         <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
     </footer>
