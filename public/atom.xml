@@ -4,6 +4,54 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
+    <id>https://perlbrew.pl/Release-0.98.html?965d801e174bd3416d63af78b45f210705d41101</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.98.html" type="text/html"/>
+    <title>Perlbrew Release 0.98</title>
+    <published>2023-08-11T23:28:25+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.98 was released at 2023-08-11T22:54:38+0900 with these  changes:
+</p>
+        <ul>
+          <li>Remove the support of cperl from <code>available</code> and <code>install</code> command. Github PR: #777. cperl can still be installed by specifying the tarball, just not by their short names.
+</li>
+          <li>new command: make-shim
+</li>
+          <li>new command: make-pp.
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-0.97.html?47cef6364ee955d4832a403cd5d0ee90ce303ab1</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-0.97.html" type="text/html"/>
+    <title>Perlbrew Release 0.97</title>
+    <published>2023-05-12T23:45:59+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 0.97 was released at 2023-05-12T22:33:42+0900 with these  changes:
+</p>
+        <ul>
+          <li>Thanks to our contributors: Elvin Aslanov, Graham Knop, Shoichi Kaji, Tomasz Konojacki, brian greenfield
+</li>
+          <li>The documentation of <code>clone-module</code> and <code>list-modules</code> are improved.
+</li>
+          <li>No longer depends on Pod::Parser. Github PR #760
+</li>
+          <li>Bugfix for csh users: Github PR #770
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Release-0.96.html?77b016ff24f4757a27b6dd0ded01d927cbceb21b</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-0.96.html" type="text/html"/>
     <title>Perlbrew Release 0.96</title>
@@ -733,84 +781,5 @@ Again, choose a `<a href="http://`">http://`</a> URL.
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html?493f02c679cdd8e30d543d2fbc83a6f808e74a47</id>
-    <link rel="alternate" href="https://perlbrew.pl/Perlbrew-In-Shell-Scripts.html" type="text/html"/>
-    <title>Perlbrew In Shell Scripts</title>
-    <published>2018-07-02T10:22:32+09:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>It is generally easy to bootstrap perlbrew and use perlbrew function in shell scripts. In an interactive script, this preamble is usually what's needed:
-</p>
-        <pre>
-          <code>#!/bin/bash
-source $HOME/perl5/perlbrew/etc/bashrc
-perlbrew use perl-5.28.0
-</code>
-        </pre>
-        <p>It is just the same as what's put in bashrc and executed everytime you open a new shell.
-</p>
-        <p>However, this may not work for a cron script -- because cron scripts are executed without variables like <code>$HOME</code>. The alternative shell preamble for cron scripts is something like:
-</p>
-        <pre>
-          <code>#!/bin/bash
-export PERLBREW_ROOT=/home/gugod/perl5/perlbrew
-export PERLBREW_HOME=/home/gugod/.perlbrew
-source ${PERLBREW_ROOT}/etc/bashrc
-perlbrew use perl-5.28.0
-</code>
-        </pre>
-        <p>The <code>$PERLBREW_ROOT</code> and <code>$PERLBREW_HOME</code> are special variables recognized by perlbrew for bootstrapping purposes. They are also used for specifying alternative installation directiory and let multiple accounts on the same machine share the same perlbrew installation.
-</p>
-        <p>In an interactive shell environment, the default value of <code>$PERLBREW_HOME</code> is <code>$HOME/.perlbrew</code>. If you don't use the <code>lib</code> feature in perlbrew, you can probably also skip setting this variable.
-</p>
-        <p>If this shell script only invokes one program and do not call <code>perlbrew use</code> several times, it can be simplifed by utilizing <code>perlbrew exec</code> command to something like this:
-</p>
-        <pre>
-          <code>#!/bin/bash
-exec /home/gugod/perl5/perlbrew/bin/perlbrew exec -q --with perl-5.28.1 \
-    perl /apps/myapp/bin/myapp.pl $*
-</code>
-        </pre>
-        <p>This runs <code>perl /apps/myapp/bin/myapp.pl</code>, passing through all command-line arguments, after switching perl-5.28.1. The <code>perlbrew</code> executable itself should be located within an initialized <code>$PERLBREW_ROOT</code> directory, as that is how it figures out the installation paths of perls. This last trick does not work with perlbrew instaledd via cpan clients.
-</p>
-      </div>
-    </content>
-  </entry>
-  <entry>
-    <id>https://perlbrew.pl/perlbrew-ing-on-$OS.html?564e43e265b91041ef9f7f7119753f8425232b3f</id>
-    <link rel="alternate" href="https://perlbrew.pl/perlbrew-ing-on-$OS.html" type="text/html"/>
-    <title>perlbrew ing on $OS</title>
-    <published>2018-04-06T09:54:47+09:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>This page is list of short cheatsheet on how to prepare your system so after it runs this bash script:
-</p>
-        <pre>
-          <code class="language-bash">\curl -L https://install.perlbrew.pl | bash
-eval "$(./perl5/perlbrew/bin/perlbrew init-in-bash)"
-perlbrew install perl-5.26.1 --notest</code>
-        </pre>
-        <p>you get a usable perl-5.26.1 installation.
-</p>
-        <h2>Debian and Ubuntu
-</h2>
-        <pre>
-          <code class="language-bash">sudo apt install -y build-essential curl perl</code>
-        </pre>
-        <h2>CentOS 7
-</h2>
-        <pre>
-          <code class="language-bash">sudo yum install -y gcc curl patch perl</code>
-        </pre>
-      </div>
-    </content>
-  </entry>
-  <updated>2022-08-01T09:13:50+09:00</updated>
+  <updated>2023-08-11T23:28:25+09:00</updated>
 </feed>
