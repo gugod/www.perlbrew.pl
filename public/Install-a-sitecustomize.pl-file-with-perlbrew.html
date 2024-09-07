@@ -39,7 +39,7 @@
         <section>
   <h2>Install a sitecustomize.pl file with perlbrew</h2>
   <p>by <a href="https://github.com/xdg">@xdg</a>
-</p><p>When perl is compiled with <code>-Dusesitecustomize</code> it will look for a file in the <code>$Config{siteperl}</code> directory called <code>sitecustomize.pl</code> and execute it extremely early in the life of the interpreter.  (See <a href="http://perldoc.perl.org/perlrun.html">perldoc perlrun</a> and the <code>-f</code> switch for an explanation.)
+</p><p>When perl is compiled with <code>-Dusesitecustomize</code> it will look for a file in the <code>$Config{sitelib}</code> directory called <code>sitecustomize.pl</code> and execute it extremely early in the life of the interpreter.  (See <a href="http://perldoc.perl.org/perlrun.html">perldoc perlrun</a> and the <code>-f</code> switch for an explanation.)
 </p><p>Perlbrew 0.37 adds the <code>--sitecustomize</code> installation option to specify a Perl file to be installed as <code>sitecustomize.pl</code>. (Perlbrew will also set <code>-Dusesitecustomize</code> automatically.)
 </p><pre><code>$ perlbrew install perl-5.14.2 --sitecustomize /path/to/customize.pl
 </code></pre><p>This is extremely useful for doing dynamic manipulation of the environment or perl globals.  In particular, it can be used to modify @INC in a more customized way than can be achieved with <code>PERL5LIB</code>.
