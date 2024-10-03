@@ -4,6 +4,74 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
+    <id>https://perlbrew.pl/Perlbrew-1.00.html?bc8ff4037c42dbe8d0424066cbbe9ff863296266</id>
+    <link rel="alternate" href="https://perlbrew.pl/Perlbrew-1.00.html" type="text/html"/>
+    <title>Perlbrew 1.00</title>
+    <published>2024-10-03T12:44:09+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 1.00 was released on 2024/10/4, a day when I (<a href="https://gugod.org">@gugod</a>) was
+in a personal trip to the city of Hakodate, right before the awesome
+conference of <a href="https://yapcjapan.org/2024hakodate/">YAPC::Hakodate, 2024</a>, in which I gave a short
+presentation titled "perlbrew 3000!" -- it's a brief history of
+perlbrew, when we look back from year 3000.
+</p>
+        <p>While I'm generally just inchworming my way forward on various hobby
+projects, it is also sometimes needed to temporarily become a
+futurist, leaping forward in time in great steps, then look
+backward. It's indeed easier that way, as <a href="https://www.youtube.com/watch?v=lXLBTBBil2U">Jensen Huang has described
+how himself not envisioning the future</a>,
+since, well, it's all in the history book now.
+</p>
+        <p>Very often, the version number 1.0 means something special, but to put
+in to the history of perlbrew, it is merely a version that comes after
+0.99, and the 91st relesae since version 0.10 -- the very the
+beginning of perlbrew. Thanks to the internet and the participant of
+OSDC.tw -- we could still look backward in time, and found <a href="https://www.youtube.com/watch?v=KTQp5_iS6Zg">the very
+first public announcement of perlbrew 0.10 on youtube.</a>.
+</p>
+        <p>With or without any specialtiy in the social status of version
+numbers, whole-number versions does sits in the position of being
+milestones, and generally means something major, with enough maturity,
+or something that might be breaking with past versions. That would be
+enough reasons for me to aggregate my thoughts together and making up
+a much longer release notes for perlbrew 1.00.
+</p>
+        <p>Oh yes, it's <code>1.00</code>, not <code>1.0</code>. Not just because two 0s are better
+one, but because conventionally I've been using 2 digits in the 2nd
+part of version numbers, and I intend to keep it as a convention of
+the perlbrew project. So the next major milestone would be <code>2.00</code>, but
+not <code>2.0</code>.
+</p>
+        <p>Someone might argue about why having such subtle differences since,
+<code>1.00</code> vs <code>1.0</code>, they don't meaning different things: it's the same
+point in the multi-dimensional plane of version numbers and they are
+both parsed as the same version object by most of
+version-number-parsing libraries (I hope.)
+</p>
+        <p>Suffice to say, that it's the job the author, to give arbitrary
+meanings to the version numbers of their software, and if you ask me,
+I'd say it's non-sense to use even numbers to mean stability and odd
+numbers to meaning instability. Prime numbers should be used to mean
+something stable, since they are not breakable. I may eventually
+engage with that rule.
+</p>
+        <p>Anyhow, perlbrew 1.00 is out and we are now on the path to perlbrew
+3000. I wholeheartly thank to the 148 contributors who've spent their
+valuable time and provides commits for the perlbrew project.
+</p>
+        <p>To get to perlbrew 3000, I extrapolate that, we will probably require
+about 1000 more contributors. Developers, you know what to do.
+</p>
+        <p>But for now, happy perlbrew-ing. 🍺
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html?cf34bcbc9553fb22f7cec71da6b5a4c59fdeea63</id>
     <link rel="alternate" href="https://perlbrew.pl/Install-a-sitecustomize.pl-file-with-perlbrew.html" type="text/html"/>
     <title>Install a sitecustomize.pl file with perlbrew</title>
@@ -1393,47 +1461,5 @@ Unknown command: `lixt`. Did you mean one of the following?
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.28.html?8e466a69aa63ed1d5ee24661be460bd3d2bb26dc</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.28.html" type="text/html"/>
-    <title>Perlbrew Release 0.28</title>
-    <published>2023-08-11T23:38:35+09:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>perlbrew 0.28 is a bug-fixing release:
-</p>
-        <ul>
-          <li>fixes for cpantester
-</li>
-          <li>Fix 'switch' and 'use' for bash users, by Woody2143++
-</li>
-          <li>The standalone <code>perlbrew</code> file is now packed with fatpacker, by running <code>dev-bin/build.sh</code>. <code>perl Makefile.PL</code> does no trigger a re-build anymore.
-</li>
-          <li>Update the installer to grab patchperl 0.46
-</li>
-        </ul>
-        <p>It is also mandatory for users to upgrade Devel::PatchPerl to at least 0.42 (the
-latest version is 0.46), in order to fix <a href="http://www.perlbrew.pl/FixLion.html">the building of Perl on MacOSX
-Lion</a>. There are also fixes for building on
-Ubuntu too.  Generally it is always nice to update Devel::Patchperl to the
-latest.
-</p>
-        <p>Also due to a futther plan of implementation, the <code>perlbrew</code> standalone
-executable is now packed with <code>App::FatPack</code>, which is, IMHO, an awesome tool to
-build self-contained executables. In case you do not know yet, the <code>cpanm</code>
-execuatble is also packed with <code>App::FatPack</code>.
-</p>
-        <p>Also I (<a href="twitter.com/gugod">@gugod</a>) submitted yet another perlbrew talk to the
-coming <a href="http://yapcasia.org/2011/">YAPC::Asia 2011</a>. Althought it has already
-been talked the last YAPC::Asia, perlbrew was still so young back then. Now the
-project has been improved and brought up many attention, I figured it a good
-idea to give a talk once again.
-</p>
-      </div>
-    </content>
-  </entry>
-  <updated>2024-09-07T16:39:19+09:00</updated>
+  <updated>2024-10-03T12:44:09+09:00</updated>
 </feed>
