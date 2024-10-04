@@ -4,6 +4,42 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
+    <id>https://perlbrew.pl/perlbrew-install-skaji-relocatable-perl.html?7e38a446cd8488f357a708d5912e4f18138487cf</id>
+    <link rel="alternate" href="https://perlbrew.pl/perlbrew-install-skaji-relocatable-perl.html" type="text/html"/>
+    <title>Perlbrew install skaji-relocatable-perl</title>
+    <published>2024-10-04T11:49:28+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p><a href="https://github.com/skaji/relocatable-perl/">skaji/relocatable-perl</a> is a binary release of perl, provided by <a href="https://metacpan.org/author/SKAJI">Shoichi Kaji</a>, or SKAJI on CPAN, the author of <a href="https://metacpan.org/dist/App-cpm">cpm</a>.
+</p>
+        <p>Since <a href="Perlbrew-1.00.html">Perlbrew 1.00</a>, we could conveniently install skaji-relocatable-perl by doing:
+</p>
+        <pre>
+          <code>perlbrew install skaji-relocatable-perl-5.40.0.0</code>
+        </pre>
+        <p>When the prefix "skaji-relocatable-perl-" is detected, the installation process would be routed to download the binary build for current OS and arch, instead of building from source code.
+</p>
+        <p>Notice that it has a longer version number that p5p perl, because some minor changes it sometimes required for rebuilding the binaries.
+</p>
+        <p>The list of exact version numbers can be found on this page:
+</p>
+        <p>L<a href="https://github.com/skaji/relocatable-perl/releases">https://github.com/skaji/relocatable-perl/releases</a>
+</p>
+        <p>Usually a ".0" suffix would suffice, sometimes there is a ".1" or even ".2" release, but not very often.
+</p>
+        <p>The skaji-relocatable-perl releases are build entirely on GitHub infra. It's built with the <code>userelocatableinc</code> option enabled by default, hence the name.
+</p>
+        <p>For perlbrew to install any binary releases, the <code>userelocatableinc</code> must be enabled, to basicaly support installation in your <code>$HOME</code> folder -- a folder name that is unique to for each user and cannot be known in advance.
+</p>
+        <p><a href="https://github.com/skaji/relocatable-perl/">skaji/relocatable-perl</a> seems to be a very good fit. With <a href="Perlbrew-1.00.html">Perlbrew 1.00</a> we make it possible to install this particular binary release. It is marked as experimental in the release note, with the intention that we may just be collecting problems for this particular change. But that's totally cool too. Problem-solving, that's what we do.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/Perlbrew-1.00.html?f2c076df16dd7bc63638e54e98cce89702caa287</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-1.00.html" type="text/html"/>
     <title>Perlbrew 1.00</title>
@@ -1439,32 +1475,5 @@ Unknown command: `lixt`. Did you mean one of the following?
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.26.html?a2fb2d0b63f7c5ddb252dcc8cdd5dd48e19e2645</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.26.html" type="text/html"/>
-    <title>Perlbrew Release 0.26</title>
-    <published>2023-08-11T23:38:35+09:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>perlbrew 0.26 is a bug-fixing release:
-</p>
-        <ul>
-          <li>Fix GH #119 
-</li>
-          <li>Fix t/08.exit_status.t for cpantesters
-</li>
-          <li>Fix several bugs in <code>exec</code> command
-</li>
-          <li>Implement GH #103 - install -v shows build.log
-</li>
-          <li>Add -Dusedevel when installing blead perl
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <updated>2024-10-04T11:12:40+09:00</updated>
+  <updated>2024-10-04T11:49:28+09:00</updated>
 </feed>

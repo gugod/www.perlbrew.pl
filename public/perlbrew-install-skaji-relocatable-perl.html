@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="alternate" type="application/atom+xml" href="https://feeds.feedburner.com/Perlbrew">
+    <title>Perlbrew install skaji-relocatable-perl</title>
+<![if gte IE 9]>
+    <link href="//fonts.googleapis.com/css?family=Vollkorn:regular,bold" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/application.css" media="screen, projection" rel="stylesheet" type="text/css">
+<![endif]>
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <ul>
+                <li><a href="https://perl.org/" title="What makes everything.">Perl</a></li>
+                <li><a href="https://www.cpan.org/" title="Where everthing lives.">CPAN</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="inner">
+            <div class="hd">
+                <h1>
+                    <strong>Perlbrew</strong>
+                    <span id="bubble-1"></span>
+                    <span id="bubble-2"></span>
+                    <span id="bubble-3"></span>
+                    <span id="bubble-4"></span>
+                    <span id="bubble-5"></span>
+                    <span id="bubble-6"></span>
+                </h1>
+            </div>
+            <a href="https://github.com/gugod/App-perlbrew/" id="ninja"><span>Fork me on github!!</span></a>    
+        </div>
+    </header>
+    <div id="container" class="inner">
+        <section>
+  <h2>Perlbrew install skaji-relocatable-perl</h2>
+  <p><a href="https://github.com/skaji/relocatable-perl/">skaji/relocatable-perl</a> is a binary release of perl, provided by <a href="https://metacpan.org/author/SKAJI">Shoichi Kaji</a>, or SKAJI on CPAN, the author of <a href="https://metacpan.org/dist/App-cpm">cpm</a>.
+</p><p>Since <a href="Perlbrew-1.00.html">Perlbrew 1.00</a>, we could conveniently install skaji-relocatable-perl by doing:
+</p><pre><code>perlbrew install skaji-relocatable-perl-5.40.0.0</code></pre><p>When the prefix &quot;skaji-relocatable-perl-&quot; is detected, the installation process would be routed to download the binary build for current OS and arch, instead of building from source code.
+</p><p>Notice that it has a longer version number that p5p perl, because some minor changes it sometimes required for rebuilding the binaries.
+</p><p>The list of exact version numbers can be found on this page:
+</p><p>L<a href="https://github.com/skaji/relocatable-perl/releases">https://github.com/skaji/relocatable-perl/releases</a>
+</p><p>Usually a &quot;.0&quot; suffix would suffice, sometimes there is a &quot;.1&quot; or even &quot;.2&quot; release, but not very often.
+</p><p>The skaji-relocatable-perl releases are build entirely on GitHub infra. It's built with the <code>userelocatableinc</code> option enabled by default, hence the name.
+</p><p>For perlbrew to install any binary releases, the <code>userelocatableinc</code> must be enabled, to basicaly support installation in your <code>$HOME</code> folder -- a folder name that is unique to for each user and cannot be known in advance.
+</p><p><a href="https://github.com/skaji/relocatable-perl/">skaji/relocatable-perl</a> seems to be a very good fit. With <a href="Perlbrew-1.00.html">Perlbrew 1.00</a> we make it possible to install this particular binary release. It is marked as experimental in the release note, with the intention that we may just be collecting problems for this particular change. But that's totally cool too. Problem-solving, that's what we do.
+</p>
+        </section>
+    </div>
+    <footer>
+        <p>© 2022 perlbrew is an open source project. The web design and graphics are copyrighted work sponsored by Handlino. Inc</p>
+
+        <p><a href="https://flattr.com/submit/auto?fid=mrdqw0&url=https%3A%2F%2Fperlbrew.pl%2F" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a></p>
+    </footer>
+</body>
+</html>
