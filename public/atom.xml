@@ -4,10 +4,10 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
-    <id>https://perlbrew.pl/Perlbrew-1.00.html?bc8ff4037c42dbe8d0424066cbbe9ff863296266</id>
+    <id>https://perlbrew.pl/Perlbrew-1.00.html?f2c076df16dd7bc63638e54e98cce89702caa287</id>
     <link rel="alternate" href="https://perlbrew.pl/Perlbrew-1.00.html" type="text/html"/>
     <title>Perlbrew 1.00</title>
-    <published>2024-10-03T12:44:09+09:00</published>
+    <published>2024-10-04T11:12:40+09:00</published>
     <author>
       <name>gugod</name>
     </author>
@@ -67,6 +67,30 @@ valuable time and provides commits for the perlbrew project.
 about 1000 more contributors. Developers, you know what to do.
 </p>
         <p>But for now, happy perlbrew-ing. 🍺
+</p>
+        <p>Written before YAPC::Hakodate.
+2024/10/4, <a href="https://gugod.org">@gugod</a>.
+</p>
+      </div>
+    </content>
+  </entry>
+  <entry>
+    <id>https://perlbrew.pl/Release-1.00.html?ab179fff4919c55b0c3b28aa95b25dd3c8c0fdbe</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-1.00.html" type="text/html"/>
+    <title>Perlbrew Release 1.00</title>
+    <published>2024-10-04T11:03:15+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 1.00 was released at 2024-10-04T10:48:40+0900 with these  changes:
+</p>
+        <ul>
+          <li>Experimental: <code>perlbrew install</code> now accept names like skaji-relocatable-perl-$version.
+</li>
+        </ul>
+        <p>See also: <a href="Perlbrew-1.00.html">Perlbrew 1.00</a>
 </p>
       </div>
     </content>
@@ -1442,24 +1466,5 @@ Unknown command: `lixt`. Did you mean one of the following?
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.27.html?38fa714886285d751b85afa4a8e037bf7828ac34</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.27.html" type="text/html"/>
-    <title>Perlbrew Release 0.27</title>
-    <published>2023-08-11T23:38:35+09:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>perlbrew 0.27 is a hotfix release
-</p>
-        <ul>
-          <li>Fix <code>perlbrew install</code> command.
-</li>
-        </ul>
-      </div>
-    </content>
-  </entry>
-  <updated>2024-10-03T12:44:09+09:00</updated>
+  <updated>2024-10-04T11:12:40+09:00</updated>
 </feed>
