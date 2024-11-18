@@ -4,6 +4,25 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
+    <id>https://perlbrew.pl/Release-1.01.html?acd4a2d86b45cfe1b6e12c0fb9bf83a5bab80e1f</id>
+    <link rel="alternate" href="https://perlbrew.pl/Release-1.01.html" type="text/html"/>
+    <title>Perlbrew Release 1.01</title>
+    <published>2024-11-18T20:51:26+09:00</published>
+    <author>
+      <name>gugod</name>
+    </author>
+    <content type="xhtml" xml:base="https://perlbrew.pl">
+      <div xmlns="http://www.w3.org/1999/xhtml">
+        <p>perlbrew 1.01 was released at 2024-11-18T20:46:04+0900 with these  changes:
+</p>
+        <ul>
+          <li>fix: <code>perlbrew install skaji-relocatable-perl-$version</code> on macOS.
+</li>
+        </ul>
+      </div>
+    </content>
+  </entry>
+  <entry>
     <id>https://perlbrew.pl/perlbrew-install-skaji-relocatable-perl.html?7e38a446cd8488f357a708d5912e4f18138487cf</id>
     <link rel="alternate" href="https://perlbrew.pl/perlbrew-install-skaji-relocatable-perl.html" type="text/html"/>
     <title>Perlbrew install skaji-relocatable-perl</title>
@@ -1432,48 +1451,5 @@ perlbrew alias create perl-5.14.0 stable
       </div>
     </content>
   </entry>
-  <entry>
-    <id>https://perlbrew.pl/Release-0.25.html?865df1b22d6f0265c172bddfa22c83365a098071</id>
-    <link rel="alternate" href="https://perlbrew.pl/Release-0.25.html" type="text/html"/>
-    <title>Perlbrew Release 0.25</title>
-    <published>2023-08-11T23:38:35+09:00</published>
-    <author>
-      <name>gugod</name>
-    </author>
-    <content type="xhtml" xml:base="https://perlbrew.pl">
-      <div xmlns="http://www.w3.org/1999/xhtml">
-        <p>Big congrats to p5p for releasing 3 branches of perl5 in the same week!
-</p>
-        <p>perlbrew 0.25 is basically a bug-fixing release with some small improvements
-</p>
-        <ul>
-          <li>suggest when user types wrong commands
-</li>
-          <li>Improvements about self-upgrade
-</li>
-          <li>exit with non-zero status code when there's some sort of error
-</li>
-          <li>Added verification of existing alias before attempting unalias
-</li>
-          <li>Fix <code>install-cpanm</code> for those who uses curl
-</li>
-        </ul>
-        <h2>Command suggestion
-</h2>
-        <p>Now when you have a typo in your command names, perlbrew shows you a list of suggestions
-</p>
-        <pre>
-          <code>&gt; perlbrew lixt
-Unknown command: `lixt`. Did you mean one of the following?
-    list
-    init
-    alias
-</code>
-        </pre>
-        <p>Thanks <a href="http://search.cpan.org/~rhoelz/">Rob Hoelz</a> for the implementation.
-</p>
-      </div>
-    </content>
-  </entry>
-  <updated>2024-10-04T11:49:28+09:00</updated>
+  <updated>2024-11-18T20:51:26+09:00</updated>
 </feed>
