@@ -4,175 +4,175 @@
   <title>perlbrew</title>
   <link rel="alternate" href="https://perlbrew.pl" type="text/html"/>
   <entry>
-    <id>https://perlbrew.pl/Release-Notes.html?9713d4b3f24c65d858b8ecfa693d50a22887c1bb</id>
+    <id>https://perlbrew.pl/Release-Notes.html?7f4576c1874571a2593db7230ededa33334b61f5</id>
     <link rel="alternate" href="https://perlbrew.pl/Release-Notes.html" type="text/html"/>
     <title>Release Notes</title>
-    <published>2024-11-27T20:04:57+09:00</published>
+    <published>2024-11-27T20:24:06+09:00</published>
     <author>
       <name>gugod</name>
     </author>
     <content type="xhtml" xml:base="https://perlbrew.pl">
       <div xmlns="http://www.w3.org/1999/xhtml">
         <ul>
-          <li>[Release 1.01]
+          <li><a href="Release-1.01.html">Release 1.01</a>
 </li>
-          <li>[Release 1.00]
+          <li><a href="Release-1.00.html">Release 1.00</a>
 </li>
-          <li>[Release 0.99]
+          <li><a href="Release-0.99.html">Release 0.99</a>
 </li>
-          <li>[Release 0.98]
+          <li><a href="Release-0.98.html">Release 0.98</a>
 </li>
-          <li>[Release 0.97]
+          <li><a href="Release-0.97.html">Release 0.97</a>
 </li>
-          <li>[Release 0.96]
+          <li><a href="Release-0.96.html">Release 0.96</a>
 </li>
-          <li>[Release 0.95]
+          <li><a href="Release-0.95.html">Release 0.95</a>
 </li>
-          <li>[Release 0.94]
+          <li><a href="Release-0.94.html">Release 0.94</a>
 </li>
-          <li>[Release 0.93]
+          <li><a href="Release-0.93.html">Release 0.93</a>
 </li>
-          <li>[Release 0.92]
+          <li><a href="Release-0.92.html">Release 0.92</a>
 </li>
-          <li>[Release 0.91]
+          <li><a href="Release-0.91.html">Release 0.91</a>
 </li>
-          <li>[Release 0.90]
+          <li><a href="Release-0.90.html">Release 0.90</a>
 </li>
-          <li>[Release 0.89]
+          <li><a href="Release-0.89.html">Release 0.89</a>
 </li>
-          <li>[Release 0.88]
+          <li><a href="Release-0.88.html">Release 0.88</a>
 </li>
-          <li>[Release 0.87]
+          <li><a href="Release-0.87.html">Release 0.87</a>
 </li>
-          <li>[Release 0.86]
+          <li><a href="Release-0.86.html">Release 0.86</a>
 </li>
-          <li>[Release 0.85]
+          <li><a href="Release-0.85.html">Release 0.85</a>
 </li>
-          <li>[Release 0.84]
+          <li><a href="Release-0.84.html">Release 0.84</a>
 </li>
-          <li>[Release 0.83]
+          <li><a href="Release-0.83.html">Release 0.83</a>
 </li>
-          <li>[Release 0.82]
+          <li><a href="Release-0.82.html">Release 0.82</a>
 </li>
-          <li>[Release 0.81]
+          <li><a href="Release-0.81.html">Release 0.81</a>
 </li>
-          <li>[Release 0.79]
+          <li><a href="Release-0.79.html">Release 0.79</a>
 </li>
-          <li>[Release 0.78]
+          <li><a href="Release-0.78.html">Release 0.78</a>
 </li>
-          <li>[Release 0.77]
+          <li><a href="Release-0.77.html">Release 0.77</a>
 </li>
-          <li>[Release 0.76]
+          <li><a href="Release-0.76.html">Release 0.76</a>
 </li>
-          <li>[Release 0.75]
+          <li><a href="Release-0.75.html">Release 0.75</a>
 </li>
-          <li>[Release 0.74]
+          <li><a href="Release-0.74.html">Release 0.74</a>
 </li>
-          <li>[Release 0.73]
+          <li><a href="Release-0.73.html">Release 0.73</a>
 </li>
-          <li>[Release 0.72]
+          <li><a href="Release-0.72.html">Release 0.72</a>
 </li>
-          <li>[Release 0.71]
+          <li><a href="Release-0.71.html">Release 0.71</a>
 </li>
-          <li>[Release 0.70]
+          <li><a href="Release-0.70.html">Release 0.70</a>
 </li>
-          <li>[Release 0.69]
+          <li><a href="Release-0.69.html">Release 0.69</a>
 </li>
-          <li>[Release 0.68]
+          <li><a href="Release-0.68.html">Release 0.68</a>
 </li>
-          <li>[Release 0.67]
+          <li><a href="Release-0.67.html">Release 0.67</a>
 </li>
-          <li>[Release 0.66]
+          <li><a href="Release-0.66.html">Release 0.66</a>
 </li>
-          <li>[Release 0.65]
+          <li><a href="Release-0.65.html">Release 0.65</a>
 </li>
-          <li>[Release 0.64]
+          <li><a href="Release-0.64.html">Release 0.64</a>
 </li>
-          <li>[Release 0.63]
+          <li><a href="Release-0.63.html">Release 0.63</a>
 </li>
-          <li>[Release 0.62]
+          <li><a href="Release-0.62.html">Release 0.62</a>
 </li>
-          <li>[Release 0.61]
+          <li><a href="Release-0.61.html">Release 0.61</a>
 </li>
-          <li>[Release 0.59]
+          <li><a href="Release-0.59.html">Release 0.59</a>
 </li>
-          <li>[Release 0.58]
+          <li><a href="Release-0.58.html">Release 0.58</a>
 </li>
-          <li>[Release 0.57]
+          <li><a href="Release-0.57.html">Release 0.57</a>
 </li>
-          <li>[Release 0.56]
+          <li><a href="Release-0.56.html">Release 0.56</a>
 </li>
-          <li>[Release 0.55]
+          <li><a href="Release-0.55.html">Release 0.55</a>
 </li>
-          <li>[Release 0.54]
+          <li><a href="Release-0.54.html">Release 0.54</a>
 </li>
-          <li>[Release 0.53]
+          <li><a href="Release-0.53.html">Release 0.53</a>
 </li>
-          <li>[Release 0.52]
+          <li><a href="Release-0.52.html">Release 0.52</a>
 </li>
-          <li>[Release 0.51]
+          <li><a href="Release-0.51.html">Release 0.51</a>
 </li>
-          <li>[Release 0.50]
+          <li><a href="Release-0.50.html">Release 0.50</a>
 </li>
-          <li>[Release 0.49]
+          <li><a href="Release-0.49.html">Release 0.49</a>
 </li>
-          <li>[Release 0.48]
+          <li><a href="Release-0.48.html">Release 0.48</a>
 </li>
-          <li>[Release 0.47]
+          <li><a href="Release-0.47.html">Release 0.47</a>
 </li>
-          <li>[Release 0.46]
+          <li><a href="Release-0.46.html">Release 0.46</a>
 </li>
-          <li>[Release 0.45]
+          <li><a href="Release-0.45.html">Release 0.45</a>
 </li>
-          <li>[Release 0.44]
+          <li><a href="Release-0.44.html">Release 0.44</a>
 </li>
-          <li>[Release 0.43]
+          <li><a href="Release-0.43.html">Release 0.43</a>
 </li>
-          <li>[Release 0.42]
+          <li><a href="Release-0.42.html">Release 0.42</a>
 </li>
-          <li>[Release 0.41]
+          <li><a href="Release-0.41.html">Release 0.41</a>
 </li>
-          <li>[Release 0.40]
+          <li><a href="Release-0.40.html">Release 0.40</a>
 </li>
-          <li>[Release 0.39]
+          <li><a href="Release-0.39.html">Release 0.39</a>
 </li>
-          <li>[Release 0.38]
+          <li><a href="Release-0.38.html">Release 0.38</a>
 </li>
-          <li>[Release 0.37]
+          <li><a href="Release-0.37.html">Release 0.37</a>
 </li>
-          <li>[Release 0.36]
+          <li><a href="Release-0.36.html">Release 0.36</a>
 </li>
-          <li>[Release 0.35]
+          <li><a href="Release-0.35.html">Release 0.35</a>
 </li>
-          <li>[Release 0.34]
+          <li><a href="Release-0.34.html">Release 0.34</a>
 </li>
-          <li>[Release 0.33]
+          <li><a href="Release-0.33.html">Release 0.33</a>
 </li>
-          <li>[Release 0.32]
+          <li><a href="Release-0.32.html">Release 0.32</a>
 </li>
-          <li>[Release 0.31]
+          <li><a href="Release-0.31.html">Release 0.31</a>
 </li>
-          <li>[Release 0.30]
+          <li><a href="Release-0.30.html">Release 0.30</a>
 </li>
-          <li>[Release 0.29]
+          <li><a href="Release-0.29.html">Release 0.29</a>
 </li>
-          <li>[Release 0.28]
+          <li><a href="Release-0.28.html">Release 0.28</a>
 </li>
-          <li>[Release 0.27]
+          <li><a href="Release-0.27.html">Release 0.27</a>
 </li>
-          <li>[Release 0.26]
+          <li><a href="Release-0.26.html">Release 0.26</a>
 </li>
-          <li>[Release 0.25]
+          <li><a href="Release-0.25.html">Release 0.25</a>
 </li>
-          <li>[Release 0.24]
+          <li><a href="Release-0.24.html">Release 0.24</a>
 </li>
-          <li>[Release 0.23]
+          <li><a href="Release-0.23.html">Release 0.23</a>
 </li>
-          <li>[Release 0.22]
+          <li><a href="Release-0.22.html">Release 0.22</a>
 </li>
-          <li>[Release 0.21]
+          <li><a href="Release-0.21.html">Release 0.21</a>
 </li>
-          <li>[Release 0.20]
+          <li><a href="Release-0.20.html">Release 0.20</a>
 </li>
         </ul>
       </div>
@@ -1603,5 +1603,5 @@ perlbrew alias create perl-5.14.0 stable
       </div>
     </content>
   </entry>
-  <updated>2024-11-27T20:04:57+09:00</updated>
+  <updated>2024-11-27T20:24:06+09:00</updated>
 </feed>
